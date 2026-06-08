@@ -1,0 +1,124 @@
+---
+title: Button (Product)
+summary: The navy action button for the internal app, where the user completes a task.
+mode: product
+status: ready
+availability:
+  web: true
+---
+
+import Demo from "../../components/docs/Demo.astro";
+import DoDont from "../../components/docs/DoDont.astro";
+import PropsTable from "../../components/docs/PropsTable.astro";
+import { ProductButtonDemo, ProductButtonSizes } from "../../islands/ProductButtonDemo";
+import { Button } from "@ucm/ui";
+
+A button lets the user perform an action with a tap or a click. In product mode
+the primary button is navy and restrained, with no glow.
+
+## When to use
+
+**Use a button:**
+- to trigger an action on the current screen (submit, confirm, save)
+- to advance a flow (continue, next step)
+
+**Don't use a button:**
+- to navigate between pages where a link is clearer (use a text link)
+- for many low-priority actions at once (demote to ghost or a menu)
+
+## Anatomy / Variants
+
+### Priorities
+
+One primary per screen. Everything else is secondary or quieter.
+
+<Demo title="Variants">
+  <ProductButtonDemo client:visible />
+</Demo>
+
+| Variant | When to use |
+|---|---|
+| Primary (navy) | The single most important action on the screen. |
+| Outline | A secondary action that still needs a clear hit area. |
+| Ghost | Low-emphasis actions; quiet until hovered. |
+| Danger | Destructive confirmation, paired with a ghost cancel. |
+
+### Sizes
+
+`default` everywhere; `lg` for primary mobile CTAs that need a 44px target.
+
+<Demo title="Sizes">
+  <ProductButtonSizes client:visible />
+</Demo>
+
+### Accessories
+
+The primary button shows a forward arrow by default; pass `hideArrow` to remove
+it. `iconLeft` places a leading MUI icon.
+
+## Behaviour
+
+### Interaction
+
+Hover shifts the background a step darker; the press state is subtle. A disabled
+button drops to 45% opacity, removes its shadow, and does not fire its handler.
+
+### Placement
+
+In the app, the primary action is typically pinned to a sticky action bar on
+mobile and sits inline on desktop.
+
+## Best practice
+
+<DoDont
+  do="Use a single navy primary as the clear next step."
+  dont="Stack several primaries so nothing stands out."
+>
+  <div slot="do"><Button>Anfrage senden</Button></div>
+  <div slot="dont" class="flex flex-wrap gap-2">
+    <Button>Senden</Button>
+    <Button>Speichern</Button>
+  </div>
+</DoDont>
+
+## Accessibility
+
+- Renders a real `<button>` (or `<a>` with `href`), so it is keyboard focusable
+  and announced with its role.
+- The decorative arrow is `aria-hidden`; icon-only usage requires an
+  `aria-label`.
+- Touch target is at least 36px (`h-9`); use `lg` (44px) for primary mobile CTAs.
+- Disabled buttons must have a visible reason nearby, since disabled controls do
+  not explain themselves.
+
+## Content
+
+- Start with a verb ("Senden", "Speichern").
+- Keep it to one or two words; allow about 2x growth when translated.
+- Sentence case, no full stop, no first-person pronouns.
+- Every label is bilingual (DE + EN) via the locale layer.
+
+| ✅ Do | ❌ Don't |
+|---|---|
+| "Anfrage senden" | "Ich möchte eine Anfrage senden" |
+| "Karte sperren" | "Meine Karte sperren" |
+
+## Props
+
+<PropsTable
+  rows={[
+    { name: "variant", type: "\"primary\" | \"ghost\" | \"outline\" | \"danger\"", default: "\"primary\"", description: "Visual priority." },
+    { name: "size", type: "\"default\" | \"lg\"", default: "\"default\"", description: "Control height; lg is 44px." },
+    { name: "hideArrow", type: "boolean", default: "false", description: "Hide the primary forward arrow." },
+    { name: "iconLeft", type: "ReactNode", description: "Leading icon node." },
+    { name: "href", type: "string", description: "Render as an anchor instead of a button." },
+  ]}
+/>
+
+## Availability
+
+| Platform | Available | Developer documentation |
+|----------|:---------:|-------------------------|
+| Android  | —         | —                       |
+| iOS      | —         | —                       |
+| Web      | ✅        | `@ucm/ui` → `Button`    |

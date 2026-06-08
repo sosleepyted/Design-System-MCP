@@ -1,0 +1,114 @@
+---
+title: Button (Brand)
+summary: Expressive marketing CTAs for the public site, including the yellow primary and the GlowButton.
+mode: brand
+status: ready
+availability:
+  web: true
+---
+
+import Demo from "../../components/docs/Demo.astro";
+import DoDont from "../../components/docs/DoDont.astro";
+import PropsTable from "../../components/docs/PropsTable.astro";
+import { BrandButtonDemo, GlowButtonDemo } from "../../islands/BrandButtonDemo";
+import { BrandButton } from "@ucm/ui";
+
+On the marketing site the call to action persuades and converts. The primary CTA
+is yellow; the GlowButton adds a cursor-tracked radial glow, the one gradient
+permitted anywhere in the system.
+
+## When to use
+
+**Use a brand CTA:**
+- as the conversion action on a marketing page (request staff, apply now)
+- in heroes, feature blocks, and CTA bands
+
+**Don't use a brand CTA:**
+- inside the internal app (use the product Button instead)
+- for minor in-page navigation (use a text link)
+
+## Anatomy / Variants
+
+### Priorities
+
+<Demo title="CTA variants">
+  <BrandButtonDemo client:visible />
+</Demo>
+
+| Variant | When to use |
+|---|---|
+| Primary (yellow) | The main conversion action. |
+| Dark | Secondary emphasis on a light section. |
+| Outline | Tertiary action with a clear boundary. |
+
+### GlowButton
+
+The signature CTA: a radial glow follows the cursor and the button lifts 1px on
+hover.
+
+<Demo title="GlowButton">
+  <GlowButtonDemo client:visible />
+</Demo>
+
+## Behaviour
+
+### Interaction
+
+Hover brightens the yellow, lifts the button 1px, and slides the arrow right. The
+GlowButton additionally paints a radial gradient at the cursor position. All
+motion is compositor-friendly and disabled under reduced-motion.
+
+### Placement
+
+Pinned in heroes and CTA bands; often full-width on mobile.
+
+## Best practice
+
+<DoDont
+  do="Lead a section with one yellow primary CTA."
+  dont="Place two competing yellow CTAs side by side."
+>
+  <div slot="do"><BrandButton>Personal anfragen</BrandButton></div>
+  <div slot="dont" class="flex flex-wrap gap-2">
+    <BrandButton>Anfragen</BrandButton>
+    <BrandButton>Bewerben</BrandButton>
+  </div>
+</DoDont>
+
+## Accessibility
+
+- Renders a real `<button>` or `<a>`; keyboard focusable and announced.
+- The arrow glyph is `aria-hidden`.
+- The glow is decorative and does not convey state.
+- Maintain contrast: navy text on yellow meets contrast requirements.
+
+## Content
+
+- Start with a verb; motivational voice is allowed in brand mode.
+- Bilingual (DE + EN); no em dashes.
+- Sentence case, no full stop.
+
+| ✅ Do | ❌ Don't |
+|---|---|
+| "Personal anfragen" | "Jetzt hier dein Personal anfragen!" |
+| "Jetzt bewerben" | "Bewirb dich bei uns für einen Job" |
+
+## Props
+
+<PropsTable
+  rows={[
+    { name: "variant", type: "\"primary\" | \"dark\" | \"outline\"", default: "\"primary\"", description: "BrandButton CTA priority." },
+    { name: "href", type: "string", description: "Render as an anchor." },
+    { name: "bg", type: "string", default: "\"#FCC224\"", description: "GlowButton background." },
+    { name: "glow", type: "string", default: "\"#F1F6F4\"", description: "GlowButton radial glow color." },
+    { name: "hideArrow", type: "boolean", default: "false", description: "Hide the arrow glyph." },
+  ]}
+/>
+
+## Availability
+
+| Platform | Available | Developer documentation        |
+|----------|:---------:|--------------------------------|
+| Android  | —         | —                              |
+| iOS      | —         | —                              |
+| Web      | ✅        | `@ucm/ui` → `BrandButton`, `GlowButton` |

@@ -1,0 +1,18 @@
+---
+title: Motion
+summary: One signature easing, ease-out only, compositor-friendly properties.
+---
+
+## Principles
+
+Animate transform, opacity, and clip-path only, never layout properties, and
+never `transition-all`. The signature easing is `cubic-bezier(0.22, 1, 0.36, 1)`
+at 220 to 400ms. All entrance and ambient motion is disabled under
+`prefers-reduced-motion: reduce`.
+
+## Durations
+
+- Micro (hover, opacity): 180 to 220ms
+- Standard (hover state, accordion): 300ms
+- Medium (panel slide): 400ms
+- Brand only (image transitions, logo reveal): 500 to 900ms
