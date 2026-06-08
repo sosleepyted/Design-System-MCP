@@ -1,0 +1,22 @@
+---
+import "../styles/globals.css";
+import { SmokeButton } from "../islands/SmokeButton";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UCM Design System</title>
+  </head>
+  <body>
+    <main class="mx-auto max-w-[960px] px-8 py-16">
+      <h1 class="text-[clamp(2rem,5vw,3rem)] font-light tracking-[-0.02em]">
+        UCM Design System
+      </h1>
+      <div class="mt-8" data-testid="smoke">
+        <SmokeButton client:load />
+      </div>
+    </main>
+  </body>
+</html>

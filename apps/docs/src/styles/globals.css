@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "@ucm/ui/styles/tokens.css";
+@import "@ucm/ui/styles/motion.css";
+
+/* Self-hosted fonts (Fontsource). Figtree variable + Nunito 800. */
+@import "@fontsource-variable/figtree";
+@import "@fontsource/nunito/800.css";
+
+/* Generate utilities for classes used inside the library source. */
+@source "../../../../packages/ui/src";
+
+:root {
+  --font-figtree: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-nunito: "Nunito", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: #f5f5f3;
+  color: #001e2b;
+  font-family: var(--font-figtree);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, dt, dd, blockquote {
+  text-wrap: pretty;
+}
