@@ -36,3 +36,10 @@ test("useLocale throws outside a provider", () => {
   expect(() => render(<Probe />)).toThrow(/LocaleProvider/);
   spy.mockRestore();
 });
+
+test("hydrates locale from localStorage on mount", async () => {
+  window.localStorage.setItem("ucm-locale", "en");
+  render(<LocaleProvider><Probe /></LocaleProvider>);
+  expect(await screen.findByTestId("locale")).toHaveTextContent("en");
+  expect(screen.getByTestId("text")).toHaveTextContent("Hello");
+});

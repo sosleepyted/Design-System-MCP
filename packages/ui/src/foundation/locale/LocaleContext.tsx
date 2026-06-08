@@ -3,6 +3,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
   type ReactNode,
 } from "react";
@@ -29,9 +30,10 @@ export function LocaleProvider({
   const [locale, setLocaleState] = useState<Locale>(initialLocale);
 
   useEffect(() => {
+    if (initialLocale !== DEFAULT_LOCALE) return; // caller was explicit, respect it
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored === "de" || stored === "en") setLocaleState(stored);
-  }, []);
+  }, [initialLocale]);
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);
@@ -40,8 +42,10 @@ export function LocaleProvider({
 
   const t = useCallback((label: Label) => label[locale], [locale]);
 
+  const value = useMemo(() => ({ locale, setLocale, t }), [locale, setLocale, t]);
+
   return (
-    <LocaleContext.Provider value={{ locale, setLocale, t }}>
+    <LocaleContext.Provider value={value}>
       {children}
     </LocaleContext.Provider>
   );
