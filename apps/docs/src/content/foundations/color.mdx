@@ -1,8 +1,35 @@
 ---
 title: Color
-summary: The cream, navy, and yellow triad and the ink opacity ramp.
+summary: The cream, navy, and yellow triad, named surfaces, and the ink opacity ramp.
 ---
+
+import TokenSwatch from "../../components/docs/TokenSwatch.astro";
 
 ## Triad
 
-Placeholder — completed in Task 10.
+The whole system is one triad. Do not introduce new hues; teal and status colors
+are accents, never primaries. Never use pure black or white as ink or surface.
+
+<div class="mt-4 grid gap-3 sm:grid-cols-3">
+  <TokenSwatch name="Ink (navy)" value="#001E2B" />
+  <TokenSwatch name="Page (cream)" value="#F5F5F3" />
+  <TokenSwatch name="Accent (yellow)" value="#FCC224" />
+</div>
+
+## Status
+
+<div class="mt-4 grid gap-3 sm:grid-cols-2">
+  <TokenSwatch name="Success" value="#0F5E2A" />
+  <TokenSwatch name="Danger" value="#A32D2D" />
+</div>
+
+## Ink opacity ramp
+
+Text and borders are navy with an alpha step, never gray. Lead with the product
+ramp; brand uses a coarser subset.
+
+<div class="mt-4 grid gap-3 sm:grid-cols-3">
+  <TokenSwatch name="text /85 body emphasis" value="#001E2B" />
+  <TokenSwatch name="text /65 secondary" value="#001E2B" />
+  <TokenSwatch name="text /55 labels" value="#001E2B" />
+</div>
