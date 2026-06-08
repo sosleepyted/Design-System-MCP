@@ -42,7 +42,7 @@ type AsButton = CommonProps &
     href?: undefined;
   };
 type AsAnchor = CommonProps &
-  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonProps> & {
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonProps | "disabled"> & {
     href: string;
   };
 
@@ -66,14 +66,17 @@ export function Button(props: ButtonProps) {
     <>
       {iconLeft}
       {children}
-      {showArrow ? <ArrowForward aria-hidden sx={{ fontSize: 16 }} /> : null}
+      {showArrow ? <ArrowForward aria-hidden={true} sx={{ fontSize: 16 }} /> : null}
     </>
   );
 
   if ("href" in props && props.href !== undefined) {
-    const { href, ...anchorRest } = rest as AnchorHTMLAttributes<HTMLAnchorElement>;
     return (
-      <a href={props.href} className={classes} {...anchorRest}>
+      <a
+        href={props.href}
+        className={classes}
+        {...(rest as Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">)}
+      >
         {content}
       </a>
     );

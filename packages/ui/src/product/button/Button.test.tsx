@@ -34,8 +34,9 @@ test("ghost variant does not render an arrow", () => {
 });
 
 test("disabled button does not fire onClick", async () => {
+  const user = userEvent.setup();
   const onClick = vi.fn();
   render(<Button disabled onClick={onClick}>Go</Button>);
-  await userEvent.click(screen.getByRole("button"));
+  await user.click(screen.getByRole("button"));
   expect(onClick).not.toHaveBeenCalled();
 });
