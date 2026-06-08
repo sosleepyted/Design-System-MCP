@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "docs-dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "dev:docs"],
+      "port": 4321
+    },
+    {
+      "name": "docs-preview",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@ucm/docs", "preview", "--port", "4321"],
+      "port": 4321
+    }
+  ]
+}

@@ -8,13 +8,7 @@ export default defineConfig({
   build: {
     lib: { entry: resolve(__dirname, "src/index.ts"), formats: ["es"], fileName: "index" },
     rollupOptions: {
-      external: [
-        "react",
-        "react-dom",
-        "react/jsx-runtime",
-        /^@mui\//,
-        /^@emotion\//,
-      ],
+      external: ["react", "react-dom", "react/jsx-runtime"],
     },
   },
 });
