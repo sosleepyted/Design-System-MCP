@@ -1,6 +1,9 @@
 ---
 import "../styles/globals.css";
-import { SmokeButton } from "../islands/SmokeButton";
+import { getCollection } from "astro:content";
+
+const components = await getCollection("components");
+const foundations = await getCollection("foundations");
 ---
 
 <html lang="en">
@@ -10,12 +13,40 @@ import { SmokeButton } from "../islands/SmokeButton";
     <title>UCM Design System</title>
   </head>
   <body>
-    <main class="mx-auto max-w-[960px] px-8 py-16">
-      <h1 class="text-[clamp(2rem,5vw,3rem)] font-light tracking-[-0.02em]">
-        UCM Design System
+    <main class="mx-auto max-w-[960px] px-8 py-20">
+      <p class="text-[12px] font-medium uppercase tracking-[0.08em] text-[#001E2B]/55">UCM</p>
+      <h1 class="mt-3 text-[clamp(2rem,5vw,3.5rem)] font-light leading-[1.05] tracking-[-0.02em]">
+        Design system
       </h1>
-      <div class="mt-8" data-testid="smoke">
-        <SmokeButton client:load />
+      <p class="mt-4 max-w-[52ch] text-[15px] leading-[1.55] text-[#001E2B]/65">
+        One design language for two surfaces: an expressive brand site and a restrained product app, on one shared foundation.
+      </p>
+
+      <div class="mt-12 grid gap-8 sm:grid-cols-2">
+        <section>
+          <h2 class="text-[11px] font-medium uppercase tracking-[0.08em] text-[#001E2B]/55">Foundations</h2>
+          <ul class="mt-3 space-y-1">
+            {foundations.map((entry) => (
+              <li>
+                <a class="text-[14px] text-[#001E2B]/78 underline-offset-4 hover:underline" href={`/foundations/${entry.id}`}>
+                  {entry.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-[11px] font-medium uppercase tracking-[0.08em] text-[#001E2B]/55">Components</h2>
+          <ul class="mt-3 space-y-1">
+            {components.map((entry) => (
+              <li>
+                <a class="text-[14px] text-[#001E2B]/78 underline-offset-4 hover:underline" href={`/components/${entry.id}`}>
+                  {entry.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </main>
   </body>

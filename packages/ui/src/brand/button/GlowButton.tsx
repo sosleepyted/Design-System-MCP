@@ -51,7 +51,7 @@ export function GlowButton({
   } as CSSProperties;
 
   const classes = cx(
-    "group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-6 py-3.5 text-[14px] font-semibold transition hover:-translate-y-[1px]",
+    "group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-6 py-3.5 text-[14px] font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#001E2B]/50 focus-visible:ring-offset-2 hover:-translate-y-[1px]",
     className,
   );
 
@@ -75,13 +75,13 @@ export function GlowButton({
 
   if (href) {
     return (
-      <a ref={ref} href={href} className={classes} style={style} onMouseMove={handleMove}>
+      <a ref={ref} href={href} className={classes} style={style} onMouseMove={handleMove} onClick={onClick}>
         {content}
       </a>
     );
   }
   return (
-    <button ref={ref} className={classes} style={style} onMouseMove={handleMove} onClick={onClick}>
+    <button type="button" ref={ref} className={classes} style={style} onMouseMove={handleMove} onClick={onClick}>
       {content}
     </button>
   );

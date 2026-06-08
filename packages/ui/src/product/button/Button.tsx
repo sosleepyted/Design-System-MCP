@@ -10,7 +10,7 @@ export type ButtonVariant = "primary" | "ghost" | "outline" | "danger";
 export type ButtonSize = "default" | "lg";
 
 const BASE =
-  "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-[-0.005em] transition disabled:cursor-not-allowed";
+  "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-[-0.005em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#001E2B]/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed";
 
 const VARIANTS: Record<ButtonVariant, string> = {
   primary:
@@ -83,7 +83,7 @@ export function Button(props: ButtonProps) {
   }
 
   return (
-    <button className={classes} {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}>
+    <button type="button" className={classes} {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}>
       {content}
     </button>
   );

@@ -16,3 +16,8 @@ test("outline variant uses the navy alpha border", () => {
   render(<BrandButton variant="outline">Mehr</BrandButton>);
   expect(screen.getByRole("button")).toHaveClass("border-[#001E2B]/15");
 });
+
+test("dark variant renders a navy background", () => {
+  render(<BrandButton variant="dark">Bewerben</BrandButton>);
+  expect(screen.getByRole("button")).toHaveClass("bg-[#001E2B]");
+});

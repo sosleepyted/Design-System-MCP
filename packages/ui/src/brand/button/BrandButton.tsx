@@ -4,7 +4,7 @@ import { cx } from "../../foundation/utils/cx";
 export type BrandButtonVariant = "primary" | "dark" | "outline";
 
 const BASE =
-  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] transition";
+  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#001E2B]/50 focus-visible:ring-offset-2";
 
 const VARIANTS: Record<BrandButtonVariant, string> = {
   primary: "bg-[#FCC224] font-semibold text-[#001E2B] hover:bg-[#FFD84D]",
@@ -31,13 +31,13 @@ export function BrandButton({
   const classes = cx(BASE, VARIANTS[variant], className);
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} onClick={onClick}>
         {children}
       </a>
     );
   }
   return (
-    <button className={classes} onClick={onClick}>
+    <button type="button" className={classes} onClick={onClick}>
       {children}
     </button>
   );

@@ -19,3 +19,8 @@ test("mouse move sets the --x and --y custom properties", () => {
   expect(el.style.getPropertyValue("--x")).not.toBe("");
   expect(el.style.getPropertyValue("--y")).not.toBe("");
 });
+
+test("renders an <a> when href is passed", () => {
+  render(<GlowButton href="/start">Los</GlowButton>);
+  expect(screen.getByRole("link", { name: /los/i }).tagName).toBe("A");
+});
