@@ -1,0 +1,25 @@
+# Private npm registry for the UCM design system.
+#
+#   docker compose -f infra/registry/docker-compose.yml up -d
+#
+# config.yaml uses paths relative to its own directory (/verdaccio/conf), so the
+# storage and htpasswd it creates live under /verdaccio/conf. A single named
+# volume mounted there persists packages and accounts across restarts. The
+# read-only bind layers the committed config on top of that volume.
+#
+# In production this sits behind Cloudflare Tunnel + Access (no public port).
+# See README.md.
+
+services:
+  registry:
+    image: verdaccio/verdaccio:6
+    container_name: ucm-registry
+    restart: unless-stopped
+    ports:
+      - "4873:4873"
+    volumes:
+      - registry-data:/verdaccio/conf
+      - ./config.yaml:/verdaccio/conf/config.yaml:ro
+
+volumes:
+  registry-data:
