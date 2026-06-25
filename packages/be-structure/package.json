@@ -1,0 +1,11 @@
+{
+  "name": "@ucm/be-structure",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "RESERVED SLOT (not yet implemented). The backend-structure skill: the backend counterpart to @ucm/ui, served through the same MCP under `structures`.",
+  "ucm": {
+    "reserved": true,
+    "status": "placeholder"
+  }
+}

@@ -5,13 +5,20 @@ mode: brand
 status: ready
 availability:
   web: true
+guidelines:
+  do:
+    - "Lead a section with one yellow primary CTA."
+    - "Use GlowButton for the signature conversion action."
+  dont:
+    - "Place two competing yellow CTAs side by side."
+    - "Use a brand CTA inside the internal app."
 ---
 
 import Demo from "../../components/docs/Demo.astro";
 import DoDont from "../../components/docs/DoDont.astro";
 import PropsTable from "../../components/docs/PropsTable.astro";
 import { BrandButtonDemo, GlowButtonDemo } from "../../islands/BrandButtonDemo";
-import { BrandButton } from "@ucm/ui";
+import { BrandButton, Icon } from "@ucm/ui";
 
 On the marketing site the call to action persuades and converts. The primary CTA
 is yellow; the GlowButton adds a cursor-tracked radial glow, the one gradient
@@ -88,7 +95,7 @@ Pinned in heroes and CTA bands; often full-width on mobile.
 - Bilingual (DE + EN); no em dashes.
 - Sentence case, no full stop.
 
-| ✅ Do | ❌ Don't |
+| <Icon name="check_circle" className="text-[#0f5e2a]" /> Do | <Icon name="close" className="text-[#a32d2d]" /> Don't |
 |---|---|
 | "Personal anfragen" | "Jetzt hier dein Personal anfragen!" |
 | "Jetzt bewerben" | "Bewirb dich bei uns für einen Job" |
@@ -109,6 +116,6 @@ Pinned in heroes and CTA bands; often full-width on mobile.
 
 | Platform | Available | Developer documentation        |
 |----------|:---------:|--------------------------------|
-| Android  | —         | —                              |
-| iOS      | —         | —                              |
-| Web      | ✅        | `@ucm/ui` → `BrandButton`, `GlowButton` |
+| Android  | -         | -                              |
+| iOS      | -         | -                              |
+| Web      | <Icon name="check_circle" /> | `@ucm/ui` → `BrandButton`, `GlowButton` |

@@ -1,0 +1,111 @@
+---
+title: Footer
+summary: The page footer with link columns and a legal line, in a brand and a product variant on one shared component.
+mode: shared
+status: ready
+availability:
+  web: true
+guidelines:
+  do:
+    - "Group links into a few clear columns."
+    - "Keep the legal line to the year and entity."
+  dont:
+    - "List every page in one long column."
+    - "Use it as a dumping ground for every link on the site."
+---
+
+import Demo from "../../components/docs/Demo.astro";
+import DoDont from "../../components/docs/DoDont.astro";
+import PropsTable from "../../components/docs/PropsTable.astro";
+import { BrandFooterDemo, ProductFooterDemo } from "../../islands/FooterDemo";
+import { Icon } from "@ucm/ui";
+
+`Footer` closes the page: a wordmark with a short tagline, columns of links, and a
+bottom bar for the legal line and small actions. One component serves both
+surfaces through the `mode` prop.
+
+## When to use
+
+**Use Footer:**
+- as the closing navigation on any brand or product page
+- to group secondary links (product, company, legal)
+
+**Don't use Footer:**
+- for the primary navigation (use `Nav`)
+- as a dumping ground for every link on the site
+
+## Anatomy and variants
+
+### Modes
+
+<Demo title="Brand">
+  <BrandFooterDemo client:visible />
+</Demo>
+
+<Demo title="Product">
+  <ProductFooterDemo client:visible />
+</Demo>
+
+| Mode | Surface | Link accent |
+|---|---|---|
+| `brand` | Dark navy, expressive | Hover to yellow `#FCC224` |
+| `product` | Light white, restrained | Hover to full navy ink |
+
+## Behaviour
+
+### Placement
+
+`Footer` sits at the bottom of the page after the main content. The link columns
+stack to two on small screens and the bottom bar wraps below the links.
+
+## Best practice
+
+<DoDont
+  do="Group links into a few clear columns."
+  dont="List every page in one long column."
+>
+  <div slot="do" class="text-[13px] text-[#001E2B]/70">Product, Company, Legal.</div>
+  <div slot="dont" class="text-[13px] text-[#001E2B]/70">Twenty links, no grouping.</div>
+</DoDont>
+
+## Accessibility
+
+- Renders a `<footer>` `contentinfo` landmark, with a labelled `<nav>` for the
+  link columns.
+- Column titles are plain sentence-case labels, never eyebrows.
+- Links meet the 36px minimum touch target.
+- On the dark brand surface, link color contrast is kept above the minimum and
+  hover does not rely on color alone (the underline and lift cues remain).
+
+## Content
+
+- Column titles are one noun, bilingual (DE and EN).
+- Link labels are short and bilingual. No em dashes, sentence case.
+- The legal line carries the year and entity, nothing more.
+
+| <Icon name="check_circle" className="text-[#0f5e2a]" /> Do | <Icon name="close" className="text-[#a32d2d]" /> Don't |
+|---|---|
+| "Datenschutz" | "Hier unsere Datenschutzbestimmungen lesen" |
+| "Kontakt" | "Schreib uns doch einfach mal!" |
+
+## Props
+
+<PropsTable
+  rows={[
+    { name: "mode", type: "\"brand\" | \"product\"", default: "\"product\"", description: "Surface and link styling." },
+    { name: "wordmark", type: "ReactNode", default: "\"UCM\"", description: "Wordmark node." },
+    { name: "tagline", type: "Label", description: "Short bilingual line under the wordmark." },
+    { name: "groups", type: "{ title: Label; links: { label: Label; href: string }[] }[]", default: "[]", description: "Columns of links." },
+    { name: "legal", type: "Label", description: "Legal or copyright line." },
+    { name: "actions", type: "ReactNode", description: "Right-aligned slot in the bottom bar." },
+    { name: "className", type: "string", description: "Extra classes on the footer." },
+  ]}
+/>
+
+## Availability
+
+| Platform | Available | Developer documentation |
+|----------|:---------:|-------------------------|
+| Android  | -         | -                       |
+| iOS      | -         | -                       |
+| Web      | <Icon name="check_circle" /> | `@ucm/ui` → `Footer`    |

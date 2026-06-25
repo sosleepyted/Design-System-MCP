@@ -1,0 +1,117 @@
+---
+title: Layout
+summary: The structural primitives, Container, Section, Stack, Grid and Divider, that compose every page on one shared rhythm.
+mode: shared
+status: ready
+availability:
+  web: true
+guidelines:
+  do:
+    - "Use Container to bound and pad page content to the mode width."
+    - "Separate content with a Divider instead of nesting cards."
+  dont:
+    - "Hand-roll one-off max-widths or paddings when a primitive fits."
+    - "Nest a card inside a card in product mode."
+---
+
+import Demo from "../../components/docs/Demo.astro";
+import PropsTable from "../../components/docs/PropsTable.astro";
+import { ContainerDemo, GridDemo, StackDemo } from "../../islands/LayoutDemo";
+import { Icon } from "@ucm/ui";
+
+These five primitives carry the page structure so screens stay on one rhythm
+without hand-tuned margins. They hold no color of their own beyond the divider
+border, so they read the same in both modes.
+
+## When to use
+
+**Use a layout primitive:**
+- `Container` to bound and pad page content to the mode width
+- `Section` for vertical rhythm between page bands
+- `Stack` for a vertical run with a consistent gap
+- `Grid` for responsive columns
+- `Divider` to separate content without nesting a card
+
+**Don't:**
+- hand-roll one-off max-widths or paddings when a primitive fits
+- nest a card inside a card in product mode (use a `Divider`)
+
+## Container
+
+Bounds and pads content. `product` is the narrower app width (680 to 960px),
+`brand` is the wide marketing width (1440px).
+
+<Demo title="Container">
+  <ContainerDemo client:visible />
+</Demo>
+
+## Grid
+
+Responsive columns that collapse on smaller screens. `cols` sets the maximum at
+the widest breakpoint.
+
+<Demo title="Grid (cols=3)">
+  <GridDemo client:visible />
+</Demo>
+
+## Stack and Divider
+
+`Stack` runs children vertically with one gap. `Divider` separates content on the
+navy alpha border, the product-safe alternative to nesting cards.
+
+<Demo title="Stack with Divider">
+  <StackDemo client:visible />
+</Demo>
+
+## Accessibility
+
+- `Section` renders a `<section>` and forwards `aria-label` / `aria-labelledby`
+  so a labelled section becomes a region landmark.
+- `Divider` renders an `<hr>`, exposed as a separator.
+- The primitives add structure only and never trap focus or hide content.
+
+## Props
+
+### Container
+
+<PropsTable
+  rows={[
+    { name: "mode", type: "\"brand\" | \"product\"", default: "\"product\"", description: "Width and padding." },
+    { name: "className", type: "string", description: "Extra classes." },
+  ]}
+/>
+
+### Section
+
+<PropsTable
+  rows={[
+    { name: "mode", type: "\"brand\" | \"product\"", default: "\"product\"", description: "Vertical rhythm." },
+    { name: "aria-label", type: "string", description: "Labels the section as a region." },
+  ]}
+/>
+
+### Stack
+
+<PropsTable
+  rows={[
+    { name: "gap", type: "\"sm\" | \"md\" | \"lg\"", default: "\"md\"", description: "Vertical gap." },
+    { name: "align", type: "\"start\" | \"center\" | \"end\" | \"stretch\"", default: "\"stretch\"", description: "Cross-axis alignment." },
+  ]}
+/>
+
+### Grid
+
+<PropsTable
+  rows={[
+    { name: "cols", type: "1 | 2 | 3 | 4", default: "3", description: "Max columns at the widest breakpoint." },
+    { name: "gap", type: "\"sm\" | \"md\" | \"lg\"", default: "\"md\"", description: "Grid gap." },
+  ]}
+/>
+
+## Availability
+
+| Platform | Available | Developer documentation |
+|----------|:---------:|-------------------------|
+| Android  | -         | -                       |
+| iOS      | -         | -                       |
+| Web      | <Icon name="check_circle" /> | `@ucm/ui` → `Container`, `Section`, `Stack`, `Grid`, `Divider` |

@@ -1,0 +1,21 @@
+---
+import "../../styles/globals.css";
+import { BrandLanding } from "../../templates/BrandLanding";
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brand landing template · UCM Design System</title>
+    <script is:inline>
+      try {
+        var stored = localStorage.getItem("ucm-locale");
+        document.documentElement.lang = stored === "en" ? "en" : "de";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <BrandLanding client:visible />
+  </body>
+</html>

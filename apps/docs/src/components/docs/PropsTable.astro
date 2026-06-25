@@ -26,7 +26,7 @@ const { rows } = Astro.props;
         <tr class="border-t border-[#001E2B]/8 align-top">
           <td class="px-4 py-2 font-medium text-[#001E2B]">{row.name}</td>
           <td class="px-4 py-2 font-mono text-[12px] text-[#001E2B]/78">{row.type}</td>
-          <td class="px-4 py-2 font-mono text-[12px] text-[#001E2B]/55">{row.default ?? "—"}</td>
+          <td class="px-4 py-2 font-mono text-[12px] text-[#001E2B]/55">{row.default ?? "-"}</td>
           <td class="px-4 py-2 text-[#001E2B]/78">{row.description}</td>
         </tr>
       ))}

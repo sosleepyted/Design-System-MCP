@@ -8,12 +8,12 @@ const { do: doText, dont: dontText } = Astro.props;
 
 <div class="grid gap-4 sm:grid-cols-2">
   <div class="rounded-[16px] border border-[#0f5e2a]/20 bg-[#0f5e2a]/[0.04] p-5">
-    <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-[#0f5e2a]">Do</p>
+    <p class="text-[12px] font-semibold text-[#0f5e2a]">Do</p>
     <div class="mt-3"><slot name="do" /></div>
     <p class="mt-3 text-[13px] leading-[1.5] text-[#001E2B]/78">{doText}</p>
   </div>
   <div class="rounded-[16px] border border-[#a32d2d]/20 bg-[#a32d2d]/[0.04] p-5">
-    <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-[#a32d2d]">Don't</p>
+    <p class="text-[12px] font-semibold text-[#a32d2d]">Don't</p>
     <div class="mt-3"><slot name="dont" /></div>
     <p class="mt-3 text-[13px] leading-[1.5] text-[#001E2B]/78">{dontText}</p>
   </div>

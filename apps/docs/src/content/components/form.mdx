@@ -1,0 +1,133 @@
+---
+title: Form
+summary: The product input set, Field, Input, Select and Checkbox, with labels, hints, errors and the yellow attention ring.
+mode: product
+status: ready
+availability:
+  web: true
+guidelines:
+  do:
+    - "Pair every control with a Field label and a clear error."
+    - "Use the yellow ring only for empty or attention states."
+  dont:
+    - "Rely on the placeholder as the only label."
+    - "Use the yellow ring as decoration."
+---
+
+import Demo from "../../components/docs/Demo.astro";
+import DoDont from "../../components/docs/DoDont.astro";
+import PropsTable from "../../components/docs/PropsTable.astro";
+import { FormDemo } from "../../islands/FormDemo";
+import { Icon } from "@ucm/ui";
+
+The form set covers the common product inputs. `Field` owns the label and the id
+and aria wiring; `Input`, `Select` and `Checkbox` are the controls. Empty or
+attention states use the documented yellow ring, the one place the accent appears
+in a form.
+
+## When to use
+
+**Use the form set:**
+- for any input the user fills in the internal app
+- when a control needs a label, a hint, or an error tied to it
+
+**Don't:**
+- place an input without a `Field` label (a bare placeholder is not a label)
+- use the yellow ring as decoration; it signals an empty or attention state
+
+## Anatomy
+
+<Demo title="A small form">
+  <FormDemo client:visible />
+</Demo>
+
+`Field` renders the label and, below the control, either a hint or, when set, an
+error. The control reads its id, `aria-describedby`, `aria-invalid`, and
+`aria-required` from the field, so wiring is automatic.
+
+## Behaviour
+
+### States
+
+- Default: navy alpha border, darkening on hover and focus.
+- Attention: the yellow border and its ring partner, for empty or attention
+  fields.
+- Error: `Field` shows the error text and marks the control invalid.
+
+## Best practice
+
+<DoDont
+  do="Pair every control with a Field label and a clear error."
+  dont="Rely on the placeholder as the only label."
+>
+  <div slot="do" class="text-[13px] text-[#001E2B]/70">Label above, hint below.</div>
+  <div slot="dont" class="text-[13px] text-[#001E2B]/70">Placeholder-only inputs.</div>
+</DoDont>
+
+## Accessibility
+
+- `Field` connects the `<label>` to the control with a shared id, and ties hint
+  and error text via `aria-describedby`.
+- An error sets `aria-invalid`; a required field sets `aria-required`.
+- Controls are at least 36px tall; the checkbox row is the full label.
+- Focus is always visible on the navy focus ring.
+
+## Content
+
+- Labels are one or two words, bilingual (DE and EN), sentence case.
+- Errors say what to do, not just what went wrong, and carry no em dashes.
+
+| <Icon name="check_circle" className="text-[#0f5e2a]" /> Do | <Icon name="close" className="text-[#a32d2d]" /> Don't |
+|---|---|
+| "Bitte eine gültige E-Mail angeben." | "Fehler" |
+| "E-Mail" | "Trag hier mal deine E-Mail ein" |
+
+## Props
+
+### Field
+
+<PropsTable
+  rows={[
+    { name: "label", type: "Label", description: "Visible bilingual label." },
+    { name: "hint", type: "Label", description: "Helper text below the control." },
+    { name: "error", type: "Label", description: "Error text; marks the control invalid." },
+    { name: "required", type: "boolean", default: "false", description: "Adds a marker and aria-required." },
+    { name: "id", type: "string", description: "Override the generated control id." },
+  ]}
+/>
+
+### Input
+
+<PropsTable
+  rows={[
+    { name: "attention", type: "boolean", default: "false", description: "Yellow attention ring for empty or attention states." },
+    { name: "className", type: "string", description: "Extra classes." },
+  ]}
+/>
+
+### Select
+
+<PropsTable
+  rows={[
+    { name: "options", type: "{ label: Label; value: string }[]", description: "The options." },
+    { name: "placeholder", type: "Label", description: "Disabled first option." },
+    { name: "attention", type: "boolean", default: "false", description: "Yellow attention ring." },
+  ]}
+/>
+
+### Checkbox
+
+<PropsTable
+  rows={[
+    { name: "label", type: "Label", description: "Inline bilingual label." },
+    { name: "className", type: "string", description: "Extra classes on the row." },
+  ]}
+/>
+
+## Availability
+
+| Platform | Available | Developer documentation |
+|----------|:---------:|-------------------------|
+| Android  | -         | -                       |
+| iOS      | -         | -                       |
+| Web      | <Icon name="check_circle" /> | `@ucm/ui` → `Field`, `Input`, `Select`, `Checkbox` |

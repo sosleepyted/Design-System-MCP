@@ -6,15 +6,23 @@ const components = await getCollection("components");
 const foundations = await getCollection("foundations");
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UCM Design System</title>
+    <script is:inline>
+      // Rule 1.5: reflect the stored locale on first paint (default de), before
+      // hydration, so the document language is never misreported.
+      try {
+        var stored = localStorage.getItem("ucm-locale");
+        document.documentElement.lang = stored === "en" ? "en" : "de";
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <main class="mx-auto max-w-[960px] px-8 py-20">
-      <p class="text-[12px] font-medium uppercase tracking-[0.08em] text-[#001E2B]/55">UCM</p>
+      <p class="text-[15px] font-extrabold tracking-[-0.02em] text-[#001E2B]" style="font-family: var(--font-nunito)">UCM</p>
       <h1 class="mt-3 text-[clamp(2rem,5vw,3.5rem)] font-light leading-[1.05] tracking-[-0.02em]">
         Design system
       </h1>
@@ -24,7 +32,7 @@ const foundations = await getCollection("foundations");
 
       <div class="mt-12 grid gap-8 sm:grid-cols-2">
         <section>
-          <h2 class="text-[11px] font-medium uppercase tracking-[0.08em] text-[#001E2B]/55">Foundations</h2>
+          <h2 class="text-[12px] font-semibold text-[#001E2B]/55">Foundations</h2>
           <ul class="mt-3 space-y-1">
             {foundations.map((entry) => (
               <li>
@@ -36,7 +44,7 @@ const foundations = await getCollection("foundations");
           </ul>
         </section>
         <section>
-          <h2 class="text-[11px] font-medium uppercase tracking-[0.08em] text-[#001E2B]/55">Components</h2>
+          <h2 class="text-[12px] font-semibold text-[#001E2B]/55">Components</h2>
           <ul class="mt-3 space-y-1">
             {components.map((entry) => (
               <li>

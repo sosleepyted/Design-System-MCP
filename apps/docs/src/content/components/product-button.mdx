@@ -5,13 +5,20 @@ mode: product
 status: ready
 availability:
   web: true
+guidelines:
+  do:
+    - "Use a single navy primary as the clear next step."
+    - "Start the label with a verb."
+  dont:
+    - "Stack several primaries so nothing stands out."
+    - "Use a brand CTA inside the internal app."
 ---
 
 import Demo from "../../components/docs/Demo.astro";
 import DoDont from "../../components/docs/DoDont.astro";
 import PropsTable from "../../components/docs/PropsTable.astro";
 import { ProductButtonDemo, ProductButtonSizes } from "../../islands/ProductButtonDemo";
-import { Button } from "@ucm/ui";
+import { Button, Icon } from "@ucm/ui";
 
 A button lets the user perform an action with a tap or a click. In product mode
 the primary button is navy and restrained, with no glow.
@@ -98,7 +105,7 @@ mobile and sits inline on desktop.
 - Sentence case, no full stop, no first-person pronouns.
 - Every label is bilingual (DE + EN) via the locale layer.
 
-| ✅ Do | ❌ Don't |
+| <Icon name="check_circle" className="text-[#0f5e2a]" /> Do | <Icon name="close" className="text-[#a32d2d]" /> Don't |
 |---|---|
 | "Anfrage senden" | "Ich möchte eine Anfrage senden" |
 | "Karte sperren" | "Meine Karte sperren" |
@@ -119,6 +126,6 @@ mobile and sits inline on desktop.
 
 | Platform | Available | Developer documentation |
 |----------|:---------:|-------------------------|
-| Android  | —         | —                       |
-| iOS      | —         | —                       |
-| Web      | ✅        | `@ucm/ui` → `Button`    |
+| Android  | -         | -                       |
+| iOS      | -         | -                       |
+| Web      | <Icon name="check_circle" /> | `@ucm/ui` → `Button`    |

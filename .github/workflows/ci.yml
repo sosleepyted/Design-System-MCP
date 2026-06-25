@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Design-rule lint is the real backstop: end users cannot self-review.
+      - name: Design-rule lint
+        run: pnpm lint:rules
+
+      - name: Type check
+        run: pnpm -r typecheck
+
+      - name: Unit tests
+        run: pnpm test
+
+      # Always serve the latest ready components.
+      - name: Build catalog
+        run: pnpm catalog:build
+
+      - name: Build
+        run: pnpm build

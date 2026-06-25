@@ -12,9 +12,15 @@ const components = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
-    mode: z.enum(["brand", "product"]),
+    mode: z.enum(["brand", "product", "shared"]),
     status: z.enum(["draft", "ready"]).default("draft"),
     availability: availability.default({ web: true }),
+    guidelines: z
+      .object({
+        do: z.array(z.string()).default([]),
+        dont: z.array(z.string()).default([]),
+      })
+      .default({ do: [], dont: [] }),
   }),
 });
 

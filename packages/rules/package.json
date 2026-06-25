@@ -1,0 +1,19 @@
+{
+  "name": "@ucm/rules",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mechanical UCM design-rule checks, shared by the CI lint and the MCP review_code tool so the two never drift. Zero dependencies.",
+  "exports": {
+    ".": "./src/checks.ts"
+  },
+  "scripts": {
+    "lint:rules": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

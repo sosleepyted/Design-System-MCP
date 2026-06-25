@@ -8,6 +8,10 @@
     "dev:docs": "pnpm build:ui && pnpm --filter @ucm/docs dev",
     "build": "pnpm build:ui && pnpm --filter @ucm/docs build",
     "test": "pnpm --filter @ucm/ui test",
+    "catalog:build": "pnpm --filter @ucm/catalog build",
+    "mcp:dev": "pnpm --filter @ucm/mcp-server dev",
+    "mcp:inspect": "pnpm --filter @ucm/mcp-server inspect",
+    "lint:rules": "pnpm --filter @ucm/rules lint:rules",
     "typecheck": "pnpm -r typecheck",
     "lint": "eslint \"packages/**/*.{ts,tsx}\" \"apps/**/*.{ts,tsx}\" --max-warnings 0"
   },
