@@ -1,0 +1,29 @@
+{
+  "name": "@ucm/mcp-server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "UCM design-system MCP server. Reads catalog.json and serves on-brand components and tokens over stdio. Never imports @ucm/ui.",
+  "bin": {
+    "ucm-mcp": "./src/stdio.ts"
+  },
+  "scripts": {
+    "dev": "tsx src/stdio.ts",
+    "start:http": "tsx src/http.ts",
+    "inspect": "mcp-inspector tsx src/stdio.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@ucm/rules": "workspace:*",
+    "express": "^4.21.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.22.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,82 @@
+---
+title: Icon
+summary: Inline SVG icons from Material Symbols, coloured by the current text token and safe to server-render.
+mode: product
+status: ready
+availability:
+  web: true
+guidelines:
+  do:
+    - "Use the Material Symbols name as-is."
+    - "Pass title when an icon stands alone and carries meaning."
+  dont:
+    - "Rely on color alone to convey state."
+    - "Use an emoji instead of an icon."
+---
+
+import Demo from "../../components/docs/Demo.astro";
+import PropsTable from "../../components/docs/PropsTable.astro";
+import { IconGallery, IconSizes, IconColor } from "../../islands/IconGallery";
+import { Icon } from "@ucm/ui";
+
+Icons are plain inline SVGs vendored from Material Symbols (Outlined). They carry
+no runtime dependency, render on the server in any host, and inherit colour from
+the surrounding text via `currentColor`, so they stay on the token system.
+
+## Set
+
+The starter set. Add an icon by dropping its outlined path into the registry.
+
+<Demo title="Icons">
+  <IconGallery client:visible />
+</Demo>
+
+## Sizes
+
+`size` sets width and height in pixels (default 20). Pair the icon size with the
+text it sits beside.
+
+<Demo title="Sizes">
+  <IconSizes client:visible />
+</Demo>
+
+## Colour
+
+Icons use `fill: currentColor`, so they take the colour of their text context.
+Apply a token colour with a class on the icon or its parent.
+
+<Demo title="Colour">
+  <IconColor client:visible />
+</Demo>
+
+## Accessibility
+
+- Icons are **decorative by default** (`aria-hidden`), so they are skipped by
+  screen readers. This is correct when the icon sits next to a text label.
+- When an icon stands alone and carries meaning, pass `title` to expose it as a
+  labelled image (`role="img"` with an accessible name).
+- Never rely on colour alone to convey state; pair a status icon with text.
+
+## Content
+
+- Use the Material Symbols name as-is (`arrow_forward`, `check_circle`).
+- Choose the icon that names the action, not a decorative stand-in.
+
+## Props
+
+<PropsTable
+  rows={[
+    { name: "name", type: "IconName", description: "Icon key from the registry (typed union)." },
+    { name: "size", type: "number", default: "20", description: "Rendered px size (width = height)." },
+    { name: "title", type: "string", description: "Accessible label; sets role=\"img\". Omit for decorative icons." },
+    { name: "className", type: "string", description: "Extra classes, e.g. a token text colour." },
+  ]}
+/>
+
+## Availability
+
+| Platform | Available | Developer documentation |
+|----------|:---------:|-------------------------|
+| Android  | -         | -                       |
+| iOS      | -         | -                       |
+| Web      | <Icon name="check_circle" /> | `@ucm/ui` → `Icon`      |

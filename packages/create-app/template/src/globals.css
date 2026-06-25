@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "@ucm/ui/styles/tokens.css";
+@import "@ucm/ui/styles/motion.css";
+
+/* Generate the utilities used inside the @ucm/ui source. */
+@source "../node_modules/@ucm/ui/dist";
+
+:root {
+  --font-figtree: ui-sans-serif, system-ui, sans-serif;
+  --font-nunito: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f5f3;
+  color: #001e2b;
+  font-family: var(--font-figtree);
+  -webkit-font-smoothing: antialiased;
+}

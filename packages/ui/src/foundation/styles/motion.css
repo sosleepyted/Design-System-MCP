@@ -1,4 +1,4 @@
-/* UCM motion primitives — design system §1.4 / §1.8.
+/* UCM motion primitives, design system §1.4 / §1.8.
    transform / opacity / clip-path only. Ease-out, no bounce. */
 @keyframes rise {
   from { opacity: 0; transform: translateY(6px); }

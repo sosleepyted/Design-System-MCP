@@ -1,0 +1,21 @@
+---
+import "../../styles/globals.css";
+import { ProductDashboard } from "../../templates/ProductDashboard";
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product dashboard template · UCM Design System</title>
+    <script is:inline>
+      try {
+        var stored = localStorage.getItem("ucm-locale");
+        document.documentElement.lang = stored === "en" ? "en" : "de";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <ProductDashboard client:visible />
+  </body>
+</html>

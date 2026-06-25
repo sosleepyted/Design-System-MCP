@@ -1,0 +1,11 @@
+{
+  "name": "@ucm/create-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Scaffold a UCM app wired to the design-system MCP. One command: starter app, @ucm/ui, mcp.json, and a consumer CLAUDE.md.",
+  "bin": {
+    "create-ucm-app": "index.mjs"
+  },
+  "files": ["index.mjs", "template"]
+}

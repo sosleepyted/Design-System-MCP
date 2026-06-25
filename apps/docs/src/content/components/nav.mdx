@@ -1,0 +1,126 @@
+---
+title: Nav
+summary: The top navigation bar with a working mobile menu, in a brand and a product variant on one shared component.
+mode: shared
+status: ready
+availability:
+  web: true
+guidelines:
+  do:
+    - "Keep one clear call to action in the bar."
+    - "Use the built-in mobile menu rather than a hand-rolled one."
+  dont:
+    - "Crowd the bar with several competing CTAs."
+    - "Mix brand and product chrome."
+---
+
+import Demo from "../../components/docs/Demo.astro";
+import DoDont from "../../components/docs/DoDont.astro";
+import PropsTable from "../../components/docs/PropsTable.astro";
+import { BrandNavDemo, ProductNavDemo } from "../../islands/NavDemo";
+import { Icon } from "@ucm/ui";
+
+`Nav` is the page header: a wordmark, primary links, an optional call to action,
+and a slot for actions like a locale toggle. Below the medium breakpoint the
+links collapse into a menu opened from the `menu` icon. One component serves both
+surfaces through the `mode` prop, so the brand site and the internal app stay in
+step.
+
+## When to use
+
+**Use Nav:**
+- as the top-level navigation on any brand or product page
+- when you need a built-in mobile menu rather than a hand-rolled one
+
+**Don't use Nav:**
+- for in-page section links (use anchors in the content)
+- for a sidebar or secondary navigation
+
+## Anatomy and variants
+
+### Modes
+
+Switch the `mode` between the toggles in each demo to see the labels change.
+
+<Demo title="Brand">
+  <BrandNavDemo client:visible />
+</Demo>
+
+<Demo title="Product">
+  <ProductNavDemo client:visible />
+</Demo>
+
+| Mode | CTA | Surface |
+|---|---|---|
+| `brand` | Yellow `#FCC224` | Blurred cream, expressive |
+| `product` | Navy `#001E2B` | White, restrained |
+
+### Mobile menu
+
+At narrow widths the links and CTA collapse behind the `menu` icon and open in a
+panel that slides down. Resize the demo below 768px to try it.
+
+## Behaviour
+
+### Interaction
+
+The menu button toggles the panel and swaps the `menu` icon for `close`. It
+carries `aria-expanded` and points at the panel with `aria-controls`. The panel
+uses the shared slide-down keyframe, which is switched off under reduced motion.
+Selecting a link closes the panel.
+
+### Placement
+
+`Nav` is sticky to the top of the viewport. Keep it as the first element on the
+page.
+
+## Best practice
+
+<DoDont
+  do="Keep one clear call to action in the bar."
+  dont="Crowd the bar with several competing CTAs."
+>
+  <div slot="do" class="text-[13px] text-[#001E2B]/70">One CTA, a few links.</div>
+  <div slot="dont" class="text-[13px] text-[#001E2B]/70">Five links and three buttons.</div>
+</DoDont>
+
+## Accessibility
+
+- Renders a `<header>` with a labelled `<nav>` landmark.
+- The menu button announces its state with `aria-expanded` and is labelled
+  bilingually (<Icon name="menu" /> opens, <Icon name="close" /> closes).
+- Links and the menu button meet the 36px minimum touch target.
+- Focus rings follow the navy focus token.
+
+## Content
+
+- Link labels start with a noun, stay to one or two words, and are bilingual
+  (DE and EN) via the locale layer.
+- The CTA starts with a verb. Sentence case, no full stop, no em dashes.
+- Allow about 2x growth when a label is translated.
+
+| <Icon name="check_circle" className="text-[#0f5e2a]" /> Do | <Icon name="close" className="text-[#a32d2d]" /> Don't |
+|---|---|
+| "Komponenten" | "Hier geht es zu den Komponenten" |
+| "Personal anfragen" | "Jetzt sofort Personal anfragen!" |
+
+## Props
+
+<PropsTable
+  rows={[
+    { name: "mode", type: "\"brand\" | \"product\"", default: "\"product\"", description: "Chrome and CTA styling." },
+    { name: "wordmark", type: "ReactNode", default: "\"UCM\"", description: "Left-aligned wordmark." },
+    { name: "links", type: "{ label: Label; href: string }[]", default: "[]", description: "Primary navigation links." },
+    { name: "cta", type: "{ label: Label; href: string }", description: "Optional call to action." },
+    { name: "actions", type: "ReactNode", description: "Right-aligned slot, e.g. a locale toggle." },
+    { name: "className", type: "string", description: "Extra classes on the header." },
+  ]}
+/>
+
+## Availability
+
+| Platform | Available | Developer documentation |
+|----------|:---------:|-------------------------|
+| Android  | -         | -                       |
+| iOS      | -         | -                       |
+| Web      | <Icon name="check_circle" /> | `@ucm/ui` → `Nav`       |

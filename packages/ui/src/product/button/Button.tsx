@@ -4,30 +4,10 @@ import type {
   ReactNode,
 } from "react";
 import { cx } from "../../foundation/utils/cx";
+import { Icon } from "../../foundation/icon";
 
 export type ButtonVariant = "primary" | "ghost" | "outline" | "danger";
 export type ButtonSize = "default" | "lg";
-
-// Forward arrow as an inline SVG (design system §3.9: custom inline SVG with
-// stroke-width 1.75 and round caps/joins to match MUI icon weight). Kept inline
-// so the library has no MUI dependency and stays safe to server-render in any
-// host (Astro dev SSR, Next.js, etc.).
-const ForwardArrow = (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.75"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden={true}
-  >
-    <path d="M5 12h14" />
-    <path d="M13 6l6 6-6 6" />
-  </svg>
-);
 
 const BASE =
   "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-[-0.005em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#001E2B]/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed";
@@ -86,7 +66,7 @@ export function Button(props: ButtonProps) {
     <>
       {iconLeft}
       {children}
-      {showArrow ? ForwardArrow : null}
+      {showArrow ? <Icon name="arrow_forward" size={16} /> : null}
     </>
   );
 

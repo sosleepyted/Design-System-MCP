@@ -2,6 +2,7 @@
 import "../styles/globals.css";
 import { LocaleToggle } from "../islands/LocaleToggle";
 import { getCollection } from "astro:content";
+import { preventWidow, WIDOW_MOBILE } from "../lib/widow";
 
 interface Props {
   title: string;
@@ -9,15 +10,28 @@ interface Props {
 }
 const { title, summary } = Astro.props;
 
+// Server-render the conservative mobile binding (3 words); the client script
+// upgrades to 5 on desktop. Never overflows a narrow column on first paint.
+const titleWidowed = preventWidow(title, WIDOW_MOBILE);
+const summaryWidowed = summary ? preventWidow(summary, WIDOW_MOBILE) : undefined;
+
 const components = await getCollection("components");
 const foundations = await getCollection("foundations");
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} · UCM Design System</title>
+    <script is:inline>
+      // Rule 1.5: reflect the stored locale on first paint (default de), before
+      // hydration, so the document language is never misreported.
+      try {
+        var stored = localStorage.getItem("ucm-locale");
+        document.documentElement.lang = stored === "en" ? "en" : "de";
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <header
@@ -41,7 +55,7 @@ const foundations = await getCollection("foundations");
       <aside class="hidden w-[220px] shrink-0 md:block">
         <nav aria-label="Docs navigation" class="sticky top-[88px] space-y-6 text-[13.5px]">
           <div>
-            <p class="mb-2 text-[11px] font-medium uppercase tracking-[0.08em] text-[#001E2B]/55">
+            <p class="mb-2 text-[12px] font-semibold text-[#001E2B]/55">
               Foundations
             </p>
             <ul class="space-y-1">
@@ -55,7 +69,7 @@ const foundations = await getCollection("foundations");
             </ul>
           </div>
           <div>
-            <p class="mb-2 text-[11px] font-medium uppercase tracking-[0.08em] text-[#001E2B]/55">
+            <p class="mb-2 text-[12px] font-semibold text-[#001E2B]/55">
               Components
             </p>
             <ul class="space-y-1">
@@ -72,14 +86,48 @@ const foundations = await getCollection("foundations");
       </aside>
 
       <main class="min-w-0 flex-1">
-        <h1 class="text-[clamp(1.8rem,4vw,2.6rem)] font-light leading-[1.1] tracking-[-0.02em]">
-          {title}
+        <h1
+          class="text-[clamp(1.8rem,4vw,2.6rem)] font-light leading-[1.1] tracking-[-0.02em]"
+          data-widow
+          data-widow-text={title}
+        >
+          {titleWidowed}
         </h1>
-        {summary && <p class="mt-3 max-w-[60ch] text-[15px] leading-[1.55] text-[#001E2B]/65">{summary}</p>}
+        {summary && (
+          <p
+            class="mt-3 max-w-[60ch] text-[15px] leading-[1.55] text-[#001E2B]/65"
+            data-widow
+            data-widow-text={summary}
+          >
+            {summaryWidowed}
+          </p>
+        )}
         <div class="mt-10 space-y-12 [&_h2]:mt-10 [&_h2]:text-[20px] [&_h2]:font-medium [&_h2]:tracking-[-0.012em] [&_h3]:mt-6 [&_h3]:text-[15px] [&_h3]:font-semibold [&_p]:mt-3 [&_p]:text-[14px] [&_p]:leading-[1.6] [&_p]:text-[#001E2B]/78 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_li]:text-[14px] [&_li]:text-[#001E2B]/78">
           <slot />
         </div>
       </main>
     </div>
+
+    <script>
+      import {
+        preventWidow,
+        WIDOW_MOBILE,
+        WIDOW_DESKTOP,
+        WIDOW_DESKTOP_QUERY,
+      } from "../lib/widow";
+
+      const mql = window.matchMedia(WIDOW_DESKTOP_QUERY);
+
+      function applyWidows() {
+        const count = mql.matches ? WIDOW_DESKTOP : WIDOW_MOBILE;
+        document.querySelectorAll<HTMLElement>("[data-widow]").forEach((el) => {
+          const raw = el.dataset.widowText;
+          if (raw) el.textContent = preventWidow(raw, count);
+        });
+      }
+
+      applyWidows();
+      mql.addEventListener("change", applyWidows);
+    </script>
   </body>
 </html>

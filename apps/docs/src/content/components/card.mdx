@@ -1,0 +1,98 @@
+---
+title: Card
+summary: The restrained product surface for grouping related content, with the documented shadow and border.
+mode: product
+status: ready
+availability:
+  web: true
+guidelines:
+  do:
+    - "Keep one level of cards and separate inner content with a Divider."
+    - "Use a single primary action per card."
+  dont:
+    - "Nest a card inside a card."
+    - "Use the card as a decorative box around everything on the page."
+---
+
+import Demo from "../../components/docs/Demo.astro";
+import DoDont from "../../components/docs/DoDont.astro";
+import PropsTable from "../../components/docs/PropsTable.astro";
+import { CardDemo } from "../../islands/CardDemo";
+import { Icon } from "@ucm/ui";
+
+`Card` groups related content on a single white surface with the documented
+product shadow and the navy alpha border. It is deliberately plain so the content
+leads.
+
+## When to use
+
+**Use a card:**
+- to group a unit of related content or a single record
+- to lift a primary action and its context off the page
+
+**Don't use a card:**
+- inside another card (use a `Divider` to separate content instead)
+- as a decorative box around everything on the page
+
+## Anatomy
+
+<Demo title="Cards">
+  <CardDemo client:visible />
+</Demo>
+
+Compose the inside with `Stack`, a heading, body copy, and one action. Keep the
+emphasis on the content, not the container.
+
+## Behaviour
+
+### Placement
+
+Cards sit in a `Grid` or a `Stack`. In product mode they never nest; a second
+level of grouping uses a `Divider`, not a card inside a card.
+
+## Best practice
+
+<DoDont
+  do="Keep one level of cards and separate inner content with a Divider."
+  dont="Nest a card inside a card to show a sub-group."
+>
+  <div slot="do" class="text-[13px] text-[#001E2B]/70">Card, then Divider.</div>
+  <div slot="dont" class="text-[13px] text-[#001E2B]/70">Card inside card inside card.</div>
+</DoDont>
+
+## Accessibility
+
+- A card is a plain surface; give it a `role` and `aria-label` only when it is a
+  meaningful group.
+- Keep the contrast of content on the white surface above the minimum.
+- Do not convey state with the surface alone; pair it with text or an icon.
+
+## Content
+
+- Lead with a short heading, then one or two lines of body copy.
+- Keep to a single primary action per card.
+- Bilingual (DE and EN), sentence case, no em dashes.
+
+| <Icon name="check_circle" className="text-[#0f5e2a]" /> Do | <Icon name="close" className="text-[#a32d2d]" /> Don't |
+|---|---|
+| "Karte sperren" | "Hier kannst du deine Karte sperren" |
+| One action per card | Five buttons in one card |
+
+## Props
+
+<PropsTable
+  rows={[
+    { name: "children", type: "ReactNode", description: "Card content." },
+    { name: "className", type: "string", description: "Extra classes on the surface." },
+    { name: "role", type: "string", description: "Set when the card is a meaningful group." },
+    { name: "aria-label", type: "string", description: "Accessible name when role is set." },
+  ]}
+/>
+
+## Availability
+
+| Platform | Available | Developer documentation |
+|----------|:---------:|-------------------------|
+| Android  | -         | -                       |
+| iOS      | -         | -                       |
+| Web      | <Icon name="check_circle" /> | `@ucm/ui` → `Card`      |
