@@ -1,0 +1,2 @@
+# Real secrets. Only .env.example is committed.
+.env
