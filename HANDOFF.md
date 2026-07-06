@@ -39,8 +39,16 @@ Dockerfile, .github/workflows/ci.yml
   `review_code`; CI workflow runs lint -> typecheck -> test -> catalog -> build.
 - Ship: Dockerfile, Streamable HTTP transport + bearer auth (MCP_TOKENS env),
   `npx @ucm/create-app`.
-- Verified: 47 tests pass, all 5 packages typecheck, build 14 pages, lint 0/0,
-  em dash 0, emoji 0.
+- Registry: self-hosted Verdaccio (`infra/registry/`) hosts the private `@ucm/*`
+  scope so `@ucm/ui` publishes without renaming. `@ucm/ui` is version 0.1.0 with
+  `publishConfig`; `create-app` injects an `.npmrc` registry mapping into
+  scaffolded apps. Publish round-trip (publish, scaffold, install, preflight OK)
+  proven against a local Verdaccio.
+- Deploy: `infra/deploy/` has a production compose (mcp + registry + Cloudflare
+  tunnel, no public ports), `.env.example`, and a Hetzner + Access runbook.
+- Verified (2026-07-06): 52 tests pass, all packages typecheck, build 14 pages,
+  lint 0/0, em dash 0, emoji 0, no hardcoded secrets, `pnpm install
+  --frozen-lockfile` in sync, MCP auth gate returns 401/200 correctly.
 
 ## Non-negotiable rules (the design system IS these)
 
@@ -74,18 +82,40 @@ Dockerfile, .github/workflows/ci.yml
 - `.git.plandocs-bak` at the repo root is a safety backup of a throwaway git repo
   (just the plan docs). Safe to delete: `rm -rf ".git.plandocs-bak"`.
 
-## Open items (not code; user decisions/infra)
+## Done since the last handoff (branch `feat/icon-system`, pushed)
 
-1. Publish `@ucm/ui` to an internal registry (it is version 0.0.0). Recommended:
-   GitHub Packages. Needed so `create-app` install and `preflight` resolve it.
-2. Create `CLAUDE.md` at the repo root from `docs/plan/00-context.md` (was blocked
-   by an auto-guard in the prior session; user can `cp docs/plan/00-context.md CLAUDE.md`).
-3. Push to GitHub (private). All work is uncommitted on `feat/icon-system`.
-   No remote configured.
-4. Deploy: recommended container on Hetzner (EU/GDPR, near Berlin team) behind
-   Cloudflare Tunnel + Access (zero-trust, no VPN, data stays in the container).
-   Set MCP_TOKENS. Auth is static bearer token via env (OAuth 2.1 seam left in
-   `isAuthorized`).
+- `63fc1de` root `CLAUDE.md` (old open item 2).
+- Pushed to GitHub, remote `origin` =
+  `github.com/sosleepyted/Design-System-MCP` (private). Old open item 3.
+- `686c6a9` registry setup: `@ucm/ui` 0.0.0 -> 0.1.0, Verdaccio config,
+  create-app `.npmrc` wiring. Registry decision: kept the `@ucm` scope (baked
+  into 174 refs) and self-hosted rather than rename. `ucm` is not a free GitHub
+  or npm handle, which ruled out GitHub Packages without a rename.
+- `1c1ae28` production deploy compose + runbook.
+
+## Launch verdict: code is GO; the rest is infra + secrets (yours to do)
+
+The only work between here and live is provisioning, not code:
+
+1. Provision a Hetzner host + Docker. Create a Cloudflare Tunnel + Access (tunnel
+   token, two hostnames `mcp.` and `registry.`, an Access policy).
+2. `cp infra/deploy/.env.example infra/deploy/.env`, fill `MCP_TOKENS`
+   (`openssl rand -hex 32`) and `TUNNEL_TOKEN`.
+3. `docker compose -f infra/deploy/docker-compose.yml --env-file
+   infra/deploy/.env up -d --build`.
+4. Publish `@ucm/ui` to the deployed registry (see `infra/registry/README.md`),
+   then set `auth.htpasswd.max_users: -1` and redeploy.
+5. Decide whether to merge `feat/icon-system` -> `main`. Everything is on that
+   branch; CI only gates `main` and PRs. Recommended: open the PR so the launch
+   version runs the CI gate first.
+
+## Caveats a fresh session should know
+
+- The Docker image build itself was never run (no Docker daemon in the dev box).
+  The Dockerfile is validated by inspection plus a direct `node` run of the HTTP
+  server; first `compose up --build` on the host is the real test.
+- The publish round-trip was proven against a throwaway local Verdaccio. The
+  deployed registry is empty until step 4 above runs there.
 
 ## Quick commands
 
@@ -98,4 +128,14 @@ pnpm lint:rules        # design-rule lint
 pnpm typecheck         # all packages
 pnpm mcp:inspect       # MCP Inspector
 MCP_TOKENS=secret pnpm --filter @ucm/mcp-server start:http   # HTTP server
+
+# Registry (local): serve, then publish @ucm/ui
+cd infra/registry && npx verdaccio@6 --config config.yaml   # http://localhost:4873
+pnpm --filter @ucm/ui build && pnpm --filter @ucm/ui publish \
+  --registry http://localhost:4873 --no-git-checks
+# Bump @ucm/ui version first, then `pnpm catalog:build` (catalog version tracks
+# the package, or preflight reports a mismatch).
+
+# Deploy (on the host)
+docker compose -f infra/deploy/docker-compose.yml --env-file infra/deploy/.env up -d --build
 ```
