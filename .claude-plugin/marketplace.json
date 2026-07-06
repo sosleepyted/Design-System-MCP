@@ -1,0 +1,11 @@
+{
+  "name": "ucm",
+  "owner": { "name": "UCM" },
+  "plugins": [
+    {
+      "name": "ucm-design",
+      "source": "./packages/claude-plugin",
+      "description": "UCM design system kit: registers the ucm-design-system MCP server and ships the ucm-install skill."
+    }
+  ]
+}
