@@ -128,6 +128,30 @@ The only work between here and live is provisioning, not code:
 - The publish round-trip was proven against a throwaway local Verdaccio. The
   deployed registry is empty until step 4 above runs there.
 
+## External references and skills (added 2026-07-06)
+
+Full catalog with the per-source rules: `docs/references.md`.
+
+- Skills in `~/.claude/skills`: taste-skill, karpathy-guidelines, ui-ux-pro-max
+  (were already installed, kept). From `affaan-m/ecc`, only 20 design/frontend/
+  brand/motion/a11y skills were kept (frontend-design-direction, frontend-a11y,
+  brand-voice, brand-discovery, liquid-glass-design, motion-{foundations,patterns,
+  advanced,ui}, react-{patterns,performance,testing}, ui-to-vue, ui-demo,
+  vue-patterns, vite-patterns, ...); the other 257 ecc skills were removed as
+  off-domain. The full ecc set can be reinstalled from the repo if ever needed.
+- Libraries (documented, NEVER in @ucm/ui): `google/material-design-icons`
+  (Apache-2.0) is the vendored `Icon` source; `motiondivision/motion` and
+  `mrdoob/three.js` are allowed in `apps/docs` / brand surfaces ONLY, behind a
+  dynamic import, respecting the motion rule.
+- 21st.dev animations: installed as a Claude Code plugin (marketplace `21st` from
+  `21st-dev/claude-code-plugin`, plugin `21st@21st` v0.2.0, user scope). It
+  bundles the MCP server `plugin:21st:21st` (https://21st.dev/api/mcp) plus the
+  21st skills. The endpoint is OAuth-protected (a raw x-api-key returns 401), so
+  it needs a one-time interactive authorize: restart Claude Code, then `/mcp` ->
+  21st -> authenticate (browser). The pasted API key is unused by this path.
+  Guardrail: apps/docs / brand only, reworked to the UCM rules, pass `review_code`
+  before shipping, never dropped raw into `@ucm/ui` or a product surface.
+
 ## Quick commands
 
 ```bash
