@@ -47,6 +47,7 @@ if (existsSync(dest)) {
 // 1. Clone the starter app.
 cpSync(join(here, "template"), dest, { recursive: true });
 renameSync(join(dest, "_gitignore"), join(dest, ".gitignore"));
+renameSync(join(dest, "_claude"), join(dest, ".claude"));
 
 // 1a. Point the @ucm scope at the configured private registry so `npm install`
 // can resolve @ucm/ui.
@@ -100,13 +101,20 @@ if (url.includes("REPLACE")) {
   console.log("  edit .mcp.json with your server URL and bearer token");
 }
 console.log(`  @ucm/ui resolves from ${registry} (.npmrc); override with --registry`);
-console.log("  open the folder in Claude Code, then ask it to build a page");
+console.log("  open the folder in Claude Code and run /ucm-setup, then /ucm-page to build");
 
 function consumerClaudeMd() {
   return `# UCM app
 
 This app uses the UCM design system through the \`ucm-design-system\` MCP server
 (configured in \`.mcp.json\`) and the \`@ucm/ui\` package.
+
+## Commands
+
+- \`/ucm-setup\` verifies the server connection and the \`@ucm/ui\` install,
+  and repairs \`.mcp.json\` placeholders. Run it once when you start here.
+- \`/ucm-page\` builds a page or feature with every guardrail applied, from
+  \`get_rules\` through \`review_code\`.
 
 ## Before any UI work
 
