@@ -138,6 +138,24 @@ verbatim records.
   logs (German version, deck template, ucm.agency sub-brand, reference
   approvals, case study library) carry over to the merged page.
 
+## Logo wordmark decision (2026-07-06)
+
+User decision: the logo is always "ucm." in lowercase, closed by the accent
+dot. Dot color confirmed by the user as #FF9932, the value both specs list
+as "logo accent dot" ("yellow accent dot" in the request was shorthand for
+it, not the triad yellow #FCC224). The lowercase form is logo-only; running
+text keeps the UCM casing convention from the page 01 log.
+
+- Applied to: page 01 (Brand Hub, Logo section) and page 02-03 (Assets,
+  branding elements bullet). Both now state the "ucm." plus dot form and
+  forbid retyping or rebuilding the logo.
+- Follow-up outside this workstream: DESIGN-SYSTEM.md S5.1 describes the
+  docs header wordmark as Nunito "UCM" and calls it an acronym. Under this
+  decision the rendered wordmark should be "ucm." with the dot, so the docs
+  header (BrandDocsLayout.astro) and that spec passage need a matching
+  update. The brand book follows the user decision; the spec conflict is
+  recorded here, not silently resolved.
+
 ## Page 04 notes (vibecoding guide, net-new)
 
 Authored 2026-07-06 at the user's request; there is no incoming Confluence

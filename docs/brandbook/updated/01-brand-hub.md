@@ -40,11 +40,15 @@ confident UCM brand ambassador.
 
 ### Logo
 
+The logo is always "ucm." in lowercase, closed by the accent dot in #FF9932.
+Never "UCM", never "Ucm", never without the dot. The lowercase form belongs
+to the logo alone; in running text the name is written UCM.
+
 Only use the files from the official branding elements folder:
 https://drive.google.com/drive/folders/1I6p89HNb2kteBE6LIKWr4fAlxixvjdFb
-(Google Drive, UCM account required). The wordmark is set in Nunito
-Extra-Bold 800; Nunito is never used for anything else. Follow spacing,
-sizing, and contrast rules from the Brand Guide.
+(Google Drive, UCM account required). Never retype or rebuild the logo. The
+wordmark is set in Nunito Extra-Bold 800; Nunito is never used for anything
+else. Follow spacing, sizing, and contrast rules from the Brand Guide.
 
 ### Typography
 
