@@ -11,8 +11,9 @@ mode: the UCM triad, Figtree, and a restrained yellow accent.
   https://drive.google.com/drive/folders/12iQZW7Q7YHNGDWbahoJJYqBd2to2J6pW
 - Branding elements (logos):
   https://drive.google.com/drive/folders/1I6p89HNb2kteBE6LIKWr4fAlxixvjdFb
-  Only use logo files from this folder. The wordmark is set in Nunito
-  Extra-Bold 800; Nunito is never used for anything else.
+  Only use logo files from this folder; never retype or rebuild the logo.
+  The logo is always "ucm." in lowercase with the accent dot in #FF9932, set
+  in Nunito Extra-Bold 800; Nunito is never used for anything else.
 
 Both folders live on Google Drive and require a UCM Google account.
 
