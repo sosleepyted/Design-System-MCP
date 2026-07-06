@@ -93,6 +93,17 @@ Dockerfile, .github/workflows/ci.yml
   or npm handle, which ruled out GitHub Packages without a rename.
 - `1c1ae28` production deploy compose + runbook.
 
+## Active workstream: brand book update (branch `docs/brandbook-update`)
+
+The UCM brand book lives in Confluence and is being rewritten in English to
+match the built system, one page at a time. The user pastes a page into chat;
+the raw text is filed verbatim under `docs/brandbook/incoming/`, the rewrite
+goes to `docs/brandbook/updated/`, and the user pastes that back into
+Confluence. Repo specs are the source of truth; conflicts with old Confluence
+content are logged in `docs/brandbook/TRACKER.md`, never silently resolved.
+Full process: `docs/brandbook/README.md`. This work stays off `feat/icon-system`
+so the launch PR remains clean.
+
 ## Launch verdict: code is GO; the rest is infra + secrets (yours to do)
 
 The only work between here and live is provisioning, not code:
