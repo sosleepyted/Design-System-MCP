@@ -21,35 +21,37 @@ result, so the output is on-brand by default rather than by taste.
 ## Track A: Building product or project UI with Claude Code (developers)
 
 The MCP server gives Claude direct access to the design system: rules,
-tokens, components, page templates, and a code reviewer. Work inside that
-loop and the UI comes out on-brand.
+tokens, components, page templates, and a code reviewer. Scaffolded apps
+ship with two commands that run that loop for you.
 
-1. Scaffold the app: `npx @ucm/create-app`. The scaffolder wires up the
-   private package registry and installs `@ucm/ui` for you.
-2. Connect the design system server to Claude Code:
-   `claude mcp add --transport http ucm [server URL] --header
-   "Authorization: Bearer [your token]"`.
-   Until the hosted server is live: clone the design system repo, run
-   `pnpm install` and `pnpm catalog:build` once, then connect locally with
-   `claude mcp add ucm -- pnpm -C [path to the repo] --filter
-   @ucm/mcp-server dev`. Everything else in this track works the same.
-3. Start every session by asking Claude to call `get_rules`, and say which
-   mode you are building: brand (external marketing surfaces) or product
-   (internal app). Never mix the two on one surface.
-4. Start pages from a blessed template with `get_pattern`: landing (brand)
-   or dashboard (product). Templates are served from real, building source
-   code, so they cannot drift.
-5. Discover before you build: `search_components` and `get_component` show
-   what `@ucm/ui` already ships, with usage examples. Never hand-roll a
-   component the library already has.
-6. Verify before you ship: `preflight` confirms your setup matches the
-   catalog, and `review_code` checks your code against the design rules.
-   Fix everything it flags; the same rules gate CI, so unfixed violations
-   fail the build anyway.
+1. Scaffold the app: `npx @ucm/create-app my-app --url [server URL]
+   --token [your token]`. One command wires everything: the private
+   package registry, `@ucm/ui`, the server connection, and the two
+   commands below.
+2. Open the folder in Claude Code and run `/ucm-setup`. It verifies the
+   server connection and the library install, and repairs whatever is
+   missing, for example placeholder values when the app was scaffolded
+   without the flags.
+3. Build with `/ucm-page` plus a plain description of what you need. The
+   command enforces the whole loop in order: declare the mode (brand or
+   product, never mixed), obey `get_rules`, start whole pages from a
+   blessed `get_pattern` template, use `search_components` and
+   `get_component` instead of hand-rolling, take every value from
+   `get_tokens`, and finish only when `review_code` reports zero errors.
+   The same rules gate CI, so skipping a fix just moves the failure.
+
+Until the hosted server is live: clone the design system repo, run
+`pnpm install` and `pnpm catalog:build` once, then connect Claude Code
+locally with `claude mcp add ucm -- pnpm -C [path to the repo] --filter
+@ucm/mcp-server dev`. The commands work the same.
+
+To connect a repo that was not scaffolded by create-app:
+`claude mcp add --transport http ucm [server URL] --header
+"Authorization: Bearer [your token]"`.
 
 Never break these, even when a prompt seems to want it: no `@mui/*` or
 `@emotion/*` in UI code, every visible string in German and English, and
-the mode you declared in step 3 stays fixed for that surface.
+the mode you declared stays fixed for that surface.
 
 ## Track B: Vibecoding without a terminal (claude.ai)
 

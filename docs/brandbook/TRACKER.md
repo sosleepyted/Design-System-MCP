@@ -159,6 +159,11 @@ Placeholders the user must fill before pasting into Confluence:
   repo cloned, so the track is usable before the deploy.
 - The Confluence link to the merged B2B Presentation Guide page.
 
+Update 2026-07-06: create-app now ships /ucm-setup and /ucm-page skills in
+every scaffolded app (repo PR #3, stacked on the launch PR #2). Track A was
+rewritten from six manual steps to the one-command story: scaffold, run
+/ucm-setup, build with /ucm-page.
+
 Open questions:
 
 - Does a shared claude.ai team Project for UCM exist yet? If yes, link it in
