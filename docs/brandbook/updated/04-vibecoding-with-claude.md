@@ -40,10 +40,10 @@ ship with two commands that run that loop for you.
    `get_tokens`, and finish only when `review_code` reports zero errors.
    The same rules gate CI, so skipping a fix just moves the failure.
 
-Until the hosted server is live: clone the design system repo, run
-`pnpm install` and `pnpm catalog:build` once, then connect Claude Code
-locally with `claude mcp add ucm -- pnpm -C [path to the repo] --filter
-@ucm/mcp-server dev`. The commands work the same.
+Until the hosted server is live, run the whole environment locally from
+the design system repo. The setup is its own page: Setting up the
+vibecoding environment (link the Confluence page here). The commands work
+the same.
 
 To connect a repo that was not scaffolded by create-app:
 `claude mcp add --transport http ucm [server URL] --header

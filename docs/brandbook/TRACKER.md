@@ -8,6 +8,7 @@ Status values: `dropped`, `in rework`, `updated`, `pasted back`.
 | 02 | Guidelines für Slide Decks / B2B-Präsentationen | updated (merged into 02-03) | DS S1.8, S2.1, S2.2; UCM S1.1, S1.5, S1.8, S1.9, S2.7 | See "Page 02 conflict log" and "Merge decision 02+03" below |
 | 03 | B2B-Präsentationssystem für ucm.agency | updated (merged into 02-03) | UCM S1.9, S2.7 | See "Page 03 conflict log" and "Merge decision 02+03" below |
 | 04 | Vibecoding with the UCM Design System | updated (net-new, no incoming page) | HANDOFF (MCP tools, create-app); DS S1, S2.1, S2.2, S8; 02-03 deliverable | See "Page 04 notes" below |
+| 05 | Setting up the vibecoding environment | updated (net-new, no incoming page) | HANDOFF (registry, quick commands); repo source: mcp-server http.ts, create-app index.mjs, infra/registry/config.yaml | See "Page 05 notes" below |
 
 ## Page 01 conflict log (Brand Hub)
 
@@ -170,6 +171,55 @@ Open questions:
   Track B instead of asking each person to create one.
 - Slide file generation (pptx or HTML) was deliberately left out; revisit if
   a maintained brand slide template lands.
+
+## Page 05 notes (vibecoding environment, net-new)
+
+Authored 2026-07-06 at the user's request; there is no incoming Confluence
+page. The page tells developers to use the design system repo as the
+vibecoding environment: the repo runs the MCP server, the private registry,
+and `@ucm/ui` locally, and the colleague's app is scaffolded in its own
+folder next to the clone (user decision: own app, repo alongside).
+
+Decisions:
+
+- Local HTTP transport (`start:http`, port 8787, endpoint `/mcp`) instead of
+  the stdio connect that page 04 used in its interim paragraph. Reason:
+  `create-app` writes `.mcp.json` with HTTP plus bearer token, so the
+  scaffolded app connects with zero extra steps, and it mirrors production.
+- The scaffolder is run from the clone (`node [clone]/packages/create-app/
+  index.mjs`) because the `@ucm` scope resolves from no public registry, so
+  `npx @ucm/create-app` fails on a fresh machine. The npx form is named as
+  the future path once the package is published.
+- `npm adduser --registry http://localhost:4873` added before the publish
+  step: the registry config allows open reads but requires an authenticated
+  user for publishing (infra/registry/config.yaml, max_users 1000).
+- Page 04 edit (2026-07-06): its Track A interim paragraph ("Until the
+  hosted server is live: clone ... claude mcp add ucm ...") replaced with a
+  pointer to this page. The non-scaffolded-repo HTTP connect command in
+  Track A stays.
+- Scope statement added at the user's request (2026-07-06): the environment
+  is UI only; backend services, databases, and APIs are out of scope. This
+  matches the built system (@ucm/be-structure is a reserved placeholder, not
+  built).
+- Restructure at the user's request (2026-07-06): cloning the repo is the
+  only one-time step. Registry, publish, server, and scaffold moved under a
+  "Starting a project" section that begins with git pull, pnpm install, and
+  pnpm catalog:build, so every project starts from the current design
+  system. Added: adduser is first-time only, and a note that re-publishing
+  an unchanged @ucm/ui version stops with a harmless conflict error.
+
+Dependency: the page says create-app wires the `/ucm-setup` and `/ucm-page`
+commands. Those skills ship with repo PR #3 (stacked on launch PR #2) and are
+not on this branch yet; page 04 makes the same assumption. If PR #3 does not
+merge before the page is pasted back, soften both pages.
+
+Placeholders the user must fill before pasting into Confluence:
+
+- The Confluence link to Vibecoding with the UCM Design System (page 04),
+  referenced twice (intro and Next step).
+- After the hosted deploy: replace `http://localhost:8787/mcp` and the
+  self-chosen token with the real server URL and the token request process.
+  The rest of the page is deploy-independent by design.
 
 ## How to read this table
 
