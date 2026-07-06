@@ -16,8 +16,10 @@ Decisions taken with the user:
 
 - The repo is the canonical brand book. Confluence receives pasted copies
   through the existing brandbook workflow, now inverted (repo to Confluence).
-- Logo files move into the repo. The photo gallery stays on Google Drive and
-  is linked.
+- Logo files eventually move into the repo, but ONLY after the user gives an
+  explicit go (user decision 2026-07-06). Until then no logo file is copied
+  from the Drive folder; the repo carries the rules and the Drive link only.
+  The photo gallery stays on Google Drive and is linked.
 - The external skills catalog (docs/references.md) becomes part of the
   environment setup instructions, so colleagues install the same skill set.
 - UCM-DESIGN SYSTEM.md Section 7 (external site content and IA) is explicitly
@@ -91,10 +93,10 @@ cannot drift silently.
 
 ## Assets
 
-- brand/assets/logos/: the user supplies the wordmark files from the branding
-  elements Drive folder. Until they land, the folder ships only its README
-  (usage rules, Drive links). The README states the logo rule and forbids
-  retyping or rebuilding the logo.
+- brand/assets/logos/: gated on the user's explicit go. Until that approval,
+  the folder ships only its README (usage rules, Drive links) and no logo
+  file enters the repo. The README states the logo rule, forbids retyping or
+  rebuilding the logo, and names the Drive folder as the file source for now.
 - brand/assets/color-diagram.svg: swatch grid of triad, ramps, semantic
   colors, and sub-palette with hex labels. Drawn to the brand rules (Figtree,
   no banned patterns). color.md embeds it and repeats the values as a plain
@@ -149,7 +151,8 @@ cannot drift silently.
    the logo-rule state of the pages.
 3. Implementation order: moves first, then new pages, then repositioning
    edits, then tracker and brandbook README updates.
-4. Logo files are a user dependency; everything else proceeds without them.
+4. Logo files wait for the user's explicit go-ahead; nothing is copied from
+   Drive before that. Everything else proceeds without them.
 
 ## Acceptance checks
 
