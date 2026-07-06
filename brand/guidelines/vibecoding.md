@@ -134,6 +134,15 @@ Checklist before you build the slides:
 - References named in the deck are current and approved.
 - German deck for German-speaking clients.
 
+## External libraries and generated components
+
+Expressive extras (motion libraries, three.js, 21st.dev animations) are
+allowed on docs and brand surfaces only, always behind a dynamic import,
+and they obey the motion rules like everything else. Generated or borrowed
+components are reworked to the UCM rules and pass the review_code check
+before they ship; they are never dropped in raw and never enter the
+component library or a product surface.
+
 ## The non-negotiables, whatever the track
 
 - Triad only: cream #F5F5F3, navy #001E2B, yellow #FCC224. Never pure black
