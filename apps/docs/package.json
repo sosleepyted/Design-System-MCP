@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "typecheck": "astro check",
+    "typecheck": "pnpm --filter @ucm/ui build && astro check",
     "lint": "echo \"(lint configured in Task 12)\"",
     "test:visual": "playwright test"
   },
