@@ -1,0 +1,49 @@
+# Production topology for the UCM design system service.
+#
+# Three containers on one host (recommended: Hetzner, EU/GDPR):
+#   - mcp       the MCP server (Streamable HTTP, bearer auth)
+#   - registry  the private @ucm/* npm registry (Verdaccio)
+#   - tunnel    Cloudflare Tunnel; the only egress, so neither service needs a
+#               public port. Put Cloudflare Access in front for zero-trust.
+#
+# Secrets come from a sibling .env file (never commit it). See README.md.
+#
+#   docker compose -f infra/deploy/docker-compose.yml --env-file infra/deploy/.env up -d
+
+services:
+  mcp:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    container_name: ucm-mcp
+    restart: unless-stopped
+    environment:
+      # Comma-separated bearer tokens. The server refuses to start if unset.
+      MCP_TOKENS: ${MCP_TOKENS:?set MCP_TOKENS in infra/deploy/.env}
+      PORT: 8787
+    expose:
+      - "8787"
+
+  registry:
+    image: verdaccio/verdaccio:6
+    container_name: ucm-registry
+    restart: unless-stopped
+    volumes:
+      - registry-data:/verdaccio/conf
+      - ../registry/config.yaml:/verdaccio/conf/config.yaml:ro
+    expose:
+      - "4873"
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: ucm-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${TUNNEL_TOKEN:?set TUNNEL_TOKEN in infra/deploy/.env}
+    depends_on:
+      - mcp
+      - registry
+
+volumes:
+  registry-data:

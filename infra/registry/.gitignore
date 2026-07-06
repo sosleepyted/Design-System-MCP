@@ -1,0 +1,5 @@
+# Local Verdaccio state (created by `npx verdaccio --config config.yaml`).
+# In Docker these live inside the named volume instead.
+storage/
+htpasswd
+plugins/

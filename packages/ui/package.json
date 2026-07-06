@@ -1,7 +1,17 @@
 {
   "name": "@ucm/ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sosleepyted/Design-System-MCP.git",
+    "directory": "packages/ui"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873",
+    "access": "restricted"
+  },
   "sideEffects": ["*.css"],
   "exports": {
     ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },

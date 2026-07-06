@@ -36,6 +36,7 @@ const { positionals, flags } = parseArgs(process.argv.slice(2));
 const name = positionals[0] ?? "ucm-app";
 const url = flags.url ?? "https://REPLACE-WITH-YOUR-SERVER/mcp";
 const token = flags.token ?? "REPLACE-WITH-YOUR-TOKEN";
+const registry = flags.registry ?? "http://localhost:4873";
 const dest = resolve(process.cwd(), name);
 
 if (existsSync(dest)) {
@@ -46,6 +47,18 @@ if (existsSync(dest)) {
 // 1. Clone the starter app.
 cpSync(join(here, "template"), dest, { recursive: true });
 renameSync(join(dest, "_gitignore"), join(dest, ".gitignore"));
+
+// 1a. Point the @ucm scope at the configured private registry so `npm install`
+// can resolve @ucm/ui.
+const npmrcPath = join(dest, ".npmrc");
+renameSync(join(dest, "_npmrc"), npmrcPath);
+writeFileSync(
+  npmrcPath,
+  readFileSync(npmrcPath, "utf8").replace(
+    "http://localhost:4873",
+    registry,
+  ),
+);
 
 // 2. Name the project.
 const pkgPath = join(dest, "package.json");
@@ -86,6 +99,7 @@ console.log(`  cd ${name}`);
 if (url.includes("REPLACE")) {
   console.log("  edit .mcp.json with your server URL and bearer token");
 }
+console.log(`  @ucm/ui resolves from ${registry} (.npmrc); override with --registry`);
 console.log("  open the folder in Claude Code, then ask it to build a page");
 
 function consumerClaudeMd() {

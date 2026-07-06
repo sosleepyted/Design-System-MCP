@@ -1,0 +1,56 @@
+# Verdaccio config for the UCM private registry.
+#
+# It hosts the private @ucm/* packages and proxies everything else to npmjs.
+# Reference: https://verdaccio.org/docs/configuration
+#
+# Privacy model: the registry is meant to run behind Cloudflare Access (the same
+# zero-trust perimeter as the MCP server). The network is the authentication
+# boundary, so reads inside the perimeter are open and only publishing needs an
+# npm token. This keeps scaffolded apps (npx @ucm/create-app) friction-free: they
+# need a registry mapping, not a per-developer token. If you would rather require
+# npm auth for reads too, change @ucm/* access to $authenticated (see below).
+
+storage: ./storage
+
+web:
+  title: UCM Registry
+  primary_color: "#001E2B"
+
+auth:
+  htpasswd:
+    file: ./htpasswd
+    algorithm: bcrypt
+    # Create the accounts you need (npm adduser --registry ...), then set this to
+    # -1 to disable open self-registration. Recommended for an internal registry.
+    max_users: 1000
+
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+    maxage: 30m
+    cache: true
+
+packages:
+  # Our scope. Never proxied to npmjs. Reads open inside the perimeter; publishing
+  # requires an authenticated user (a token provisioned for CI or a maintainer).
+  "@ucm/*":
+    access: $all
+    publish: $authenticated
+    unpublish: $authenticated
+
+  # Other scoped packages: read-through proxy to npmjs, no local publishing.
+  "@*/*":
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+
+  # Everything else: read-through proxy to npmjs.
+  "**":
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+
+# Listen on all interfaces so the container is reachable from the host/tunnel.
+listen: 0.0.0.0:4873
+
+log: { type: stdout, format: pretty, level: http }
