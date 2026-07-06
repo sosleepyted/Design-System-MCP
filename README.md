@@ -1,49 +1,52 @@
-# UCM Design System x MCP
+# UCM brand home
 
-A design system as a service: an MCP server that lets non-designers vibecode UIs
-that come out on-brand by default. Correctness is structural, not dependent on
-the user's judgment. The system is its **rules** as much as its **components**.
+The home of the UCM brand: identity, rules, guidelines, assets, and the
+design system that enforces them. The system is its rules as much as its
+components; correctness is structural, never a matter of taste.
 
-See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) for the full spec, and
-[docs/plan/](docs/plan/) for the step-by-step build plan this was made from.
+Start here: **[brand/README.md](brand/README.md)**, the canonical brand
+book. Twelve guideline pages (identity, modes, color, typography, motion,
+voice and copy, layout, components, dos and don'ts, presentations,
+vibecoding, environment setup), the color diagram, and the logo rules.
+Confluence carries pasted copies; the sync workflow is
+[docs/brandbook/README.md](docs/brandbook/README.md).
 
-## Packages
+## The rules
 
-| Package | What it is |
-|---------|------------|
-| `@ucm/ui` (`packages/ui`) | The component library: tokens, modes, 16 components |
-| `@ucm/catalog` (`packages/catalog`) | Build tool that emits `dist/catalog.json` from the UI source, docs, tokens, rules |
-| `@ucm/mcp-server` (`packages/mcp-server`) | The MCP server, 7 tools, stdio and HTTP |
-| `@ucm/rules` (`packages/rules`) | The single-source rules manifest + CI lint |
-| `@ucm/create-app` (`packages/create-app`) | Scaffolder: `npx @ucm/create-app` |
-| `@ucm/be-structure` (`packages/be-structure`) | Reserved slot for the future backend-structure skill |
-| `apps/docs` | The Astro docs site |
+- [brand/guidelines/dos-and-donts.md](brand/guidelines/dos-and-donts.md):
+  the quick reference.
+- [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md): the built-state technical reference.
+- [UCM-DESIGN SYSTEM.md](<UCM-DESIGN SYSTEM.md>): the intent spec.
+- `packages/rules`: the twelve-rule manifest that drives the CI lint and the
+  code reviewer. `pnpm lint:rules` must always report zero.
 
-## MCP tools
+## The components
 
-`get_rules`, `get_pattern`, `search_components`, `get_component`, `get_tokens`,
-`preflight`, `review_code`.
-
-## Run it
+`@ucm/ui` (`packages/ui`) is the component library: tokens, two modes, 16
+components, zero runtime dependencies, server-render safe. `apps/docs` is
+the Astro docs site with the component pages and island demos.
 
 ```bash
 pnpm install
-pnpm catalog:build      # build catalog.json
-pnpm mcp:inspect        # open the MCP Inspector
-pnpm mcp:dev            # run the MCP server over stdio
-
 pnpm test               # unit tests
 pnpm build              # build @ucm/ui + the docs site
 pnpm lint:rules         # design-rule lint
 pnpm typecheck          # typecheck all packages
 ```
 
-## Deploy (remote MCP)
+## Design system service (parked)
+
+The MCP service around the library is built, green, and parked while the
+brand work leads; nothing here is deprecated. `@ucm/mcp-server` (7 tools:
+get_rules, get_pattern, search_components, get_component, get_tokens,
+preflight, review_code), `@ucm/catalog`, `@ucm/create-app`, the Claude Code
+plugin (`packages/claude-plugin`), the private registry and deploy material
+(`infra/`), and `@ucm/be-structure` (a reserved slot). The launch runbook
+and the resume point live in [HANDOFF.md](HANDOFF.md); the deploy notes in
+`packages/mcp-server/README.md`.
 
 ```bash
-docker build -t ucm-mcp .
-docker run -e MCP_TOKENS=your-secret -p 8787:8787 ucm-mcp
+pnpm catalog:build      # build catalog.json
+pnpm mcp:inspect        # open the MCP Inspector
+pnpm mcp:dev            # run the MCP server over stdio
 ```
-
-See `packages/mcp-server/README.md` for the HTTP transport, bearer auth, and the
-Cloudflare Tunnel + Access deploy notes.

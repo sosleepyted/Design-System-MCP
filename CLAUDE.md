@@ -1,19 +1,24 @@
-# UCM Design System x MCP, Standing Context
+# UCM Brand Home, Standing Context
 
 ## What we are building
 
-An internal "design system as a service": an MCP server that lets non-designers
-vibecode UIs that come out on-brand by default. They cannot tell good design from
-bad, so correctness has to be **structural**, never dependent on their judgment or
-on a human reviewing the output. The MCP is a discovery layer over `@ucm/ui`; its
-output (imports, examples) is useless unless the package is installed, so the two
-are coupled by design.
+The canonical home of the UCM brand: identity, rules, guidelines, and assets
+under `brand/`, enforced by the design system built here. Correctness is
+**structural**, never dependent on judgment or human review. The MCP service
+layer (server, catalog, create-app, plugin, registry) is built and green but
+**parked** since 2026-07-06 (spec:
+`docs/superpowers/specs/2026-07-06-brand-home-design.md`); keep it passing,
+do not extend it unless asked. Brand and guideline work leads.
 
 ## Source of truth (read before acting)
 
-1. `UCM-DESIGN SYSTEM.md` (the language / intent spec).
-2. The built-state reference (tokens, atoms, modes, bans, architecture, Sections 1 to 14).
-3. `packages/ui/src/index.ts` plus the existing button and icon source.
+1. `brand/README.md` and `brand/guidelines/` (the canonical brand book).
+2. `UCM-DESIGN SYSTEM.md` (the language / intent spec).
+3. The built-state reference (tokens, atoms, modes, bans, architecture, Sections 1 to 14).
+4. `packages/ui/src/index.ts` plus the existing component source.
+
+When a brand book page and a spec disagree, the spec wins and the page gets
+fixed; conflicts are logged in `docs/brandbook/TRACKER.md`.
 
 ## What exists (do not rebuild)
 
