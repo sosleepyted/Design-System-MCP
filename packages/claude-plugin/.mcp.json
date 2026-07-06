@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "ucm-design-system": {
+      "type": "http",
+      "url": "${UCM_MCP_URL:-http://localhost:8787/mcp}",
+      "headers": { "Authorization": "Bearer ${UCM_MCP_TOKEN}" }
+    }
+  }
+}

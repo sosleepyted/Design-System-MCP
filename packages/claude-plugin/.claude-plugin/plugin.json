@@ -1,0 +1,6 @@
+{
+  "name": "ucm-design",
+  "version": "0.1.0",
+  "description": "UCM design system kit for Claude Code. Registers the ucm-design-system MCP server (rules, tokens, components, patterns, review) and ships the ucm-install skill that wires any project to @ucm/ui.",
+  "author": { "name": "UCM" }
+}

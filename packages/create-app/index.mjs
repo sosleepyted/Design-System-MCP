@@ -35,7 +35,10 @@ function parseArgs(argv) {
 const { positionals, flags } = parseArgs(process.argv.slice(2));
 const name = positionals[0] ?? "ucm-app";
 const url = flags.url ?? "https://REPLACE-WITH-YOUR-SERVER/mcp";
-const token = flags.token ?? "REPLACE-WITH-YOUR-TOKEN";
+// Without --token the generated .mcp.json references ${UCM_MCP_TOKEN}, which
+// Claude Code expands from the environment at load time. No literal secret
+// lands in the scaffolded project. The --token flag stays for compatibility.
+const token = flags.token ?? "${UCM_MCP_TOKEN}";
 const registry = flags.registry ?? "http://localhost:4873";
 const dest = resolve(process.cwd(), name);
 
