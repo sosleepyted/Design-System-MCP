@@ -1,6 +1,27 @@
 # Brand book page tracker
 
-Status values: `dropped`, `in rework`, `updated`, `pasted back`.
+Status values: `dropped`, `in rework`, `updated`, `pasted back`. Pages
+handled after the refocus below use the shorter lifecycle `dropped`,
+`reconciled`, `pasted back` from docs/brandbook/README.md.
+
+## Refocus 2026-07-06: the repo is canonical
+
+The brand book moved to `brand/` (spec:
+docs/superpowers/specs/2026-07-06-brand-home-design.md). The `updated/`
+folder dissolved; its deliverables became the canonical pages. Mapping:
+
+| # | Old deliverable | Canonical file |
+|---|---|---|
+| 01 | updated/01-brand-hub.md | brand/guidelines/brand-hub.md |
+| 02-03 | updated/02-03-b2b-presentations.md | brand/guidelines/b2b-presentations.md |
+| 04 | updated/04-vibecoding-with-claude.md | brand/guidelines/vibecoding.md |
+| 05 | updated/05-vibecoding-environment.md | brand/guidelines/vibecoding-environment.md |
+
+The net-new canonical pages written repo-first (modes, color, typography,
+motion, voice-and-copy, layout, components, dos-and-donts, all in
+brand/guidelines/) get tracker rows when they are pasted to Confluence for
+the first time. Historical log entries below keep their original paths;
+they are records, not links.
 
 | # | Page title | Status | Spec sections referenced | Conflicts and decisions |
 |---|------------|--------|--------------------------|-------------------------|
@@ -242,7 +263,7 @@ Placeholders the user must fill before pasting into Confluence:
 ## How to read this table
 
 - One row per Confluence page, in intake order. The number matches the file
-  prefix in `incoming/` and `updated/`.
+  prefix in `incoming/`; the canonical file is in the refocus mapping above.
 - "Spec sections referenced" lists the sections of `DESIGN-SYSTEM.md` or
   `UCM-DESIGN SYSTEM.md` the rewrite leaned on, for example "DS S2.1, S8".
 - "Conflicts and decisions" records every place the old Confluence content
