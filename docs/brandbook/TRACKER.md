@@ -177,6 +177,31 @@ text keeps the UCM casing convention from the page 01 log.
   update. The brand book follows the user decision; the spec conflict is
   recorded here, not silently resolved.
 
+## Color pairing rules (2026-07-07)
+
+User decision: the brand book states which color pairings are allowed, on
+the principle dark on light or light on dark within the same tone, never
+color on color, with accessibility and readability maintained. Added to
+brand/guidelines/color.md as "Sanctioned pairings": measured WCAG contrast
+tables for text on light and dark surfaces, ink ramp floors, and banned
+pairings. dos-and-donts.md links to the tables. All ratios computed from
+the token hex values (WCAG relative luminance); tint backgrounds computed
+as alpha blends over the page color.
+
+Conflicts found by the math, resolved by sanctioning narrowly and logging
+here (token changes are spec and code territory, outside this workstream):
+
+- Inline warning #A96B00 measures 4.02 to 1 on page, below the 4.5 AA bar
+  at its built 12px size (UCM S3.8 uses it at 12px). Open question: revisit
+  the token or its size; interim guidance in the page prefers #8A5A00
+  (5.4 to 1) where strict AA applies.
+- Field labels at 55 percent ink measure 3.8 to 1, passing only the
+  large-text bar while the built label style is 12px (UCM S3.2). Interim
+  guidance: prefer 65 percent for meaning-bearing labels.
+- White button text (navy and danger buttons) is built reality and passes
+  (17.2 and 7.1); the pairing tables sanction it as buttons-only so it does
+  not soften the "white is card-surface only" rule elsewhere.
+
 ## Page 04 notes (vibecoding guide, net-new)
 
 Authored 2026-07-06 at the user's request; there is no incoming Confluence
