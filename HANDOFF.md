@@ -1,5 +1,20 @@
 # Project handoff (context for a new chat)
 
+## Pivot 2026-07-06: brand-first, MCP parked
+
+User decision: the repo is now the canonical home of the UCM brand
+(identity, rules, guidelines, assets) under `brand/`, and the
+MCP-as-a-service direction is parked, not deleted. All service code stays
+green (`pnpm lint:rules`, `pnpm -r typecheck`, `pnpm test`, CI); it just is
+not the focus. Spec: `docs/superpowers/specs/2026-07-06-brand-home-design.md`.
+Plan: `docs/superpowers/plans/2026-07-06-brand-home.md`. The sections below
+describe the parked service and remain the resume point for a future launch.
+
+Standing gates from the pivot: logo files enter the repo only on the brand
+owner's explicit go (until then `brand/assets/logos/` is a README pointing
+at the Drive folder), and the brand book syncs to Confluence via
+`docs/brandbook/README.md`.
+
 ## What this is
 
 The UCM Design System as a service: an MCP server that lets non-designers
@@ -104,7 +119,7 @@ content are logged in `docs/brandbook/TRACKER.md`, never silently resolved.
 Full process: `docs/brandbook/README.md`. This work stays off `feat/icon-system`
 so the launch PR remains clean.
 
-## Launch verdict: code is GO; the rest is infra + secrets (yours to do)
+## Launch verdict (parked since 2026-07-06): code is GO; the rest is infra + secrets
 
 The only work between here and live is provisioning, not code:
 

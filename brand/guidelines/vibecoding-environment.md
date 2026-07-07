@@ -31,6 +31,11 @@ Clone the design system repo:
 git clone https://github.com/sosleepyted/Design-System-MCP.git
 ```
 
+Then install the design skill packs so Claude builds with the same design
+judgment on every machine: the list and the install commands are in the
+tooling and skills section of the brand book index (brand/README.md in the
+repo).
+
 That is the whole one-time setup. Everything else happens per project.
 
 ## Starting a project

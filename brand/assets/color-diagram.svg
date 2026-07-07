@@ -1,0 +1,74 @@
+<svg viewBox="0 0 900 760" xmlns="http://www.w3.org/2000/svg" font-family="Figtree, sans-serif" role="img" aria-label="UCM color palette diagram">
+  <rect width="900" height="760" fill="#F5F5F3"/>
+  <text x="34" y="52" font-size="24" font-weight="300" letter-spacing="-0.4" fill="#001E2B">UCM color palette</text>
+
+  <text x="34" y="96" font-size="13" font-weight="500" fill="#001E2B">The triad</text>
+  <rect x="34" y="108" width="180" height="72" rx="10" fill="#001E2B"/>
+  <rect x="238" y="108" width="180" height="72" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <rect x="442" y="108" width="180" height="72" rx="10" fill="#FCC224"/>
+  <text x="34" y="200" font-size="12" fill="#001E2B">Ink</text>
+  <text x="34" y="215" font-size="11" fill="#001E2B" fill-opacity="0.65">#001E2B</text>
+  <text x="238" y="200" font-size="12" fill="#001E2B">Page</text>
+  <text x="238" y="215" font-size="11" fill="#001E2B" fill-opacity="0.65">#F5F5F3</text>
+  <text x="442" y="200" font-size="12" fill="#001E2B">Accent</text>
+  <text x="442" y="215" font-size="11" fill="#001E2B" fill-opacity="0.65">#FCC224</text>
+
+  <text x="34" y="256" font-size="13" font-weight="500" fill="#001E2B">Surfaces and tints</text>
+  <rect x="34" y="268" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.12"/>
+  <rect x="238" y="268" width="180" height="56" rx="10" fill="#F8F5EE" stroke="#001E2B" stroke-opacity="0.08"/>
+  <rect x="442" y="268" width="180" height="56" rx="10" fill="#EDECEA"/>
+  <rect x="646" y="268" width="180" height="56" rx="10" fill="#F7F7F7" stroke="#001E2B" stroke-opacity="0.08"/>
+  <text x="34" y="344" font-size="12" fill="#001E2B">Card</text>
+  <text x="34" y="359" font-size="11" fill="#001E2B" fill-opacity="0.65">#FFFFFF, cards only</text>
+  <text x="238" y="344" font-size="12" fill="#001E2B">Cream tint</text>
+  <text x="238" y="359" font-size="11" fill="#001E2B" fill-opacity="0.65">#F8F5EE</text>
+  <text x="442" y="344" font-size="12" fill="#001E2B">Light gray</text>
+  <text x="442" y="359" font-size="11" fill="#001E2B" fill-opacity="0.65">#EDECEA</text>
+  <text x="646" y="344" font-size="12" fill="#001E2B">Faint gray</text>
+  <text x="646" y="359" font-size="11" fill="#001E2B" fill-opacity="0.65">#F7F7F7</text>
+
+  <text x="34" y="400" font-size="13" font-weight="500" fill="#001E2B">Status and accent states</text>
+  <rect x="34" y="412" width="136" height="56" rx="10" fill="#0F5E2A"/>
+  <rect x="190" y="412" width="136" height="56" rx="10" fill="#A32D2D"/>
+  <rect x="346" y="412" width="136" height="56" rx="10" fill="#8A5A00"/>
+  <rect x="502" y="412" width="136" height="56" rx="10" fill="#A96B00"/>
+  <rect x="658" y="412" width="136" height="56" rx="10" fill="#FFD84D"/>
+  <text x="34" y="488" font-size="12" fill="#001E2B">Success</text>
+  <text x="34" y="503" font-size="11" fill="#001E2B" fill-opacity="0.65">#0F5E2A</text>
+  <text x="190" y="488" font-size="12" fill="#001E2B">Danger</text>
+  <text x="190" y="503" font-size="11" fill="#001E2B" fill-opacity="0.65">#A32D2D</text>
+  <text x="346" y="488" font-size="12" fill="#001E2B">Warning text</text>
+  <text x="346" y="503" font-size="11" fill="#001E2B" fill-opacity="0.65">#8A5A00</text>
+  <text x="502" y="488" font-size="12" fill="#001E2B">Inline warning</text>
+  <text x="502" y="503" font-size="11" fill="#001E2B" fill-opacity="0.65">#A96B00</text>
+  <text x="658" y="488" font-size="12" fill="#001E2B">Accent hover</text>
+  <text x="658" y="503" font-size="11" fill="#001E2B" fill-opacity="0.65">#FFD84D</text>
+
+  <text x="34" y="544" font-size="13" font-weight="500" fill="#001E2B">Dark hero pairing, brand only</text>
+  <rect x="34" y="556" width="380" height="64" rx="10" fill="#0A0F14"/>
+  <text x="54" y="594" font-size="13" fill="#F0F0EB">Ink on dark #F0F0EB</text>
+  <text x="434" y="594" font-size="11" fill="#001E2B" fill-opacity="0.65">Hero dark #0A0F14, used sparingly</text>
+
+  <text x="34" y="660" font-size="13" font-weight="500" fill="#001E2B">Decorative sub-palette, never the CTA</text>
+  <rect x="34" y="672" width="76" height="44" rx="8" fill="#03677E"/>
+  <rect x="118" y="672" width="76" height="44" rx="8" fill="#024E60"/>
+  <rect x="202" y="672" width="76" height="44" rx="8" fill="#0E3E4A"/>
+  <rect x="286" y="672" width="76" height="44" rx="8" fill="#114C5A"/>
+  <rect x="370" y="672" width="76" height="44" rx="8" fill="#1A8578"/>
+  <rect x="454" y="672" width="76" height="44" rx="8" fill="#2FB8A8"/>
+  <rect x="538" y="672" width="76" height="44" rx="8" fill="#C2E8FF"/>
+  <rect x="622" y="672" width="76" height="44" rx="8" fill="#D9E8E2"/>
+  <rect x="706" y="672" width="76" height="44" rx="8" fill="#F0A639"/>
+  <rect x="790" y="672" width="76" height="44" rx="8" fill="#FF9932"/>
+  <text x="34" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#03677E</text>
+  <text x="118" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#024E60</text>
+  <text x="202" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#0E3E4A</text>
+  <text x="286" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#114C5A</text>
+  <text x="370" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#1A8578</text>
+  <text x="454" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#2FB8A8</text>
+  <text x="538" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#C2E8FF</text>
+  <text x="622" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#D9E8E2</text>
+  <text x="706" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#F0A639</text>
+  <text x="790" y="732" font-size="10" fill="#001E2B" fill-opacity="0.65">#FF9932</text>
+  <text x="790" y="746" font-size="10" fill="#001E2B" fill-opacity="0.65">logo dot</text>
+</svg>
