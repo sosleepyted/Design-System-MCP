@@ -89,6 +89,8 @@ The ratios below are measured WCAG contrast; the bars are 4.5 to 1 for
 normal text and 3 to 1 for large text and UI shapes (AA). Anything not in
 these tables is not a sanctioned pairing.
 
+![UCM sanctioned color pairings diagram](../assets/color-pairings.svg)
+
 ### Text on light surfaces
 
 | Text | Background | Ratio | Verdict |

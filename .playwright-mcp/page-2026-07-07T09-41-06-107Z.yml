@@ -1,0 +1,393 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - heading "UCM color" [level=1] [ref=f3e3]
+    - paragraph [ref=f3e4]: "The whole system is one triad: cream page, navy ink, yellow accent. Every other value is a ramp, a status color, or a small decorative sub-palette. New hues are never introduced. Every ratio on this page is measured WCAG contrast; the AA bars are 4.5 to 1 for normal text and 3 to 1 for large text and UI shapes."
+    - navigation "Sections" [ref=f3e5]:
+      - link "Tokens" [ref=f3e6] [cursor=pointer]:
+        - /url: "#tokens"
+      - link "Ramps" [ref=f3e7] [cursor=pointer]:
+        - /url: "#ramps"
+      - link "Rules" [ref=f3e8] [cursor=pointer]:
+        - /url: "#rules"
+      - link "Pairings" [ref=f3e9] [cursor=pointer]:
+        - /url: "#pairings"
+      - link "Banned" [ref=f3e10] [cursor=pointer]:
+        - /url: "#banned"
+      - link "JSON" [ref=f3e11] [cursor=pointer]:
+        - /url: "#machine"
+  - main [ref=f3e12]:
+    - region "Core tokens" [ref=f3e13]:
+      - heading "Core tokens" [level=2] [ref=f3e14]
+      - list [ref=f3e15]:
+        - listitem [ref=f3e16]:
+          - generic [ref=f3e18]:
+            - paragraph [ref=f3e19]: ink
+            - paragraph [ref=f3e20]: "Text and borders everywhere, used instead of black, never #000."
+          - button "#001E2B" [ref=f3e21] [cursor=pointer]
+        - listitem [ref=f3e22]:
+          - generic [ref=f3e24]:
+            - paragraph [ref=f3e25]: page
+            - paragraph [ref=f3e26]: "Page background, never #FFF as a page."
+          - button "#F5F5F3" [ref=f3e27] [cursor=pointer]
+        - listitem [ref=f3e28]:
+          - generic [ref=f3e30]:
+            - paragraph [ref=f3e31]: card
+            - paragraph [ref=f3e32]: Card surface, the one allowed pure white.
+          - button "#FFFFFF" [ref=f3e33] [cursor=pointer]
+        - listitem [ref=f3e34]:
+          - generic [ref=f3e36]:
+            - paragraph [ref=f3e37]: accent
+            - paragraph [ref=f3e38]: Yellow accent, the brand primary CTA. Never more than about 10 percent of any surface.
+          - button "#FCC224" [ref=f3e39] [cursor=pointer]
+        - listitem [ref=f3e40]:
+          - generic [ref=f3e42]:
+            - paragraph [ref=f3e43]: accent-hover
+            - paragraph [ref=f3e44]: Accent hover state.
+          - button "#FFD84D" [ref=f3e45] [cursor=pointer]
+        - listitem [ref=f3e46]:
+          - generic [ref=f3e48]:
+            - paragraph [ref=f3e49]: cream-tint
+            - paragraph [ref=f3e50]: Pill chips, soft callouts.
+          - button "#F8F5EE" [ref=f3e51] [cursor=pointer]
+        - listitem [ref=f3e52]:
+          - generic [ref=f3e54]:
+            - paragraph [ref=f3e55]: light-gray
+            - paragraph [ref=f3e56]: Nav pill background, secondary surface.
+          - button "#EDECEA" [ref=f3e57] [cursor=pointer]
+        - listitem [ref=f3e58]:
+          - generic [ref=f3e60]:
+            - paragraph [ref=f3e61]: faint-gray
+            - paragraph [ref=f3e62]: Inputs, inactive pill states (brand).
+          - button "#F7F7F7" [ref=f3e63] [cursor=pointer]
+        - listitem [ref=f3e64]:
+          - generic [ref=f3e66]:
+            - paragraph [ref=f3e67]: ink-on-dark
+            - paragraph [ref=f3e68]: Text on dark surfaces, never pure white for content.
+          - button "#F0F0EB" [ref=f3e69] [cursor=pointer]
+        - listitem [ref=f3e70]:
+          - generic [ref=f3e72]:
+            - paragraph [ref=f3e73]: hero-dark
+            - paragraph [ref=f3e74]: Cinematic dark hero, brand only.
+          - button "#0A0F14" [ref=f3e75] [cursor=pointer]
+    - region "Status tokens" [ref=f3e76]:
+      - heading "Status tokens" [level=2] [ref=f3e77]
+      - list [ref=f3e78]:
+        - listitem [ref=f3e79]:
+          - generic [ref=f3e81]:
+            - paragraph [ref=f3e82]: success
+            - paragraph [ref=f3e83]: Success text; tint base at 22 percent.
+          - button "#0F5E2A" [ref=f3e84] [cursor=pointer]
+        - listitem [ref=f3e85]:
+          - generic [ref=f3e87]:
+            - paragraph [ref=f3e88]: danger
+            - paragraph [ref=f3e89]: Danger text and button background; 10 percent hover tint.
+          - button "#A32D2D" [ref=f3e90] [cursor=pointer]
+        - listitem [ref=f3e91]:
+          - generic [ref=f3e93]:
+            - paragraph [ref=f3e94]: warning-text
+            - paragraph [ref=f3e95]: Warning text on a yellow-tinted background or the page.
+          - button "#8A5A00" [ref=f3e96] [cursor=pointer]
+        - listitem [ref=f3e97]:
+          - generic [ref=f3e99]:
+            - paragraph [ref=f3e100]: warning-inline
+            - paragraph [ref=f3e101]: Inline warning text; below AA at its built 12px size, see known gaps.
+          - button "#A96B00" [ref=f3e102] [cursor=pointer]
+      - paragraph [ref=f3e103]: Warning always uses the accent family, never a new orange or red.
+    - region "Ink opacity ramp, text" [ref=f3e104]:
+      - generic [ref=f3e105]:
+        - heading "Ink opacity ramp, text" [level=2] [ref=f3e106]
+        - generic [ref=f3e107]: Contrast on page / card
+      - paragraph [ref=f3e108]: "Text steps down in opacity, never into gray hues. Four steps only: 100 / 80 / 60 / 30."
+      - list [ref=f3e109]:
+        - listitem [ref=f3e110]:
+          - generic [ref=f3e111]: Aa
+          - generic [ref=f3e112]:
+            - paragraph [ref=f3e113]: ink-100
+            - paragraph [ref=f3e114]: Headlines, focused input text. Any text.
+          - generic [ref=f3e115]:
+            - paragraph [ref=f3e116]: 15.8 / 17.2
+            - paragraph [ref=f3e117]: "#001E2B"
+        - listitem [ref=f3e118]:
+          - generic [ref=f3e119]: Aa
+          - generic [ref=f3e120]:
+            - paragraph [ref=f3e121]: ink-80
+            - paragraph [ref=f3e122]: Body, emphasis, list items, paragraphs. Any text.
+          - generic [ref=f3e123]:
+            - paragraph [ref=f3e124]: 8.7 / 9.2
+            - paragraph [ref=f3e125]: "#001E2B at 80 percent"
+        - listitem [ref=f3e126]:
+          - generic [ref=f3e127]: Aa
+          - generic [ref=f3e128]:
+            - paragraph [ref=f3e129]: ink-60
+            - paragraph [ref=f3e130]: Secondary body, labels, fine print. A hair under the 4.5 bar on the page, see known gaps.
+          - generic [ref=f3e131]:
+            - paragraph [ref=f3e132]: 4.47 / 4.6
+            - paragraph [ref=f3e133]: "#001E2B at 60 percent"
+        - listitem [ref=f3e134]:
+          - generic [ref=f3e135]: Aa
+          - generic [ref=f3e136]:
+            - paragraph [ref=f3e137]: ink-30
+            - paragraph [ref=f3e138]: Placeholder text, subdued icon strokes, disabled states. Never text.
+          - generic [ref=f3e139]:
+            - paragraph [ref=f3e140]: 1.9 / 1.9
+            - paragraph [ref=f3e141]: "#001E2B at 30 percent"
+    - region "Border and divider ramp" [ref=f3e142]:
+      - heading "Border and divider ramp" [level=2] [ref=f3e143]
+      - paragraph [ref=f3e144]: Borders are navy with alpha, never gray and never black.
+      - list [ref=f3e145]:
+        - listitem [ref=f3e146]:
+          - generic [ref=f3e149]:
+            - paragraph [ref=f3e150]: border-8
+            - paragraph [ref=f3e151]: Faint hairlines, in-card dividers.
+          - paragraph [ref=f3e152]: "#001E2B at 8 percent"
+        - listitem [ref=f3e153]:
+          - generic [ref=f3e155]:
+            - paragraph [ref=f3e156]: border-10
+            - paragraph [ref=f3e157]: Default card border.
+          - paragraph [ref=f3e158]: "#001E2B at 10 percent"
+        - listitem [ref=f3e159]:
+          - generic [ref=f3e161]:
+            - paragraph [ref=f3e162]: border-12
+            - paragraph [ref=f3e163]: Default input border.
+          - paragraph [ref=f3e164]: "#001E2B at 12 percent"
+        - listitem [ref=f3e165]:
+          - generic [ref=f3e167]:
+            - paragraph [ref=f3e168]: border-15
+            - paragraph [ref=f3e169]: Outlined buttons.
+          - paragraph [ref=f3e170]: "#001E2B at 15 percent"
+        - listitem [ref=f3e171]:
+          - generic [ref=f3e173]:
+            - paragraph [ref=f3e174]: border-25
+            - paragraph [ref=f3e175]: Hover state on cards and inputs.
+          - paragraph [ref=f3e176]: "#001E2B at 25 percent"
+    - region "Accent alphas" [ref=f3e177]:
+      - heading "Accent alphas" [level=2] [ref=f3e178]
+      - list [ref=f3e179]:
+        - listitem [ref=f3e180]:
+          - generic [ref=f3e182]:
+            - paragraph [ref=f3e183]: accent-tint-22
+            - paragraph [ref=f3e184]: "Soft tinted background; composites to about #F7EAC5 over the page."
+          - paragraph [ref=f3e185]: "#FCC224 at 22 percent"
+        - listitem [ref=f3e186]:
+          - generic [ref=f3e188]:
+            - paragraph [ref=f3e189]: accent-border-60
+            - paragraph [ref=f3e190]: Strong border on an empty or attention field.
+          - paragraph [ref=f3e191]: "#FCC224 at 60 percent"
+        - listitem [ref=f3e192]:
+          - generic [ref=f3e194]:
+            - paragraph [ref=f3e195]: accent-ring-25
+            - paragraph [ref=f3e196]: Ring partner to that border.
+          - paragraph [ref=f3e197]: "#FCC224 at 25 percent"
+    - region "Decorative sub-palette" [ref=f3e198]:
+      - heading "Decorative sub-palette" [level=2] [ref=f3e199]
+      - paragraph [ref=f3e200]: "Decorative only: never the CTA, never a primary, never as text, never under text."
+      - list [ref=f3e201]:
+        - listitem [ref=f3e202]:
+          - paragraph [ref=f3e204]: "#03677E"
+        - listitem [ref=f3e205]:
+          - paragraph [ref=f3e207]: "#024E60"
+        - listitem [ref=f3e208]:
+          - paragraph [ref=f3e210]: "#0E3E4A"
+        - listitem [ref=f3e211]:
+          - paragraph [ref=f3e213]: "#114C5A"
+        - listitem [ref=f3e214]:
+          - paragraph [ref=f3e216]: "#1A8578"
+        - listitem [ref=f3e217]:
+          - paragraph [ref=f3e219]: "#2FB8A8"
+        - listitem [ref=f3e220]:
+          - paragraph [ref=f3e222]: "#C2E8FF"
+        - listitem [ref=f3e223]:
+          - paragraph [ref=f3e225]: "#D9E8E2"
+        - listitem [ref=f3e226]:
+          - paragraph [ref=f3e228]: "#F0A639"
+        - listitem [ref=f3e229]:
+          - paragraph [ref=f3e231]: "#FF9932, logo dot"
+      - paragraph [ref=f3e232]: "The logo dot #FF9932 belongs to the \"ucm.\" wordmark and nothing else."
+    - region "The rules that keep it honest" [ref=f3e233]:
+      - heading "The rules that keep it honest" [level=2] [ref=f3e234]
+      - list [ref=f3e235]:
+        - listitem [ref=f3e236]: "Never pure black, never pure white as ink or surface. Ink is #001E2B, the page is #F5F5F3. White #FFFFFF exists only as a card surface and as text inside solid action surfaces."
+        - listitem [ref=f3e237]: "Yellow stays scarce: never more than about 10 percent of any surface."
+        - listitem [ref=f3e238]: Borders are navy with alpha, never gray and never black.
+        - listitem [ref=f3e239]: "Hero dark #0A0F14 with ink-on-dark #F0F0EB is brand only, used sparingly."
+        - listitem [ref=f3e240]: Gradient text is banned. The GlowButton radial is the one gradient in the system, brand only.
+    - region "Text on light surfaces" [ref=f3e241]:
+      - generic [ref=f3e242]:
+        - heading "Text on light surfaces" [level=2] [ref=f3e243]
+        - generic [ref=f3e244]: Measured contrast
+      - paragraph [ref=f3e245]: "One principle: dark ink-family text on a light surface, or light cream-family text on a dark surface, always in the same warm tone. Anything not listed is not a sanctioned pairing."
+      - list [ref=f3e246]:
+        - listitem [ref=f3e247]:
+          - generic [ref=f3e248]: Aa
+          - generic [ref=f3e249]:
+            - paragraph [ref=f3e250]: Ink on page
+            - paragraph [ref=f3e251]: Default text on the page background. Any size.
+          - generic [ref=f3e252]:
+            - paragraph [ref=f3e253]: "15.8"
+            - paragraph [ref=f3e254]: "#001E2B on #F5F5F3"
+        - listitem [ref=f3e255]:
+          - generic [ref=f3e256]: Aa
+          - generic [ref=f3e257]:
+            - paragraph [ref=f3e258]: Ink on card
+            - paragraph [ref=f3e259]: Text inside white cards. Any size.
+          - generic [ref=f3e260]:
+            - paragraph [ref=f3e261]: "17.2"
+            - paragraph [ref=f3e262]: "#001E2B on #FFFFFF"
+        - listitem [ref=f3e263]:
+          - generic [ref=f3e264]: Aa
+          - generic [ref=f3e265]:
+            - paragraph [ref=f3e266]: Ink on cream tint
+            - paragraph [ref=f3e267]: Pill chips and soft callouts. Any size.
+          - generic [ref=f3e268]:
+            - paragraph [ref=f3e269]: "15.8"
+            - paragraph [ref=f3e270]: "#001E2B on #F8F5EE"
+        - listitem [ref=f3e271]:
+          - generic [ref=f3e272]: Aa
+          - generic [ref=f3e273]:
+            - paragraph [ref=f3e274]: Ink on light gray
+            - paragraph [ref=f3e275]: Nav pills and secondary surfaces. Any size.
+          - generic [ref=f3e276]:
+            - paragraph [ref=f3e277]: "14.6"
+            - paragraph [ref=f3e278]: "#001E2B on #EDECEA"
+        - listitem [ref=f3e279]:
+          - generic [ref=f3e280]: Aa
+          - generic [ref=f3e281]:
+            - paragraph [ref=f3e282]: Ink on faint gray
+            - paragraph [ref=f3e283]: Inputs and inactive pill states. Any size.
+          - generic [ref=f3e284]:
+            - paragraph [ref=f3e285]: "16.1"
+            - paragraph [ref=f3e286]: "#001E2B on #F7F7F7"
+        - listitem [ref=f3e287]:
+          - generic [ref=f3e288]: Aa
+          - generic [ref=f3e289]:
+            - paragraph [ref=f3e290]: Ink on accent
+            - paragraph [ref=f3e291]: The brand CTA pairing. Any size.
+          - generic [ref=f3e292]:
+            - paragraph [ref=f3e293]: "10.6"
+            - paragraph [ref=f3e294]: "#001E2B on #FCC224"
+        - listitem [ref=f3e295]:
+          - generic [ref=f3e296]: Aa
+          - generic [ref=f3e297]:
+            - paragraph [ref=f3e298]: Ink on accent hover
+            - paragraph [ref=f3e299]: CTA hover state. Any size.
+          - generic [ref=f3e300]:
+            - paragraph [ref=f3e301]: "12.4"
+            - paragraph [ref=f3e302]: "#001E2B on #FFD84D"
+        - listitem [ref=f3e303]:
+          - generic [ref=f3e304]: Aa
+          - generic [ref=f3e305]:
+            - paragraph [ref=f3e306]: Success on light
+            - paragraph [ref=f3e307]: 7.3 on the page, 7.9 on white cards.
+          - generic [ref=f3e308]:
+            - paragraph [ref=f3e309]: "7.3"
+            - paragraph [ref=f3e310]: "#0F5E2A on #F5F5F3"
+        - listitem [ref=f3e311]:
+          - generic [ref=f3e312]: Aa
+          - generic [ref=f3e313]:
+            - paragraph [ref=f3e314]: Danger on light
+            - paragraph [ref=f3e315]: 6.5 on the page, 7.1 on white cards.
+          - generic [ref=f3e316]:
+            - paragraph [ref=f3e317]: "6.5"
+            - paragraph [ref=f3e318]: "#A32D2D on #F5F5F3"
+        - listitem [ref=f3e319]:
+          - generic [ref=f3e320]: Aa
+          - generic [ref=f3e321]:
+            - paragraph [ref=f3e322]: Warning on yellow tint
+            - paragraph [ref=f3e323]: 4.9 on the tint, 5.4 on the page.
+          - generic [ref=f3e324]:
+            - paragraph [ref=f3e325]: "4.9"
+            - paragraph [ref=f3e326]: "#8A5A00 on yellow tint"
+        - listitem [ref=f3e327]:
+          - generic [ref=f3e328]: Aa
+          - generic [ref=f3e329]:
+            - paragraph [ref=f3e330]: Inline warning on light
+            - paragraph [ref=f3e331]: "Below AA for small text. Keep short, prefer #8A5A00."
+          - generic [ref=f3e332]:
+            - paragraph [ref=f3e333]: "4.02"
+            - paragraph [ref=f3e334]: "#A96B00 on #F5F5F3"
+    - region "Text on dark surfaces" [ref=f3e335]:
+      - generic [ref=f3e336]:
+        - heading "Text on dark surfaces" [level=2] [ref=f3e337]
+        - generic [ref=f3e338]: Measured contrast
+      - list [ref=f3e339]:
+        - listitem [ref=f3e340]:
+          - generic [ref=f3e341]: Aa
+          - generic [ref=f3e342]:
+            - paragraph [ref=f3e343]: White on ink
+            - paragraph [ref=f3e344]: Button labels inside solid navy actions only.
+          - generic [ref=f3e345]:
+            - paragraph [ref=f3e346]: "17.2"
+            - paragraph [ref=f3e347]: "#FFFFFF on #001E2B"
+        - listitem [ref=f3e348]:
+          - generic [ref=f3e349]: Aa
+          - generic [ref=f3e350]:
+            - paragraph [ref=f3e351]: White on danger
+            - paragraph [ref=f3e352]: Danger button labels only.
+          - generic [ref=f3e353]:
+            - paragraph [ref=f3e354]: "7.1"
+            - paragraph [ref=f3e355]: "#FFFFFF on #A32D2D"
+        - listitem [ref=f3e356]:
+          - generic [ref=f3e357]: Aa
+          - generic [ref=f3e358]:
+            - paragraph [ref=f3e359]: Ink on dark, hero dark
+            - paragraph [ref=f3e360]: The cinematic dark hero. Brand only, used sparingly.
+          - generic [ref=f3e361]:
+            - paragraph [ref=f3e362]: "16.8"
+            - paragraph [ref=f3e363]: "#F0F0EB on #0A0F14"
+        - listitem [ref=f3e364]:
+          - generic [ref=f3e365]: Aa
+          - generic [ref=f3e366]:
+            - paragraph [ref=f3e367]: Ink on dark, navy ink
+            - paragraph [ref=f3e368]: Dark featured cards. Never pure white for content.
+          - generic [ref=f3e369]:
+            - paragraph [ref=f3e370]: "15.1"
+            - paragraph [ref=f3e371]: "#F0F0EB on #001E2B"
+    - region "Banned pairings" [ref=f3e372]:
+      - generic [ref=f3e373]:
+        - heading "Banned pairings" [level=2] [ref=f3e374]
+        - generic [ref=f3e375]: Measured contrast
+      - list [ref=f3e376]:
+        - listitem [ref=f3e377]:
+          - generic [ref=f3e378]: Aa
+          - generic [ref=f3e380]:
+            - paragraph [ref=f3e381]: Yellow as text on light
+            - paragraph [ref=f3e382]: Unreadable. Yellow is a surface and an accent, never text on light.
+          - generic [ref=f3e383]:
+            - paragraph [ref=f3e384]: "1.5"
+            - paragraph [ref=f3e385]: "#FCC224 on #F5F5F3"
+        - listitem [ref=f3e386]:
+          - generic [ref=f3e387]: Aa
+          - generic [ref=f3e389]:
+            - paragraph [ref=f3e390]: Mid-tone as copy
+            - paragraph [ref=f3e391]: The decorative sub-palette never carries text.
+          - generic [ref=f3e392]:
+            - paragraph [ref=f3e393]: Banned
+            - paragraph [ref=f3e394]: "#03677E as text"
+        - listitem [ref=f3e395]:
+          - generic [ref=f3e396]: Aa
+          - generic [ref=f3e398]:
+            - paragraph [ref=f3e399]: Color on color
+            - paragraph [ref=f3e400]: Semantic colors sit on light neutrals or carry white. Never teal on yellow.
+          - generic [ref=f3e401]:
+            - paragraph [ref=f3e402]: Banned
+            - paragraph [ref=f3e403]: "#03677E on #FCC224"
+        - listitem [ref=f3e404]:
+          - generic [ref=f3e405]: Aa
+          - generic [ref=f3e407]:
+            - paragraph [ref=f3e408]: Light on light
+            - paragraph [ref=f3e409]: Never two tones from the middle or top of the range.
+          - generic [ref=f3e410]:
+            - paragraph [ref=f3e411]: Banned
+            - paragraph [ref=f3e412]: "#F0F0EB on #F5F5F3"
+    - region "Known gaps, logged in the tracker" [ref=f3e413]:
+      - heading "Known gaps, logged in the tracker" [level=2] [ref=f3e414]
+      - list [ref=f3e415]:
+        - listitem [ref=f3e416]: "warning-inline #A96B00 measures 4.02 on the page at its built 12px size, below the 4.5 bar. Keep inline warnings short and prefer warning-text #8A5A00 (5.4) where strict AA applies."
+        - listitem [ref=f3e417]: ink-60 measures 4.47 on the page, just under the 4.5 bar; it passes on white cards (4.6). Prefer ink-80 for essential small text that sits directly on the page.
+    - region "Machine-readable block" [ref=f3e418]:
+      - heading "Machine-readable block" [level=2] [ref=f3e419]
+      - paragraph [ref=f3e420]: "The JSON below mirrors this page one to one, for AI agents and tooling. It also lives in the DOM as script#ucm-color-data. Canonical source: brand/guidelines/color.md."
+      - group [ref=f3e421]:
+        - generic "Show the JSON" [ref=f3e422] [cursor=pointer]
+  - contentinfo [ref=f3e423]:
+    - paragraph [ref=f3e424]: "UCM brand, color reference. Canonical source: brand/guidelines/color.md; when the page changes, this file changes in the same commit."
