@@ -1,0 +1,209 @@
+<svg viewBox="0 0 900 2088" xmlns="http://www.w3.org/2000/svg" font-family="Figtree, sans-serif" role="img" aria-label="UCM sanctioned color pairings reference">
+  <rect width="900" height="2088" fill="#F5F5F3"/>
+  <text x="34" y="56" font-size="24" font-weight="300" letter-spacing="-0.4" fill="#001E2B">UCM sanctioned color pairings</text>
+  <text x="34" y="86" font-size="12" fill="#001E2B" fill-opacity="0.8">Every approved text and surface combination, shown live with its measured WCAG contrast.</text>
+  <text x="34" y="103" font-size="12" fill="#001E2B" fill-opacity="0.8">The AA bars are 4.5 to 1 for normal text and 3 to 1 for large text and UI shapes. Anything not listed is not sanctioned.</text>
+
+  <rect x="34" y="132" width="832" height="812" rx="12" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.10"/>
+  <text x="58" y="168" font-size="15" font-weight="500" fill="#001E2B">Text on light surfaces</text>
+  <text x="842" y="168" font-size="11" fill="#001E2B" fill-opacity="0.6" text-anchor="end">Measured contrast</text>
+
+  <rect x="58" y="196" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="224" font-size="17" fill="#001E2B" text-anchor="middle">Aa</text>
+  <text x="170" y="213" font-size="13.5" font-weight="500" fill="#001E2B">Ink on page</text>
+  <text x="170" y="232" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Default text on the page background. Any size.</text>
+  <text x="842" y="214" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">15.8</text>
+  <text x="842" y="232" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B on #F5F5F3</text>
+  <line x1="58" y1="252" x2="842" y2="252" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="264" width="88" height="44" rx="8" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="292" font-size="17" fill="#001E2B" text-anchor="middle">Aa</text>
+  <text x="170" y="281" font-size="13.5" font-weight="500" fill="#001E2B">Ink on card</text>
+  <text x="170" y="300" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Text inside white cards. Any size.</text>
+  <text x="842" y="282" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">17.2</text>
+  <text x="842" y="300" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B on #FFFFFF</text>
+  <line x1="58" y1="320" x2="842" y2="320" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="332" width="88" height="44" rx="8" fill="#F8F5EE" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="360" font-size="17" fill="#001E2B" text-anchor="middle">Aa</text>
+  <text x="170" y="349" font-size="13.5" font-weight="500" fill="#001E2B">Ink on cream tint</text>
+  <text x="170" y="368" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Pill chips and soft callouts. Any size.</text>
+  <text x="842" y="350" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">15.8</text>
+  <text x="842" y="368" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B on #F8F5EE</text>
+  <line x1="58" y1="388" x2="842" y2="388" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="400" width="88" height="44" rx="8" fill="#EDECEA" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="428" font-size="17" fill="#001E2B" text-anchor="middle">Aa</text>
+  <text x="170" y="417" font-size="13.5" font-weight="500" fill="#001E2B">Ink on light gray</text>
+  <text x="170" y="436" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Nav pills and secondary surfaces. Any size.</text>
+  <text x="842" y="418" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">14.6</text>
+  <text x="842" y="436" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B on #EDECEA</text>
+  <line x1="58" y1="456" x2="842" y2="456" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="468" width="88" height="44" rx="8" fill="#F7F7F7" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="496" font-size="17" fill="#001E2B" text-anchor="middle">Aa</text>
+  <text x="170" y="485" font-size="13.5" font-weight="500" fill="#001E2B">Ink on faint gray</text>
+  <text x="170" y="504" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Inputs and inactive pill states. Any size.</text>
+  <text x="842" y="486" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">16.1</text>
+  <text x="842" y="504" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B on #F7F7F7</text>
+  <line x1="58" y1="524" x2="842" y2="524" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="536" width="88" height="44" rx="8" fill="#FCC224"/>
+  <text x="102" y="564" font-size="17" fill="#001E2B" text-anchor="middle">Aa</text>
+  <text x="170" y="553" font-size="13.5" font-weight="500" fill="#001E2B">Ink on accent</text>
+  <text x="170" y="572" font-size="11.5" fill="#001E2B" fill-opacity="0.6">The brand CTA pairing. Any size.</text>
+  <text x="842" y="554" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">10.6</text>
+  <text x="842" y="572" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B on #FCC224</text>
+  <line x1="58" y1="592" x2="842" y2="592" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="604" width="88" height="44" rx="8" fill="#FFD84D"/>
+  <text x="102" y="632" font-size="17" fill="#001E2B" text-anchor="middle">Aa</text>
+  <text x="170" y="621" font-size="13.5" font-weight="500" fill="#001E2B">Ink on accent hover</text>
+  <text x="170" y="640" font-size="11.5" fill="#001E2B" fill-opacity="0.6">CTA hover state. Any size.</text>
+  <text x="842" y="622" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">12.4</text>
+  <text x="842" y="640" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B on #FFD84D</text>
+  <line x1="58" y1="660" x2="842" y2="660" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="672" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="700" font-size="17" fill="#0F5E2A" text-anchor="middle">Aa</text>
+  <text x="170" y="689" font-size="13.5" font-weight="500" fill="#001E2B">Success on light</text>
+  <text x="170" y="708" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Success text on the page; 7.9 on white cards.</text>
+  <text x="842" y="690" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">7.3</text>
+  <text x="842" y="708" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#0F5E2A on #F5F5F3</text>
+  <line x1="58" y1="728" x2="842" y2="728" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="740" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="768" font-size="17" fill="#A32D2D" text-anchor="middle">Aa</text>
+  <text x="170" y="757" font-size="13.5" font-weight="500" fill="#001E2B">Danger on light</text>
+  <text x="170" y="776" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Danger text on the page; 7.1 on white cards.</text>
+  <text x="842" y="758" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">6.5</text>
+  <text x="842" y="776" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#A32D2D on #F5F5F3</text>
+  <line x1="58" y1="796" x2="842" y2="796" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="808" width="88" height="44" rx="8" fill="#FCC224" fill-opacity="0.22" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="836" font-size="17" fill="#8A5A00" text-anchor="middle">Aa</text>
+  <text x="170" y="825" font-size="13.5" font-weight="500" fill="#001E2B">Warning on yellow tint</text>
+  <text x="170" y="844" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Warning on a yellow-tinted field; 5.4 on the page.</text>
+  <text x="842" y="826" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">4.9</text>
+  <text x="842" y="844" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#8A5A00 on yellow tint</text>
+  <line x1="58" y1="864" x2="842" y2="864" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="876" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="904" font-size="17" fill="#A96B00" text-anchor="middle">Aa</text>
+  <text x="170" y="893" font-size="13.5" font-weight="500" fill="#001E2B">Inline warning on light</text>
+  <text x="170" y="912" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Below AA for small text. Keep short, prefer #8A5A00.</text>
+  <text x="842" y="894" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">4.0</text>
+  <text x="842" y="912" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#A96B00 on #F5F5F3</text>
+
+  <rect x="34" y="964" width="832" height="336" rx="12" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.10"/>
+  <text x="58" y="1000" font-size="15" font-weight="500" fill="#001E2B">Text on dark surfaces</text>
+  <text x="842" y="1000" font-size="11" fill="#001E2B" fill-opacity="0.6" text-anchor="end">Measured contrast</text>
+
+  <rect x="58" y="1028" width="88" height="44" rx="8" fill="#001E2B"/>
+  <text x="102" y="1056" font-size="17" fill="#FFFFFF" text-anchor="middle">Aa</text>
+  <text x="170" y="1045" font-size="13.5" font-weight="500" fill="#001E2B">White on ink</text>
+  <text x="170" y="1064" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Button labels inside solid navy actions only.</text>
+  <text x="842" y="1046" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">17.2</text>
+  <text x="842" y="1064" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#FFFFFF on #001E2B</text>
+  <line x1="58" y1="1084" x2="842" y2="1084" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1096" width="88" height="44" rx="8" fill="#A32D2D"/>
+  <text x="102" y="1124" font-size="17" fill="#FFFFFF" text-anchor="middle">Aa</text>
+  <text x="170" y="1113" font-size="13.5" font-weight="500" fill="#001E2B">White on danger</text>
+  <text x="170" y="1132" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Danger button labels only.</text>
+  <text x="842" y="1114" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">7.1</text>
+  <text x="842" y="1132" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#FFFFFF on #A32D2D</text>
+  <line x1="58" y1="1152" x2="842" y2="1152" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1164" width="88" height="44" rx="8" fill="#0A0F14"/>
+  <text x="102" y="1192" font-size="17" fill="#F0F0EB" text-anchor="middle">Aa</text>
+  <text x="170" y="1181" font-size="13.5" font-weight="500" fill="#001E2B">Ink on dark, hero dark</text>
+  <text x="170" y="1200" font-size="11.5" fill="#001E2B" fill-opacity="0.6">The cinematic dark hero. Brand only, used sparingly.</text>
+  <text x="842" y="1182" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">16.8</text>
+  <text x="842" y="1200" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#F0F0EB on #0A0F14</text>
+  <line x1="58" y1="1220" x2="842" y2="1220" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1232" width="88" height="44" rx="8" fill="#001E2B"/>
+  <text x="102" y="1260" font-size="17" fill="#F0F0EB" text-anchor="middle">Aa</text>
+  <text x="170" y="1249" font-size="13.5" font-weight="500" fill="#001E2B">Ink on dark, navy ink</text>
+  <text x="170" y="1268" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Dark featured cards. Never pure white for content.</text>
+  <text x="842" y="1250" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">15.1</text>
+  <text x="842" y="1268" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#F0F0EB on #001E2B</text>
+
+  <rect x="34" y="1320" width="832" height="336" rx="12" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.10"/>
+  <text x="58" y="1356" font-size="15" font-weight="500" fill="#001E2B">Ink ramp floors, measured on the page</text>
+  <text x="842" y="1356" font-size="11" fill="#001E2B" fill-opacity="0.6" text-anchor="end">Measured contrast</text>
+
+  <rect x="58" y="1384" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="1412" font-size="17" fill="#001E2B" text-anchor="middle">Aa</text>
+  <text x="170" y="1401" font-size="13.5" font-weight="500" fill="#001E2B">Full ink</text>
+  <text x="170" y="1420" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Headlines and focused input text. Any text.</text>
+  <text x="842" y="1402" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">15.8</text>
+  <text x="842" y="1420" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B</text>
+  <line x1="58" y1="1440" x2="842" y2="1440" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1452" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="1480" font-size="17" fill="#001E2B" fill-opacity="0.8" text-anchor="middle">Aa</text>
+  <text x="170" y="1469" font-size="13.5" font-weight="500" fill="#001E2B">80 percent ink</text>
+  <text x="170" y="1488" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Body copy and emphasis. Any text.</text>
+  <text x="842" y="1470" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">8.7</text>
+  <text x="842" y="1488" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B at 80 percent</text>
+  <line x1="58" y1="1508" x2="842" y2="1508" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1520" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="1548" font-size="17" fill="#001E2B" fill-opacity="0.6" text-anchor="middle">Aa</text>
+  <text x="170" y="1537" font-size="13.5" font-weight="500" fill="#001E2B">60 percent ink</text>
+  <text x="170" y="1556" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Secondary body and labels; a hair under AA on the page, 4.6 on cards.</text>
+  <text x="842" y="1538" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">4.47</text>
+  <text x="842" y="1556" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B at 60 percent</text>
+  <line x1="58" y1="1576" x2="842" y2="1576" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1588" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="1616" font-size="17" fill="#001E2B" fill-opacity="0.3" text-anchor="middle">Aa</text>
+  <text x="170" y="1605" font-size="13.5" font-weight="500" fill="#001E2B">30 percent ink</text>
+  <text x="170" y="1624" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Icon strokes, placeholders, disabled states. Never text.</text>
+  <text x="842" y="1606" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">1.9</text>
+  <text x="842" y="1624" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#001E2B at 30 percent</text>
+
+  <rect x="34" y="1676" width="832" height="336" rx="12" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.10"/>
+  <text x="58" y="1712" font-size="15" font-weight="500" fill="#001E2B">Banned pairings</text>
+  <text x="842" y="1712" font-size="11" fill="#001E2B" fill-opacity="0.6" text-anchor="end">Measured contrast</text>
+
+  <rect x="58" y="1740" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="1768" font-size="17" fill="#FCC224" text-anchor="middle">Aa</text>
+  <line x1="64" y1="1778" x2="140" y2="1746" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
+  <text x="170" y="1757" font-size="13.5" font-weight="500" fill="#001E2B">Yellow as text on light</text>
+  <text x="170" y="1776" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Unreadable. Yellow is a surface and an accent, never text on light.</text>
+  <text x="842" y="1758" font-size="15" font-weight="500" fill="#A32D2D" text-anchor="end">1.5</text>
+  <text x="842" y="1776" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#FCC224 on #F5F5F3</text>
+  <line x1="58" y1="1796" x2="842" y2="1796" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1808" width="88" height="44" rx="8" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="1836" font-size="17" fill="#03677E" text-anchor="middle">Aa</text>
+  <line x1="64" y1="1846" x2="140" y2="1814" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
+  <text x="170" y="1825" font-size="13.5" font-weight="500" fill="#001E2B">Mid-tone as copy</text>
+  <text x="170" y="1844" font-size="11.5" fill="#001E2B" fill-opacity="0.6">The decorative sub-palette never carries text.</text>
+  <text x="842" y="1826" font-size="15" font-weight="500" fill="#A32D2D" text-anchor="end">Banned</text>
+  <text x="842" y="1844" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#03677E as text</text>
+  <line x1="58" y1="1864" x2="842" y2="1864" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1876" width="88" height="44" rx="8" fill="#FCC224"/>
+  <text x="102" y="1904" font-size="17" fill="#03677E" text-anchor="middle">Aa</text>
+  <line x1="64" y1="1914" x2="140" y2="1882" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
+  <text x="170" y="1893" font-size="13.5" font-weight="500" fill="#001E2B">Color on color</text>
+  <text x="170" y="1912" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Semantic colors sit on light neutrals or carry white. Never teal on yellow.</text>
+  <text x="842" y="1894" font-size="15" font-weight="500" fill="#A32D2D" text-anchor="end">Banned</text>
+  <text x="842" y="1912" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#03677E on #FCC224</text>
+  <line x1="58" y1="1932" x2="842" y2="1932" stroke="#001E2B" stroke-opacity="0.08"/>
+
+  <rect x="58" y="1944" width="88" height="44" rx="8" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
+  <text x="102" y="1972" font-size="17" fill="#F0F0EB" text-anchor="middle">Aa</text>
+  <line x1="64" y1="1982" x2="140" y2="1950" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
+  <text x="170" y="1961" font-size="13.5" font-weight="500" fill="#001E2B">Light on light</text>
+  <text x="170" y="1980" font-size="11.5" fill="#001E2B" fill-opacity="0.6">Never two tones from the middle or top of the range.</text>
+  <text x="842" y="1962" font-size="15" font-weight="500" fill="#A32D2D" text-anchor="end">Banned</text>
+  <text x="842" y="1980" font-size="10.5" font-family="ui-monospace, Menlo, monospace" fill="#001E2B" fill-opacity="0.6" text-anchor="end">#F0F0EB on #F5F5F3</text>
+
+  <text x="34" y="2044" font-size="11" fill="#001E2B" fill-opacity="0.6">Known gaps, logged in the tracker: inline warning #A96B00 measures 4.02 on the page at its built 12px size.</text>
+  <text x="34" y="2062" font-size="11" fill="#001E2B" fill-opacity="0.6">60 percent ink measures 4.47 on the page, just under the 4.5 bar; it passes on white cards (4.6). Prefer 80 percent on the page.</text>
+</svg>

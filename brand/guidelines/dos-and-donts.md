@@ -25,7 +25,7 @@ external libraries.
 Also global: no gradient text, ever. And text pairings are dark on light or
 light on dark within the palette, never color on color and never a mid-tone
 as or under text; the sanctioned pairing tables with measured contrast
-ratios are in color.md.
+ratios are in color-pairings.md.
 
 ## Product-only bans
 
