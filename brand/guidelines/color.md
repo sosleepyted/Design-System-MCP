@@ -38,17 +38,14 @@ New hues are never introduced.
 
 ## Ink opacity ramp
 
-Text steps down in opacity, never into gray hues:
+Text steps down in opacity in four steps, never into gray hues:
 
 | Value | Use |
 |---|---|
 | #001E2B | Headlines, focused input text |
-| #001E2B at 85 percent | Body emphasis |
-| #001E2B at 78 percent | Body, list items, paragraphs |
-| #001E2B at 65 percent | Secondary body |
-| #001E2B at 55 percent | Tertiary labels, fine print |
-| #001E2B at 45 percent | Subdued icon stroke |
-| #001E2B at 35 percent | Placeholder text |
+| #001E2B at 80 percent | Body, emphasis, list items, paragraphs |
+| #001E2B at 60 percent | Secondary body, labels, fine print |
+| #001E2B at 30 percent | Icon strokes, placeholders, disabled states, never text |
 
 Borders and dividers:
 

@@ -83,7 +83,7 @@ nav[aria-label="Sections"] a[aria-current="true"] { background-color: #001E2B; c
     <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-100</p><p class="text-sm text-ink/60">Headlines, focused input text. Any text.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">15.8 / 17.2</p><p class="font-mono text-xs text-ink/60">#001E2B</p></div></li>
     <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink/80">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-80</p><p class="text-sm text-ink/60">Body, emphasis, list items, paragraphs. Any text.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">8.7 / 9.2</p><p class="font-mono text-xs text-ink/60">#001E2B at 80 percent</p></div></li>
     <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink/60">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-60</p><p class="text-sm text-ink/60">Secondary body, labels, fine print. A hair under the 4.5 bar on the page, see known gaps.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">4.47 / 4.6</p><p class="font-mono text-xs text-ink/60">#001E2B at 60 percent</p></div></li>
-    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink/30">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-30</p><p class="text-sm text-ink/60">Placeholder text, subdued icon strokes, disabled states. Never text.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">1.9 / 1.9</p><p class="font-mono text-xs text-ink/60">#001E2B at 30 percent</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink/30">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-30</p><p class="text-sm text-ink/60">Icon strokes, placeholders, disabled states. Never text.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">1.9 / 1.9</p><p class="font-mono text-xs text-ink/60">#001E2B at 30 percent</p></div></li>
   </ul>
 </section>
 
@@ -214,7 +214,7 @@ nav[aria-label="Sections"] a[aria-current="true"] { background-color: #001E2B; c
   <h2 id="gaps-h" class="text-lg font-medium">Known gaps, logged in the tracker</h2>
   <ul class="mt-4 space-y-2 text-[15px] leading-relaxed text-ink/80">
     <li>warning-inline #A96B00 measures 4.02 on the page at its built 12px size, below the 4.5 bar. Keep inline warnings short and prefer warning-text #8A5A00 (5.4) where strict AA applies.</li>
-    <li>ink-60 measures 4.47 on the page, just under the 4.5 bar; it passes on white cards (4.6). Prefer ink-80 for essential small text that sits directly on the page.</li>
+    <li>ink-60 measures 4.47 on the page, just under the 4.5 bar; it passes on white cards (4.6). Prefer full ink or ink-80 for essential small text that sits directly on the page.</li>
   </ul>
 </section>
 
@@ -256,9 +256,9 @@ nav[aria-label="Sections"] a[aria-current="true"] { background-color: #001E2B; c
   ],
   "inkTextRamp": [
     { "id": "ink-100", "opacity": 1.0, "contrastOnPage": 15.8, "contrastOnCard": 17.2, "use": "headlines, focused input text, any text" },
-    { "id": "ink-80", "opacity": 0.8, "contrastOnPage": 8.7, "contrastOnCard": 9.2, "use": "body, emphasis, list items, any text" },
-    { "id": "ink-60", "opacity": 0.6, "contrastOnPage": 4.47, "contrastOnCard": 4.6, "use": "secondary body and labels", "knownGap": "a hair under the 4.5 bar on the page, prefer ink-80 there" },
-    { "id": "ink-30", "opacity": 0.3, "contrastOnPage": 1.9, "contrastOnCard": 1.9, "use": "placeholders, icon strokes, disabled states, never text" }
+    { "id": "ink-80", "opacity": 0.8, "contrastOnPage": 8.7, "contrastOnCard": 9.2, "use": "body, emphasis, list items, paragraphs, any text" },
+    { "id": "ink-60", "opacity": 0.6, "contrastOnPage": 4.47, "contrastOnCard": 4.6, "use": "secondary body, labels, fine print", "knownGap": "a hair under the 4.5 bar on the page, prefer full ink or ink-80 there" },
+    { "id": "ink-30", "opacity": 0.3, "contrastOnPage": 1.9, "contrastOnCard": 1.9, "use": "icon strokes, placeholders, disabled states, never text" }
   ],
   "borderRamp": [
     { "id": "border-8", "alpha": 0.08, "use": "faint hairlines, in-card dividers" },

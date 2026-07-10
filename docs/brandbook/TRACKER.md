@@ -196,9 +196,11 @@ here (token changes are spec and code territory, outside this workstream):
   at its built 12px size (UCM S3.8 uses it at 12px). Open question: revisit
   the token or its size; interim guidance in the page prefers #8A5A00
   (5.4 to 1) where strict AA applies.
-- Field labels at 55 percent ink measure 3.8 to 1, passing only the
-  large-text bar while the built label style is 12px (UCM S3.2). Interim
-  guidance: prefer 65 percent for meaning-bearing labels.
+- Secondary text at 60 percent ink measures 4.47 to 1 on the page, a hair
+  under the 4.5 AA bar for normal text (built label style is 12px, UCM
+  S3.2); it passes on white cards (4.6). Interim guidance: prefer full ink
+  or 80 percent for meaning-bearing small text on the page. See the ramp
+  adoption entry below (2026-07-10).
 - White button text (navy and danger buttons) is built reality and passes
   (17.2 and 7.1); the pairing tables sanction it as buttons-only so it does
   not soften the "white is card-surface only" rule elsewhere.
@@ -211,9 +213,30 @@ to the new canonical page brand/guidelines/color-pairings.md, together with
 the color-pairings.svg reference; color.md keeps the one-line pairing
 principle and points at the page. Pointers updated: dos-and-donts.md, the
 brand/README.md reading order, the color-reference.html meta description.
-The known gaps (#A96B00 inline warning, 55 percent labels) travel with the
-tables and stay logged in "Color pairing rules" above. The page gets its
-tracker row when it is pasted to Confluence for the first time.
+The known gaps (#A96B00 inline warning, 60 percent secondary text) travel
+with the tables and stay logged in "Color pairing rules" above. The page
+gets its tracker row when it is pasted to Confluence for the first time.
+
+## Ink opacity ramp adopted at four steps (2026-07-10)
+
+User decision: the ink text opacity ramp is 100 / 80 / 60 / 30, replacing
+the seven-step 100/85/78/65/55/45/35 that had been canonical. This reverses
+the 2026-07-07 note that the four-step ramp was "not adopted"; the user
+confirmed the four-step ramp is what they want for the whole project. Role
+mapping: body and emphasis collapse to 80, secondary body and labels and
+fine print to 60, icon strokes and placeholders and disabled states to 30.
+
+Measured on the page (sRGB alpha-composite, WCAG): 100 is 15.8, 80 is 8.7,
+60 is 4.47, 30 is 1.9. The 60 step lands a hair under the 4.5 AA bar for
+normal text on the page (passes on white cards at 4.6), which is the known
+gap logged above; revisit the token or reserve 60 for larger or card-bound
+text if strict AA is required.
+
+Reconciled in the same pass: color.md, color-pairings.md (floors and known
+gaps), typography.md (docs prose body 78 to 80), color-diagram.svg,
+color-pairings.svg (ramp-floors panel and caption opacities), and
+color-reference.html (visible ramp, embedded JSON, known gaps). HANDOFF.md
+non-negotiables and cleanup item 4 updated to match.
 
 ## Logo page (2026-07-07, net-new)
 

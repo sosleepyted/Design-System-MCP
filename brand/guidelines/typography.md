@@ -41,7 +41,7 @@ they are the same level; merge them or push them apart.
 | Section heading | 20px, Medium 500, tracking minus 0.012em |
 | Subheading | 15px, Semi-Bold 600 |
 | Standard paragraph | 15px, line height 1.55, tracking minus 0.01em |
-| Body in docs prose | 14px, line height 1.6, ink at 78 percent |
+| Body in docs prose | 14px, line height 1.6, ink at 80 percent |
 | Caption and meta | 13px or 12.5px |
 
 Brand heroes may use text-wrap balance and a responsive clamp (1rem to

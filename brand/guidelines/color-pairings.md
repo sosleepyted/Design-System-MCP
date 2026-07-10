@@ -47,10 +47,9 @@ The opacity ramp is a readability ladder, not a free choice:
 
 | Step | Ratio on page | Allowed for |
 |---|---|---|
-| Full ink to 78 percent | 8.2 and up | Any text |
-| 65 percent | 5.3 | Body and smaller; the minimum for essential text |
-| 55 percent | 3.8 | Large text and advisory fine print only, never essential small text |
-| 45 and 35 percent | 2.9 and 2.2 | Icon strokes, placeholders, disabled states; never essential text |
+| Full ink to 80 percent | 8.7 and up | Any text |
+| 60 percent | 4.5 | Secondary body and labels; a hair under the 4.5 bar on the page, passes on white cards (4.6) |
+| 30 percent | 1.9 | Icon strokes, placeholders, disabled states; never text |
 
 ## Banned pairings
 
@@ -70,5 +69,6 @@ The opacity ramp is a readability ladder, not a free choice:
 - Inline warning #A96B00 measures 4.02 on page, below the 4.5 bar at its
   built 12px size. Until the token is revisited, keep inline warnings short
   and prefer #8A5A00 (5.4) where strict AA applies.
-- Field labels at 55 percent ink (3.8) pass only the large-text bar. Prefer
-  65 percent for any label that carries meaning.
+- Secondary text at 60 percent ink measures 4.47 on the page, a hair under
+  the 4.5 bar for normal text; it passes on white cards (4.6). Prefer full
+  ink or 80 percent for essential small text that sits directly on the page.

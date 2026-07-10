@@ -1,128 +1,128 @@
 <svg viewBox="0 0 900 1060" xmlns="http://www.w3.org/2000/svg" font-family="Figtree, sans-serif" role="img" aria-label="UCM sanctioned color pairings diagram">
   <rect width="900" height="1060" fill="#F5F5F3"/>
   <text x="34" y="52" font-size="24" font-weight="300" letter-spacing="-0.4" fill="#001E2B">UCM sanctioned color pairings</text>
-  <text x="34" y="82" font-size="12" fill="#001E2B" fill-opacity="0.78">Dark ink on a light surface, or light cream on a dark surface, always in the same warm tone.</text>
-  <text x="34" y="99" font-size="12" fill="#001E2B" fill-opacity="0.78">The number on each chip is measured WCAG contrast. AA bars: 4.5 for normal text, 3 for large text and UI shapes.</text>
+  <text x="34" y="82" font-size="12" fill="#001E2B" fill-opacity="0.80">Dark ink on a light surface, or light cream on a dark surface, always in the same warm tone.</text>
+  <text x="34" y="99" font-size="12" fill="#001E2B" fill-opacity="0.80">The number on each chip is measured WCAG contrast. AA bars: 4.5 for normal text, 3 for large text and UI shapes.</text>
 
   <text x="34" y="140" font-size="13" font-weight="500" fill="#001E2B">Text on light surfaces</text>
 
   <rect x="34" y="154" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
   <text x="50" y="192" font-size="13" fill="#001E2B">Page</text>
   <text x="210" y="192" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">15.8</text>
-  <text x="34" y="236" font-size="11" fill="#001E2B" fill-opacity="0.78">#001E2B on #F5F5F3</text>
-  <text x="34" y="252" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass, any size</text>
+  <text x="34" y="236" font-size="11" fill="#001E2B" fill-opacity="0.80">#001E2B on #F5F5F3</text>
+  <text x="34" y="252" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass, any size</text>
 
   <rect x="246" y="154" width="192" height="64" rx="10" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.12"/>
   <text x="262" y="192" font-size="13" fill="#001E2B">Card</text>
   <text x="422" y="192" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">17.2</text>
-  <text x="246" y="236" font-size="11" fill="#001E2B" fill-opacity="0.78">#001E2B on #FFFFFF</text>
-  <text x="246" y="252" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass, any size</text>
+  <text x="246" y="236" font-size="11" fill="#001E2B" fill-opacity="0.80">#001E2B on #FFFFFF</text>
+  <text x="246" y="252" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass, any size</text>
 
   <rect x="458" y="154" width="192" height="64" rx="10" fill="#F8F5EE" stroke="#001E2B" stroke-opacity="0.08"/>
   <text x="474" y="192" font-size="13" fill="#001E2B">Cream tint</text>
   <text x="634" y="192" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">15.8</text>
-  <text x="458" y="236" font-size="11" fill="#001E2B" fill-opacity="0.78">#001E2B on #F8F5EE</text>
-  <text x="458" y="252" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass, any size</text>
+  <text x="458" y="236" font-size="11" fill="#001E2B" fill-opacity="0.80">#001E2B on #F8F5EE</text>
+  <text x="458" y="252" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass, any size</text>
 
   <rect x="670" y="154" width="192" height="64" rx="10" fill="#EDECEA"/>
   <text x="686" y="192" font-size="13" fill="#001E2B">Light gray</text>
   <text x="846" y="192" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">14.6</text>
-  <text x="670" y="236" font-size="11" fill="#001E2B" fill-opacity="0.78">#001E2B on #EDECEA</text>
-  <text x="670" y="252" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass, any size</text>
+  <text x="670" y="236" font-size="11" fill="#001E2B" fill-opacity="0.80">#001E2B on #EDECEA</text>
+  <text x="670" y="252" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass, any size</text>
 
   <rect x="34" y="278" width="192" height="64" rx="10" fill="#F7F7F7" stroke="#001E2B" stroke-opacity="0.08"/>
   <text x="50" y="316" font-size="13" fill="#001E2B">Faint gray</text>
   <text x="210" y="316" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">16.1</text>
-  <text x="34" y="360" font-size="11" fill="#001E2B" fill-opacity="0.78">#001E2B on #F7F7F7</text>
-  <text x="34" y="376" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass, any size</text>
+  <text x="34" y="360" font-size="11" fill="#001E2B" fill-opacity="0.80">#001E2B on #F7F7F7</text>
+  <text x="34" y="376" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass, any size</text>
 
   <rect x="246" y="278" width="192" height="64" rx="10" fill="#FCC224"/>
   <text x="262" y="316" font-size="13" fill="#001E2B">Accent</text>
   <text x="422" y="316" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">10.6</text>
-  <text x="246" y="360" font-size="11" fill="#001E2B" fill-opacity="0.78">#001E2B on #FCC224</text>
-  <text x="246" y="376" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass, the brand CTA pairing</text>
+  <text x="246" y="360" font-size="11" fill="#001E2B" fill-opacity="0.80">#001E2B on #FCC224</text>
+  <text x="246" y="376" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass, the brand CTA pairing</text>
 
   <rect x="458" y="278" width="192" height="64" rx="10" fill="#FFD84D"/>
   <text x="474" y="316" font-size="13" fill="#001E2B">Accent hover</text>
   <text x="634" y="316" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">12.4</text>
-  <text x="458" y="360" font-size="11" fill="#001E2B" fill-opacity="0.78">#001E2B on #FFD84D</text>
-  <text x="458" y="376" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass</text>
+  <text x="458" y="360" font-size="11" fill="#001E2B" fill-opacity="0.80">#001E2B on #FFD84D</text>
+  <text x="458" y="376" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass</text>
 
   <rect x="670" y="278" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
   <text x="686" y="316" font-size="13" fill="#0F5E2A">Success text</text>
   <text x="846" y="316" font-size="15" font-weight="500" fill="#0F5E2A" text-anchor="end">7.3</text>
-  <text x="670" y="360" font-size="11" fill="#001E2B" fill-opacity="0.78">#0F5E2A on page or card</text>
-  <text x="670" y="376" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass</text>
+  <text x="670" y="360" font-size="11" fill="#001E2B" fill-opacity="0.80">#0F5E2A on page or card</text>
+  <text x="670" y="376" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass</text>
 
   <rect x="34" y="402" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
   <text x="50" y="440" font-size="13" fill="#A32D2D">Danger text</text>
   <text x="210" y="440" font-size="15" font-weight="500" fill="#A32D2D" text-anchor="end">6.5</text>
-  <text x="34" y="484" font-size="11" fill="#001E2B" fill-opacity="0.78">#A32D2D on page or card</text>
-  <text x="34" y="500" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass</text>
+  <text x="34" y="484" font-size="11" fill="#001E2B" fill-opacity="0.80">#A32D2D on page or card</text>
+  <text x="34" y="500" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass</text>
 
   <rect x="246" y="402" width="192" height="64" rx="10" fill="#FCC224" fill-opacity="0.22"/>
   <text x="262" y="440" font-size="13" fill="#8A5A00">Warning text</text>
   <text x="422" y="440" font-size="15" font-weight="500" fill="#8A5A00" text-anchor="end">5.0</text>
-  <text x="246" y="484" font-size="11" fill="#001E2B" fill-opacity="0.78">#8A5A00 on yellow tint or page</text>
-  <text x="246" y="500" font-size="11" fill="#001E2B" fill-opacity="0.65">Pass</text>
+  <text x="246" y="484" font-size="11" fill="#001E2B" fill-opacity="0.80">#8A5A00 on yellow tint or page</text>
+  <text x="246" y="500" font-size="11" fill="#001E2B" fill-opacity="0.60">Pass</text>
 
   <rect x="458" y="402" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
   <text x="474" y="440" font-size="13" fill="#A96B00">Inline warning</text>
   <text x="634" y="440" font-size="15" font-weight="500" fill="#A96B00" text-anchor="end">4.0</text>
-  <text x="458" y="484" font-size="11" fill="#001E2B" fill-opacity="0.78">#A96B00 on page or card</text>
-  <text x="458" y="500" font-size="11" fill="#001E2B" fill-opacity="0.65">Below AA for small text, tracked</text>
+  <text x="458" y="484" font-size="11" fill="#001E2B" fill-opacity="0.80">#A96B00 on page or card</text>
+  <text x="458" y="500" font-size="11" fill="#001E2B" fill-opacity="0.60">Below AA for small text, tracked</text>
 
   <text x="34" y="548" font-size="13" font-weight="500" fill="#001E2B">Text on dark surfaces</text>
 
   <rect x="34" y="562" width="192" height="64" rx="10" fill="#001E2B"/>
   <text x="50" y="600" font-size="13" fill="#FFFFFF">Button label</text>
   <text x="210" y="600" font-size="15" font-weight="500" fill="#FFFFFF" text-anchor="end">17.2</text>
-  <text x="34" y="644" font-size="11" fill="#001E2B" fill-opacity="0.78">#FFFFFF on #001E2B</text>
-  <text x="34" y="660" font-size="11" fill="#001E2B" fill-opacity="0.65">Solid action surfaces only</text>
+  <text x="34" y="644" font-size="11" fill="#001E2B" fill-opacity="0.80">#FFFFFF on #001E2B</text>
+  <text x="34" y="660" font-size="11" fill="#001E2B" fill-opacity="0.60">Solid action surfaces only</text>
 
   <rect x="246" y="562" width="192" height="64" rx="10" fill="#A32D2D"/>
   <text x="262" y="600" font-size="13" fill="#FFFFFF">Danger button</text>
   <text x="422" y="600" font-size="15" font-weight="500" fill="#FFFFFF" text-anchor="end">7.1</text>
-  <text x="246" y="644" font-size="11" fill="#001E2B" fill-opacity="0.78">#FFFFFF on #A32D2D</text>
-  <text x="246" y="660" font-size="11" fill="#001E2B" fill-opacity="0.65">Danger buttons only</text>
+  <text x="246" y="644" font-size="11" fill="#001E2B" fill-opacity="0.80">#FFFFFF on #A32D2D</text>
+  <text x="246" y="660" font-size="11" fill="#001E2B" fill-opacity="0.60">Danger buttons only</text>
 
   <rect x="458" y="562" width="192" height="64" rx="10" fill="#0A0F14"/>
   <text x="474" y="600" font-size="13" fill="#F0F0EB">Hero copy</text>
   <text x="634" y="600" font-size="15" font-weight="500" fill="#F0F0EB" text-anchor="end">16.8</text>
-  <text x="458" y="644" font-size="11" fill="#001E2B" fill-opacity="0.78">#F0F0EB on #0A0F14</text>
-  <text x="458" y="660" font-size="11" fill="#001E2B" fill-opacity="0.65">Brand hero, used sparingly</text>
+  <text x="458" y="644" font-size="11" fill="#001E2B" fill-opacity="0.80">#F0F0EB on #0A0F14</text>
+  <text x="458" y="660" font-size="11" fill="#001E2B" fill-opacity="0.60">Brand hero, used sparingly</text>
 
   <rect x="670" y="562" width="192" height="64" rx="10" fill="#001E2B"/>
   <text x="686" y="600" font-size="13" fill="#F0F0EB">Featured card</text>
   <text x="846" y="600" font-size="15" font-weight="500" fill="#F0F0EB" text-anchor="end">15.1</text>
-  <text x="670" y="644" font-size="11" fill="#001E2B" fill-opacity="0.78">#F0F0EB on #001E2B</text>
-  <text x="670" y="660" font-size="11" fill="#001E2B" fill-opacity="0.65">Dark featured cards</text>
+  <text x="670" y="644" font-size="11" fill="#001E2B" fill-opacity="0.80">#F0F0EB on #001E2B</text>
+  <text x="670" y="660" font-size="11" fill="#001E2B" fill-opacity="0.60">Dark featured cards</text>
 
   <text x="34" y="708" font-size="13" font-weight="500" fill="#001E2B">Ink ramp floors, measured on the page</text>
 
   <rect x="34" y="722" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
-  <text x="50" y="760" font-size="13" fill="#001E2B" fill-opacity="0.78">Body text</text>
-  <text x="210" y="760" font-size="15" font-weight="500" fill="#001E2B" fill-opacity="0.78" text-anchor="end">8.2</text>
-  <text x="34" y="804" font-size="11" fill="#001E2B" fill-opacity="0.78">Full ink to 78 percent</text>
-  <text x="34" y="820" font-size="11" fill="#001E2B" fill-opacity="0.65">Any text</text>
+  <text x="50" y="760" font-size="13" fill="#001E2B">Headline</text>
+  <text x="210" y="760" font-size="15" font-weight="500" fill="#001E2B" text-anchor="end">15.8</text>
+  <text x="34" y="804" font-size="11" fill="#001E2B" fill-opacity="0.80">Full ink</text>
+  <text x="34" y="820" font-size="11" fill="#001E2B" fill-opacity="0.60">Headlines, any text</text>
 
   <rect x="246" y="722" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
-  <text x="262" y="760" font-size="13" fill="#001E2B" fill-opacity="0.65">Secondary body</text>
-  <text x="422" y="760" font-size="15" font-weight="500" fill="#001E2B" fill-opacity="0.65" text-anchor="end">5.3</text>
-  <text x="246" y="804" font-size="11" fill="#001E2B" fill-opacity="0.78">65 percent ink</text>
-  <text x="246" y="820" font-size="11" fill="#001E2B" fill-opacity="0.65">Minimum for essential text</text>
+  <text x="262" y="760" font-size="13" fill="#001E2B" fill-opacity="0.80">Body text</text>
+  <text x="422" y="760" font-size="15" font-weight="500" fill="#001E2B" fill-opacity="0.80" text-anchor="end">8.7</text>
+  <text x="246" y="804" font-size="11" fill="#001E2B" fill-opacity="0.80">80 percent ink</text>
+  <text x="246" y="820" font-size="11" fill="#001E2B" fill-opacity="0.60">Body, any text</text>
 
   <rect x="458" y="722" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
-  <text x="474" y="760" font-size="13" fill="#001E2B" fill-opacity="0.55">Fine print</text>
-  <text x="634" y="760" font-size="15" font-weight="500" fill="#001E2B" fill-opacity="0.55" text-anchor="end">3.8</text>
-  <text x="458" y="804" font-size="11" fill="#001E2B" fill-opacity="0.78">55 percent ink</text>
-  <text x="458" y="820" font-size="11" fill="#001E2B" fill-opacity="0.65">Large text and advisory only</text>
+  <text x="474" y="760" font-size="13" fill="#001E2B" fill-opacity="0.60">Secondary</text>
+  <text x="634" y="760" font-size="15" font-weight="500" fill="#001E2B" fill-opacity="0.60" text-anchor="end">4.5</text>
+  <text x="458" y="804" font-size="11" fill="#001E2B" fill-opacity="0.80">60 percent ink</text>
+  <text x="458" y="820" font-size="11" fill="#001E2B" fill-opacity="0.60">A hair under AA on the page</text>
 
   <rect x="670" y="722" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
-  <text x="686" y="760" font-size="13" fill="#001E2B" fill-opacity="0.35">Placeholder</text>
-  <text x="846" y="760" font-size="15" font-weight="500" fill="#001E2B" fill-opacity="0.35" text-anchor="end">2.2</text>
-  <text x="670" y="804" font-size="11" fill="#001E2B" fill-opacity="0.78">45 and 35 percent ink</text>
-  <text x="670" y="820" font-size="11" fill="#001E2B" fill-opacity="0.65">Never essential text</text>
+  <text x="686" y="760" font-size="13" fill="#001E2B" fill-opacity="0.30">Placeholder</text>
+  <text x="846" y="760" font-size="15" font-weight="500" fill="#001E2B" fill-opacity="0.30" text-anchor="end">1.9</text>
+  <text x="670" y="804" font-size="11" fill="#001E2B" fill-opacity="0.80">30 percent ink</text>
+  <text x="670" y="820" font-size="11" fill="#001E2B" fill-opacity="0.60">Never text</text>
 
   <text x="34" y="868" font-size="13" font-weight="500" fill="#001E2B">Banned pairings</text>
 
@@ -130,27 +130,27 @@
   <text x="50" y="920" font-size="13" fill="#FCC224">Yellow as text</text>
   <text x="210" y="920" font-size="15" font-weight="500" fill="#FCC224" text-anchor="end">1.5</text>
   <line x1="46" y1="934" x2="214" y2="894" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
-  <text x="34" y="964" font-size="11" fill="#001E2B" fill-opacity="0.78">#FCC224 on #F5F5F3</text>
-  <text x="34" y="980" font-size="11" fill="#001E2B" fill-opacity="0.65">Banned, never text on light</text>
+  <text x="34" y="964" font-size="11" fill="#001E2B" fill-opacity="0.80">#FCC224 on #F5F5F3</text>
+  <text x="34" y="980" font-size="11" fill="#001E2B" fill-opacity="0.60">Banned, never text on light</text>
 
   <rect x="246" y="882" width="192" height="64" rx="10" fill="#FFFFFF" stroke="#001E2B" stroke-opacity="0.12"/>
   <text x="262" y="920" font-size="13" fill="#03677E">Teal as copy</text>
   <line x1="258" y1="934" x2="426" y2="894" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
-  <text x="246" y="964" font-size="11" fill="#001E2B" fill-opacity="0.78">#03677E on page or card</text>
-  <text x="246" y="980" font-size="11" fill="#001E2B" fill-opacity="0.65">Banned, mid-tones never carry copy</text>
+  <text x="246" y="964" font-size="11" fill="#001E2B" fill-opacity="0.80">#03677E on page or card</text>
+  <text x="246" y="980" font-size="11" fill="#001E2B" fill-opacity="0.60">Banned, mid-tones never carry copy</text>
 
   <rect x="458" y="882" width="192" height="64" rx="10" fill="#FCC224"/>
   <text x="474" y="920" font-size="13" fill="#03677E">Teal on yellow</text>
   <line x1="470" y1="934" x2="638" y2="894" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
-  <text x="458" y="964" font-size="11" fill="#001E2B" fill-opacity="0.78">#03677E on #FCC224</text>
-  <text x="458" y="980" font-size="11" fill="#001E2B" fill-opacity="0.65">Banned, color on color</text>
+  <text x="458" y="964" font-size="11" fill="#001E2B" fill-opacity="0.80">#03677E on #FCC224</text>
+  <text x="458" y="980" font-size="11" fill="#001E2B" fill-opacity="0.60">Banned, color on color</text>
 
   <rect x="670" y="882" width="192" height="64" rx="10" fill="#F5F5F3" stroke="#001E2B" stroke-opacity="0.12"/>
   <text x="686" y="920" font-size="13" fill="#F0F0EB">Light on light</text>
   <line x1="682" y1="934" x2="850" y2="894" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
-  <text x="670" y="964" font-size="11" fill="#001E2B" fill-opacity="0.78">#F0F0EB on #F5F5F3</text>
-  <text x="670" y="980" font-size="11" fill="#001E2B" fill-opacity="0.65">Banned, light on light</text>
+  <text x="670" y="964" font-size="11" fill="#001E2B" fill-opacity="0.80">#F0F0EB on #F5F5F3</text>
+  <text x="670" y="980" font-size="11" fill="#001E2B" fill-opacity="0.60">Banned, light on light</text>
 
-  <text x="34" y="1016" font-size="11" fill="#001E2B" fill-opacity="0.65">Known gaps, logged in the tracker: inline warning #A96B00 measures 4.02 on page at its built 12px size.</text>
-  <text x="34" y="1032" font-size="11" fill="#001E2B" fill-opacity="0.65">Field labels at 55 percent ink (3.8) pass only the large-text bar; prefer #8A5A00 and 65 percent ink where strict AA applies.</text>
+  <text x="34" y="1016" font-size="11" fill="#001E2B" fill-opacity="0.60">Known gaps, logged in the tracker: inline warning #A96B00 measures 4.02 on page at its built 12px size.</text>
+  <text x="34" y="1032" font-size="11" fill="#001E2B" fill-opacity="0.60">Secondary text at 60 percent ink (4.47) is a hair under the 4.5 bar on the page; it passes on white cards. Prefer full ink or 80 percent for essential small text on the page.</text>
 </svg>
