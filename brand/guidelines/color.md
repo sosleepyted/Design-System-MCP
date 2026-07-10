@@ -29,24 +29,23 @@ New hues are never introduced.
   page is #F5F5F3. White #FFFFFF exists only as a card surface.
 - Yellow stays scarce: never more than about 10 percent of any surface.
 - Borders are navy with alpha, never gray and never black.
-- Sanctioned pairings: cream #F5F5F3 with ink #001E2B, or hero dark #0A0F14
-  with ink-on-dark #F0F0EB, used sparingly and in brand mode only.
+- Text pairings are dark on light or light on dark inside the palette,
+  never color on color: cream #F5F5F3 with ink #001E2B, or hero dark
+  #0A0F14 with ink-on-dark #F0F0EB used sparingly and in brand mode only.
+  The full sanctioned tables are their own page (guidelines/color-pairings.md).
 - Gradient text is banned. The GlowButton radial is the one gradient in the
   system, brand only.
 
 ## Ink opacity ramp
 
-Text steps down in opacity, never into gray hues:
+Text steps down in opacity in four steps, never into gray hues:
 
 | Value | Use |
 |---|---|
 | #001E2B | Headlines, focused input text |
-| #001E2B at 85 percent | Body emphasis |
-| #001E2B at 78 percent | Body, list items, paragraphs |
-| #001E2B at 65 percent | Secondary body |
-| #001E2B at 55 percent | Tertiary labels, fine print |
-| #001E2B at 45 percent | Subdued icon stroke |
-| #001E2B at 35 percent | Placeholder text |
+| #001E2B at 80 percent | Body, emphasis, list items, paragraphs |
+| #001E2B at 60 percent | Secondary body, labels, fine print |
+| #001E2B at 30 percent | Icon strokes, placeholders, disabled states, never text |
 
 Borders and dividers:
 
@@ -79,6 +78,13 @@ Decorative only, never the CTA, never a primary: teals #03677E, #024E60,
 #0E3E4A, #114C5A, #1A8578, #2FB8A8; light blue #C2E8FF; light cyan #D9E8E2;
 brand orange #F0A639; and the logo accent dot #FF9932, which belongs to the
 "ucm." wordmark and nothing else.
+
+## Sanctioned pairings
+
+The pairing rules are their own page: every sanctioned text and surface
+combination with its measured WCAG contrast ratio, the ink ramp floors, and
+the banned pairings (guidelines/color-pairings.md). Anything not in those
+tables is not a sanctioned pairing.
 
 ## Coming from the old palette
 

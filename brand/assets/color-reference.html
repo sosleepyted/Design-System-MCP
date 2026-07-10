@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UCM color reference</title>
+<meta name="description" content="Every UCM color token and sanctioned pairing, with measured WCAG contrast. Canonical sources: brand/guidelines/color.md and color-pairings.md.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500&family=Nunito:wght@800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#001E2B', page: '#F5F5F3', card: '#FFFFFF',
+        accent: '#FCC224', 'accent-hover': '#FFD84D',
+        'cream-tint': '#F8F5EE', 'light-gray': '#EDECEA', 'faint-gray': '#F7F7F7',
+        'ink-on-dark': '#F0F0EB', 'hero-dark': '#0A0F14',
+        success: '#0F5E2A', danger: '#A32D2D',
+        'warning-text': '#8A5A00', 'warning-inline': '#A96B00'
+      },
+      fontFamily: { sans: ['Figtree', 'system-ui', 'sans-serif'], logo: ['Nunito', 'system-ui', 'sans-serif'] }
+    }
+  }
+}
+</script>
+<style>
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+nav[aria-label="Sections"] a[aria-current="true"] { background-color: #001E2B; color: #F0F0EB; }
+</style>
+</head>
+<body class="bg-page font-sans text-ink antialiased">
+
+<header class="mx-auto max-w-4xl px-6 pb-4 pt-16">
+  <h1 class="text-4xl font-light tracking-tight"><span class="font-logo font-extrabold">ucm<span class="text-[#FF9932]">.</span></span> color</h1>
+  <p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-ink/80">The whole system is one triad: cream page, navy ink, yellow accent. Every other value is a ramp, a status color, or a small decorative sub-palette. New hues are never introduced. Every ratio on this page is measured WCAG contrast; the AA bars are 4.5 to 1 for normal text and 3 to 1 for large text and UI shapes.</p>
+  <nav aria-label="Sections" class="mt-6 flex flex-wrap gap-2">
+    <a href="#tokens" class="rounded-full bg-light-gray px-4 py-1.5 text-sm text-ink/80 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">Tokens</a>
+    <a href="#ramps" class="rounded-full bg-light-gray px-4 py-1.5 text-sm text-ink/80 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">Ramps</a>
+    <a href="#rules" class="rounded-full bg-light-gray px-4 py-1.5 text-sm text-ink/80 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">Rules</a>
+    <a href="#logo" class="rounded-full bg-light-gray px-4 py-1.5 text-sm text-ink/80 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">Logo</a>
+    <a href="#pairings" class="rounded-full bg-light-gray px-4 py-1.5 text-sm text-ink/80 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">Pairings</a>
+    <a href="#banned" class="rounded-full bg-light-gray px-4 py-1.5 text-sm text-ink/80 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">Banned</a>
+    <a href="#machine" class="rounded-full bg-light-gray px-4 py-1.5 text-sm text-ink/80 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">JSON</a>
+  </nav>
+</header>
+
+<main class="mx-auto max-w-4xl space-y-6 px-6 pb-24 pt-6">
+
+<section id="tokens" aria-labelledby="core-h" class="scroll-mt-6 rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="core-h" class="text-lg font-medium">Core tokens</h2>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-ink"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink</p><p class="text-sm text-ink/60">Text and borders everywhere, used instead of black, never #000.</p></div><button data-copy="#001E2B" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#001E2B</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/10 bg-page"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">page</p><p class="text-sm text-ink/60">Page background, never #FFF as a page.</p></div><button data-copy="#F5F5F3" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#F5F5F3</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/10 bg-card"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">card</p><p class="text-sm text-ink/60">Card surface, the one allowed pure white.</p></div><button data-copy="#FFFFFF" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#FFFFFF</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-accent"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">accent</p><p class="text-sm text-ink/60">Yellow accent, the brand primary CTA. Never more than about 10 percent of any surface.</p></div><button data-copy="#FCC224" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#FCC224</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-accent-hover"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">accent-hover</p><p class="text-sm text-ink/60">Accent hover state.</p></div><button data-copy="#FFD84D" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#FFD84D</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/10 bg-cream-tint"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">cream-tint</p><p class="text-sm text-ink/60">Pill chips, soft callouts.</p></div><button data-copy="#F8F5EE" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#F8F5EE</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-light-gray"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">light-gray</p><p class="text-sm text-ink/60">Nav pill background, secondary surface.</p></div><button data-copy="#EDECEA" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#EDECEA</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/10 bg-faint-gray"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">faint-gray</p><p class="text-sm text-ink/60">Inputs, inactive pill states (brand).</p></div><button data-copy="#F7F7F7" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#F7F7F7</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/10 bg-ink-on-dark"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-on-dark</p><p class="text-sm text-ink/60">Text on dark surfaces, never pure white for content.</p></div><button data-copy="#F0F0EB" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#F0F0EB</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-hero-dark"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">hero-dark</p><p class="text-sm text-ink/60">Cinematic dark hero, brand only.</p></div><button data-copy="#0A0F14" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#0A0F14</button></li>
+  </ul>
+</section>
+
+<section aria-labelledby="status-h" class="rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="status-h" class="text-lg font-medium">Status tokens</h2>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-success"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">success</p><p class="text-sm text-ink/60">Success text; tint base at 22 percent.</p></div><button data-copy="#0F5E2A" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#0F5E2A</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-danger"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">danger</p><p class="text-sm text-ink/60">Danger text and button background; 10 percent hover tint.</p></div><button data-copy="#A32D2D" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#A32D2D</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-warning-text"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">warning-text</p><p class="text-sm text-ink/60">Warning text on a yellow-tinted background or the page.</p></div><button data-copy="#8A5A00" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#8A5A00</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-warning-inline"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">warning-inline</p><p class="text-sm text-ink/60">Inline warning text; below AA at its built 12px size, see known gaps.</p></div><button data-copy="#A96B00" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#A96B00</button></li>
+  </ul>
+  <p class="mt-4 text-sm text-ink/60">Warning always uses the accent family, never a new orange or red.</p>
+</section>
+
+<section id="ramps" aria-labelledby="ramp-h" class="scroll-mt-6 rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"><h2 id="ramp-h" class="text-lg font-medium">Ink opacity ramp, text</h2><span class="text-xs text-ink/60">Contrast on page / card</span></div>
+  <p class="mt-2 text-sm text-ink/60">Text steps down in opacity, never into gray hues. Four steps only: 100 / 80 / 60 / 30.</p>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-100</p><p class="text-sm text-ink/60">Headlines, focused input text. Any text.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">15.8 / 17.2</p><p class="font-mono text-xs text-ink/60">#001E2B</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink/80">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-80</p><p class="text-sm text-ink/60">Body, emphasis, list items, paragraphs. Any text.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">8.7 / 9.2</p><p class="font-mono text-xs text-ink/60">#001E2B at 80 percent</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink/60">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-60</p><p class="text-sm text-ink/60">Secondary body, labels, fine print. A hair under the 4.5 bar on the page, see known gaps.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">4.47 / 4.6</p><p class="font-mono text-xs text-ink/60">#001E2B at 60 percent</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink/30">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">ink-30</p><p class="text-sm text-ink/60">Icon strokes, placeholders, disabled states. Never text.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">1.9 / 1.9</p><p class="font-mono text-xs text-ink/60">#001E2B at 30 percent</p></div></li>
+  </ul>
+</section>
+
+<section aria-labelledby="border-h" class="rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="border-h" class="text-lg font-medium">Border and divider ramp</h2>
+  <p class="mt-2 text-sm text-ink/60">Borders are navy with alpha, never gray and never black.</p>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="relative block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-page"><span class="absolute inset-x-3 top-1/2 border-t border-ink/[0.08]"></span></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">border-8</p><p class="text-sm text-ink/60">Faint hairlines, in-card dividers.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#001E2B at 8 percent</p></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/10 bg-card"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">border-10</p><p class="text-sm text-ink/60">Default card border.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#001E2B at 10 percent</p></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/[0.12] bg-card"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">border-12</p><p class="text-sm text-ink/60">Default input border.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#001E2B at 12 percent</p></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/[0.15] bg-card"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">border-15</p><p class="text-sm text-ink/60">Outlined buttons.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#001E2B at 15 percent</p></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border border-ink/25 bg-card"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">border-25</p><p class="text-sm text-ink/60">Hover state on cards and inputs.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#001E2B at 25 percent</p></li>
+  </ul>
+</section>
+
+<section aria-labelledby="alphas-h" class="rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="alphas-h" class="text-lg font-medium">Accent alphas</h2>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-accent/[0.22]"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">accent-tint-22</p><p class="text-sm text-ink/60">Soft tinted background; composites to about #F7EAC5 over the page.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#FCC224 at 22 percent</p></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg border-2 border-accent/60 bg-card"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">accent-border-60</p><p class="text-sm text-ink/60">Strong border on an empty or attention field.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#FCC224 at 60 percent</p></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="m-1 block h-9 w-20 shrink-0 rounded-lg border-2 border-accent/60 bg-card ring-4 ring-accent/25"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">accent-ring-25</p><p class="text-sm text-ink/60">Ring partner to that border.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#FCC224 at 25 percent</p></li>
+  </ul>
+</section>
+
+<section aria-labelledby="deco-h" class="rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="deco-h" class="text-lg font-medium">Decorative sub-palette</h2>
+  <p class="mt-2 text-sm text-ink/60">Decorative only: never the CTA, never a primary, never as text, never under text.</p>
+  <ul class="mt-4 grid grid-cols-3 gap-4 sm:grid-cols-5">
+    <li><span class="block h-11 rounded-lg bg-[#03677E]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#03677E</p></li>
+    <li><span class="block h-11 rounded-lg bg-[#024E60]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#024E60</p></li>
+    <li><span class="block h-11 rounded-lg bg-[#0E3E4A]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#0E3E4A</p></li>
+    <li><span class="block h-11 rounded-lg bg-[#114C5A]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#114C5A</p></li>
+    <li><span class="block h-11 rounded-lg bg-[#1A8578]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#1A8578</p></li>
+    <li><span class="block h-11 rounded-lg bg-[#2FB8A8]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#2FB8A8</p></li>
+    <li><span class="block h-11 rounded-lg border border-ink/10 bg-[#C2E8FF]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#C2E8FF</p></li>
+    <li><span class="block h-11 rounded-lg border border-ink/10 bg-[#D9E8E2]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#D9E8E2</p></li>
+    <li><span class="block h-11 rounded-lg bg-[#F0A639]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#F0A639</p></li>
+    <li><span class="block h-11 rounded-lg bg-[#FF9932]"></span><p class="mt-1.5 font-mono text-[10px] text-ink/60">#FF9932, logo dot</p></li>
+  </ul>
+  <p class="mt-4 text-sm text-ink/60">The logo dot #FF9932 belongs to the "ucm." wordmark and nothing else.</p>
+</section>
+
+<section id="rules" aria-labelledby="rules-h" class="scroll-mt-6 rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="rules-h" class="text-lg font-medium">The rules that keep it honest</h2>
+  <ul class="mt-4 space-y-2 text-[15px] leading-relaxed text-ink/80">
+    <li>Never pure black, never pure white as ink or surface. Ink is #001E2B, the page is #F5F5F3. White #FFFFFF exists only as a card surface and as text inside solid action surfaces.</li>
+    <li>Yellow stays scarce: never more than about 10 percent of any surface.</li>
+    <li>Borders are navy with alpha, never gray and never black.</li>
+    <li>Hero dark #0A0F14 with ink-on-dark #F0F0EB is brand only, used sparingly.</li>
+    <li>Gradient text is banned. The GlowButton radial is the one gradient in the system, brand only.</li>
+  </ul>
+</section>
+
+<section id="logo" aria-labelledby="logo-h" class="scroll-mt-6 rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="logo-h" class="text-lg font-medium">Logo usage</h2>
+  <p class="mt-2 text-sm text-ink/60">The wordmark is "ucm." in Nunito ExtraBold, always lowercase, always ending in the dot. It is placed from the asset files and never retyped as styled text; brand/assets/logos/ holds the README that points at the Drive folder until the files land.</p>
+  <div class="mt-6 grid gap-4 sm:grid-cols-3">
+    <figure class="rounded-lg border border-ink/10 bg-page px-6 py-12 text-center">
+      <p class="font-logo text-5xl font-extrabold tracking-tight">ucm<span class="text-[#FF9932]">.</span></p>
+      <figcaption class="mt-8 text-sm text-ink/60">On light: ink #001E2B, the dot #FF9932</figcaption>
+    </figure>
+    <figure class="rounded-lg bg-hero-dark px-6 py-12 text-center">
+      <p class="font-logo text-5xl font-extrabold tracking-tight text-ink-on-dark">ucm<span class="text-[#FF9932]">.</span></p>
+      <figcaption class="mt-8 text-sm text-ink-on-dark/60">On dark: ink-on-dark #F0F0EB, the dot #FF9932</figcaption>
+    </figure>
+    <figure class="flex flex-col items-center justify-center rounded-lg bg-accent px-6 py-8 text-center">
+      <span class="inline-block rounded-full bg-card px-6 py-2"><span class="font-logo block text-5xl font-extrabold tracking-tight">ucm<span class="text-[#FF9932]">.</span></span></span>
+      <figcaption class="mt-6 text-sm text-ink/80">On accent: the wordmark sits in its white container</figcaption>
+    </figure>
+  </div>
+  <p class="mt-3 text-sm text-ink/60">These specimens are typographic stand-ins in Nunito ExtraBold, the wordmark face; production placements always use the asset files.</p>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="block h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] rounded-lg bg-[#FF9932]"></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">logo-dot</p><p class="text-sm text-ink/60">The dot is always #FF9932. This color belongs to the wordmark and nothing else.</p></div><button data-copy="#FF9932" class="ml-auto shrink-0 rounded px-1 font-mono text-xs text-ink/60 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">#FF9932</button></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="font-logo flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] font-extrabold tracking-tight">ucm<span class="text-[#FF9932]">.</span></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Wordmark on light surfaces</p><p class="text-sm text-ink/60">Letterforms in ink #001E2B, the dot unchanged. The dot alone measures about 2.0 on light, see the note below.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#001E2B + #FF9932</p></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="font-logo flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-hero-dark text-[17px] font-extrabold tracking-tight text-ink-on-dark">ucm<span class="text-[#FF9932]">.</span></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Wordmark on dark surfaces</p><p class="text-sm text-ink/60">Letterforms in ink-on-dark #F0F0EB, the dot unchanged: 8.1 on ink, 9.0 on hero dark.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">#F0F0EB + #FF9932</p></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-accent"><span class="font-logo rounded-full bg-card px-2.5 py-0.5 text-[13px] font-extrabold tracking-tight">ucm<span class="text-[#FF9932]">.</span></span></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Wordmark on accent</p><p class="text-sm text-ink/60">The standard mark sits in its white container, never directly on yellow; #FF9932 on #FCC224 measures 1.3 and disappears.</p></div><p class="ml-auto shrink-0 font-mono text-xs text-ink/60">card + #001E2B + #FF9932</p></li>
+  </ul>
+  <ul class="mt-4 space-y-2 text-[15px] leading-relaxed text-ink/80">
+    <li>Never retype the wordmark. Place the provided asset, in any medium.</li>
+    <li>Never uppercase. The wordmark is "ucm.", not "UCM."; uppercase UCM stays reserved for prose.</li>
+    <li>Never restyle. The wordmark is always Nunito ExtraBold, never another face or weight.</li>
+    <li>Never recolor, drop, or resize the dot independently, and never use #FF9932 outside the wordmark.</li>
+    <li>On the accent the wordmark sits inside its white container, never directly on the yellow: the dot measures 1.3 on #FCC224 and disappears. The container is always a pill at maximum border radius, kept compact around the mark.</li>
+    <li>The wordmark sits on the light neutrals, the dark surfaces, or its white container on the accent, never on the decorative mid-tones.</li>
+  </ul>
+  <p class="mt-4 text-sm text-ink/60">The dot alone measures about 2.0 against light surfaces, under the 3.0 UI bar. Logos are exempt from that requirement, and the dot never appears without the ink letterforms beside it.</p>
+</section>
+
+<section id="pairings" aria-labelledby="light-h" class="scroll-mt-6 rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"><h2 id="light-h" class="text-lg font-medium">Text on light surfaces</h2><span class="text-xs text-ink/60">Measured contrast</span></div>
+  <p class="mt-2 text-sm text-ink/60">One principle: dark ink-family text on a light surface, or light cream-family text on a dark surface, always in the same warm tone. Anything not listed is not a sanctioned pairing.</p>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on page</p><p class="text-sm text-ink/60">Default text on the page background. Any size.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">15.8</p><p class="font-mono text-xs text-ink/60">#001E2B on #F5F5F3</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-card text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on card</p><p class="text-sm text-ink/60">Text inside white cards. Any size.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">17.2</p><p class="font-mono text-xs text-ink/60">#001E2B on #FFFFFF</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-cream-tint text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on cream tint</p><p class="text-sm text-ink/60">Pill chips and soft callouts. Any size.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">15.8</p><p class="font-mono text-xs text-ink/60">#001E2B on #F8F5EE</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-light-gray text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on light gray</p><p class="text-sm text-ink/60">Nav pills and secondary surfaces. Any size.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">14.6</p><p class="font-mono text-xs text-ink/60">#001E2B on #EDECEA</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-faint-gray text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on faint gray</p><p class="text-sm text-ink/60">Inputs and inactive pill states. Any size.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">16.1</p><p class="font-mono text-xs text-ink/60">#001E2B on #F7F7F7</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-accent text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on accent</p><p class="text-sm text-ink/60">The brand CTA pairing. Any size.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">10.6</p><p class="font-mono text-xs text-ink/60">#001E2B on #FCC224</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-accent-hover text-[17px] text-ink">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on accent hover</p><p class="text-sm text-ink/60">CTA hover state. Any size.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">12.4</p><p class="font-mono text-xs text-ink/60">#001E2B on #FFD84D</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-success">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Success on light</p><p class="text-sm text-ink/60">7.3 on the page, 7.9 on white cards.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">7.3</p><p class="font-mono text-xs text-ink/60">#0F5E2A on #F5F5F3</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-danger">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Danger on light</p><p class="text-sm text-ink/60">6.5 on the page, 7.1 on white cards.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">6.5</p><p class="font-mono text-xs text-ink/60">#A32D2D on #F5F5F3</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-accent/[0.22] text-[17px] text-warning-text">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Warning on yellow tint</p><p class="text-sm text-ink/60">4.9 on the tint, 5.4 on the page.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">4.9</p><p class="font-mono text-xs text-ink/60">#8A5A00 on yellow tint</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-warning-inline">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Inline warning on light</p><p class="text-sm text-ink/60">Below AA for small text. Keep short, prefer #8A5A00.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">4.02</p><p class="font-mono text-xs text-ink/60">#A96B00 on #F5F5F3</p></div></li>
+  </ul>
+</section>
+
+<section aria-labelledby="dark-h" class="rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"><h2 id="dark-h" class="text-lg font-medium">Text on dark surfaces</h2><span class="text-xs text-ink/60">Measured contrast</span></div>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-ink text-[17px] text-card">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">White on ink</p><p class="text-sm text-ink/60">Button labels inside solid navy actions only.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">17.2</p><p class="font-mono text-xs text-ink/60">#FFFFFF on #001E2B</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-danger text-[17px] text-card">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">White on danger</p><p class="text-sm text-ink/60">Danger button labels only.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">7.1</p><p class="font-mono text-xs text-ink/60">#FFFFFF on #A32D2D</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-hero-dark text-[17px] text-ink-on-dark">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on dark, hero dark</p><p class="text-sm text-ink/60">The cinematic dark hero. Brand only, used sparingly.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">16.8</p><p class="font-mono text-xs text-ink/60">#F0F0EB on #0A0F14</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-ink text-[17px] text-ink-on-dark">Aa</span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Ink on dark, navy ink</p><p class="text-sm text-ink/60">Dark featured cards. Never pure white for content.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium">15.1</p><p class="font-mono text-xs text-ink/60">#F0F0EB on #001E2B</p></div></li>
+  </ul>
+</section>
+
+<section id="banned" aria-labelledby="banned-h" class="scroll-mt-6 rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"><h2 id="banned-h" class="text-lg font-medium">Banned pairings</h2><span class="text-xs text-ink/60">Measured contrast</span></div>
+  <ul class="mt-2 divide-y divide-ink/[0.08]">
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="relative flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-accent">Aa<span class="absolute inset-x-2 top-1/2 h-0.5 -rotate-[14deg] rounded-full bg-danger/85"></span></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Yellow as text on light</p><p class="text-sm text-ink/60">Unreadable. Yellow is a surface and an accent, never text on light.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium text-danger">1.5</p><p class="font-mono text-xs text-ink/60">#FCC224 on #F5F5F3</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="relative flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-card text-[17px] text-[#03677E]">Aa<span class="absolute inset-x-2 top-1/2 h-0.5 -rotate-[14deg] rounded-full bg-danger/85"></span></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Mid-tone as copy</p><p class="text-sm text-ink/60">The decorative sub-palette never carries text.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium text-danger">Banned</p><p class="font-mono text-xs text-ink/60">#03677E as text</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="relative flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg bg-accent text-[17px] text-[#03677E]">Aa<span class="absolute inset-x-2 top-1/2 h-0.5 -rotate-[14deg] rounded-full bg-danger/85"></span></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Color on color</p><p class="text-sm text-ink/60">Semantic colors sit on light neutrals or carry white. Never teal on yellow.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium text-danger">Banned</p><p class="font-mono text-xs text-ink/60">#03677E on #FCC224</p></div></li>
+    <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-4 sm:gap-x-5"><span class="relative flex h-10 w-16 shrink-0 sm:h-11 sm:w-[88px] items-center justify-center rounded-lg border border-ink/10 bg-page text-[17px] text-ink-on-dark">Aa<span class="absolute inset-x-2 top-1/2 h-0.5 -rotate-[14deg] rounded-full bg-danger/85"></span></span><div class="min-w-0 flex-1 basis-40"><p class="text-[15px] font-medium">Light on light</p><p class="text-sm text-ink/60">Never two tones from the middle or top of the range.</p></div><div class="ml-auto shrink-0 text-right"><p class="text-[15px] font-medium text-danger">Banned</p><p class="font-mono text-xs text-ink/60">#F0F0EB on #F5F5F3</p></div></li>
+  </ul>
+</section>
+
+<section aria-labelledby="gaps-h" class="rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="gaps-h" class="text-lg font-medium">Known gaps, logged in the tracker</h2>
+  <ul class="mt-4 space-y-2 text-[15px] leading-relaxed text-ink/80">
+    <li>warning-inline #A96B00 measures 4.02 on the page at its built 12px size, below the 4.5 bar. Keep inline warnings short and prefer warning-text #8A5A00 (5.4) where strict AA applies.</li>
+    <li>ink-60 measures 4.47 on the page, just under the 4.5 bar; it passes on white cards (4.6). Prefer full ink or ink-80 for essential small text that sits directly on the page.</li>
+  </ul>
+</section>
+
+<section id="machine" aria-labelledby="machine-h" class="scroll-mt-6 rounded-xl border border-ink/10 bg-card p-6 sm:p-8">
+  <h2 id="machine-h" class="text-lg font-medium">Machine-readable block</h2>
+  <p class="mt-2 text-sm text-ink/60">The JSON below mirrors this page one to one, for AI agents and tooling. It also lives in the DOM as <span class="font-mono text-xs">script#ucm-color-data</span>. Canonical source: brand/guidelines/color.md.</p>
+  <details class="mt-4">
+    <summary class="cursor-pointer text-sm font-medium text-ink/80 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60">Show the JSON</summary>
+    <pre class="mt-4 overflow-x-auto rounded-lg bg-hero-dark p-4 text-xs leading-relaxed text-ink-on-dark"><code id="json-view"></code></pre>
+  </details>
+</section>
+
+</main>
+
+<footer class="mx-auto max-w-4xl px-6 pb-16">
+  <p class="text-xs text-ink/60">UCM brand, color reference. Canonical source: brand/guidelines/color.md; when the page changes, this file changes in the same commit.</p>
+</footer>
+
+<script type="application/json" id="ucm-color-data">
+{
+  "version": "2026-07-07",
+  "canonical": "brand/guidelines/color.md",
+  "contrastBars": { "normalText": 4.5, "largeTextAndUi": 3.0 },
+  "tokens": [
+    { "id": "ink", "hex": "#001E2B", "role": "text and borders everywhere, never #000000" },
+    { "id": "page", "hex": "#F5F5F3", "role": "page background, never #FFFFFF as a page" },
+    { "id": "card", "hex": "#FFFFFF", "role": "card surface, the one allowed pure white" },
+    { "id": "accent", "hex": "#FCC224", "role": "brand primary CTA surface", "maxCoverage": "about 10 percent of any surface" },
+    { "id": "accent-hover", "hex": "#FFD84D", "role": "accent hover state" },
+    { "id": "cream-tint", "hex": "#F8F5EE", "role": "pill chips, soft callouts" },
+    { "id": "light-gray", "hex": "#EDECEA", "role": "nav pill background, secondary surface" },
+    { "id": "faint-gray", "hex": "#F7F7F7", "role": "inputs, inactive pill states", "modes": ["brand"] },
+    { "id": "ink-on-dark", "hex": "#F0F0EB", "role": "text on dark surfaces, never pure white for content" },
+    { "id": "hero-dark", "hex": "#0A0F14", "role": "cinematic dark hero", "modes": ["brand"] },
+    { "id": "success", "hex": "#0F5E2A", "role": "success text and tint base at 22 percent" },
+    { "id": "danger", "hex": "#A32D2D", "role": "danger text and button background, 10 percent hover tint" },
+    { "id": "warning-text", "hex": "#8A5A00", "role": "warning text on a yellow tint or the page" },
+    { "id": "warning-inline", "hex": "#A96B00", "role": "inline warning text", "knownGap": "4.02 on page at built 12px, below the 4.5 bar" }
+  ],
+  "inkTextRamp": [
+    { "id": "ink-100", "opacity": 1.0, "contrastOnPage": 15.8, "contrastOnCard": 17.2, "use": "headlines, focused input text, any text" },
+    { "id": "ink-80", "opacity": 0.8, "contrastOnPage": 8.7, "contrastOnCard": 9.2, "use": "body, emphasis, list items, paragraphs, any text" },
+    { "id": "ink-60", "opacity": 0.6, "contrastOnPage": 4.47, "contrastOnCard": 4.6, "use": "secondary body, labels, fine print", "knownGap": "a hair under the 4.5 bar on the page, prefer full ink or ink-80 there" },
+    { "id": "ink-30", "opacity": 0.3, "contrastOnPage": 1.9, "contrastOnCard": 1.9, "use": "icon strokes, placeholders, disabled states, never text" }
+  ],
+  "borderRamp": [
+    { "id": "border-8", "alpha": 0.08, "use": "faint hairlines, in-card dividers" },
+    { "id": "border-10", "alpha": 0.10, "use": "default card border" },
+    { "id": "border-12", "alpha": 0.12, "use": "default input border" },
+    { "id": "border-15", "alpha": 0.15, "use": "outlined buttons" },
+    { "id": "border-25", "alpha": 0.25, "use": "hover state on cards and inputs" }
+  ],
+  "accentAlphas": [
+    { "id": "accent-tint-22", "alpha": 0.22, "use": "soft tinted background, composites to about #F7EAC5 over the page" },
+    { "id": "accent-border-60", "alpha": 0.60, "use": "strong border on an empty or attention field" },
+    { "id": "accent-ring-25", "alpha": 0.25, "use": "ring partner to that border" }
+  ],
+  "decorative": {
+    "hexes": ["#03677E", "#024E60", "#0E3E4A", "#114C5A", "#1A8578", "#2FB8A8", "#C2E8FF", "#D9E8E2", "#F0A639"],
+    "logoDot": { "hex": "#FF9932", "rule": "belongs to the ucm. wordmark and nothing else" },
+    "rule": "decorative only, never the CTA, never a primary, never as text, never under text"
+  },
+  "logo": {
+    "wordmark": "ucm.",
+    "typeface": "Nunito ExtraBold, weight 800",
+    "rules": [
+      "always Nunito ExtraBold, never another face or weight",
+      "always lowercase, never retyped, placed from the asset files in brand/assets/logos/",
+      "the dot is always #FF9932 and that color belongs to the wordmark and nothing else",
+      "never recolor, drop, or resize the dot independently",
+      "the wordmark sits on light neutrals, dark surfaces, or its white container on the accent, never on decorative mid-tones"
+    ],
+    "onLight": { "letterforms": "ink", "dot": "#FF9932", "dotContrast": 2.0, "note": "logos are exempt from the 3.0 non-text bar; the dot never appears without the ink letterforms" },
+    "onDark": { "letterforms": "ink-on-dark", "dot": "#FF9932", "dotContrastOnInk": 8.1, "dotContrastOnHeroDark": 9.0 },
+    "onAccent": { "treatment": "white container", "container": "card", "containerShape": "pill, maximum border radius, compact around the mark", "letterforms": "ink", "dot": "#FF9932", "note": "never directly on yellow; #FF9932 on #FCC224 measures 1.3 and disappears" },
+    "specimen": "the reference page shows a Nunito ExtraBold stand-in; production always places the asset files"
+  },
+  "sanctionedPairings": [
+    { "fg": "ink", "bg": "page", "contrast": 15.8, "verdict": "pass any size" },
+    { "fg": "ink", "bg": "card", "contrast": 17.2, "verdict": "pass any size" },
+    { "fg": "ink", "bg": "cream-tint", "contrast": 15.8, "verdict": "pass any size" },
+    { "fg": "ink", "bg": "light-gray", "contrast": 14.6, "verdict": "pass any size" },
+    { "fg": "ink", "bg": "faint-gray", "contrast": 16.1, "verdict": "pass any size" },
+    { "fg": "ink", "bg": "accent", "contrast": 10.6, "verdict": "pass, the brand CTA pairing" },
+    { "fg": "ink", "bg": "accent-hover", "contrast": 12.4, "verdict": "pass" },
+    { "fg": "success", "bg": "page", "contrast": 7.3, "verdict": "pass" },
+    { "fg": "success", "bg": "card", "contrast": 7.9, "verdict": "pass" },
+    { "fg": "danger", "bg": "page", "contrast": 6.5, "verdict": "pass" },
+    { "fg": "danger", "bg": "card", "contrast": 7.1, "verdict": "pass" },
+    { "fg": "warning-text", "bg": "accent-tint-22", "contrast": 4.9, "verdict": "pass" },
+    { "fg": "warning-text", "bg": "page", "contrast": 5.4, "verdict": "pass" },
+    { "fg": "warning-inline", "bg": "page", "contrast": 4.02, "verdict": "below AA for small text, tracked" },
+    { "fg": "warning-inline", "bg": "card", "contrast": 4.4, "verdict": "below AA for small text, tracked" },
+    { "fg": "card", "bg": "ink", "contrast": 17.2, "verdict": "pass", "restriction": "button labels on solid navy actions only" },
+    { "fg": "card", "bg": "danger", "contrast": 7.1, "verdict": "pass", "restriction": "danger buttons only" },
+    { "fg": "ink-on-dark", "bg": "hero-dark", "contrast": 16.8, "verdict": "pass", "restriction": "brand hero, used sparingly" },
+    { "fg": "ink-on-dark", "bg": "ink", "contrast": 15.1, "verdict": "pass", "restriction": "dark featured cards" }
+  ],
+  "bannedPairings": [
+    { "fg": "accent", "bg": "any light surface", "contrast": 1.5, "reason": "yellow is never a text color on light" },
+    { "fg": "any decorative mid-tone", "bg": "anything", "reason": "the decorative sub-palette never carries copy" },
+    { "pattern": "color on color", "reason": "semantic colors sit on light neutral surfaces or carry white" },
+    { "pattern": "light on light or mid on mid", "reason": "every text pairing is dark with light, never two mid-range tones" }
+  ],
+  "rules": [
+    "never pure black or pure white as ink or surface, white only as a card surface or button label",
+    "yellow stays scarce, never more than about 10 percent of any surface",
+    "borders are ink with alpha, never gray and never black",
+    "hero-dark with ink-on-dark is brand only, used sparingly",
+    "gradient text is banned, the GlowButton radial is the only gradient and it is brand only",
+    "warning always uses the accent family, never a new orange or red"
+  ]
+}
+</script>
+
+<script>
+document.getElementById('json-view').textContent = JSON.stringify(
+  JSON.parse(document.getElementById('ucm-color-data').textContent), null, 2
+);
+document.querySelectorAll('[data-copy]').forEach(function (btn) {
+  btn.addEventListener('click', async function () {
+    try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (err) { return; }
+    var original = btn.textContent;
+    btn.textContent = 'Copied';
+    setTimeout(function () { btn.textContent = original; }, 1200);
+  });
+});
+var sectionLinks = Array.from(document.querySelectorAll('nav[aria-label="Sections"] a'));
+var linkById = {};
+sectionLinks.forEach(function (a) { linkById[a.getAttribute('href').slice(1)] = a; });
+var sectionIds = Object.keys(linkById);
+function setActivePill(id) {
+  sectionLinks.forEach(function (a) { a.removeAttribute('aria-current'); });
+  if (id && linkById[id]) linkById[id].setAttribute('aria-current', 'true');
+}
+function updateActivePill() {
+  var line = Math.min(window.innerHeight * 0.3, 240);
+  var currentId = null;
+  sectionIds.forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= line) currentId = id;
+  });
+  var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
+  if (atBottom) currentId = sectionIds[sectionIds.length - 1];
+  setActivePill(currentId);
+}
+var suppressSpyUntil = 0;
+window.addEventListener('hashchange', function () {
+  var id = location.hash.slice(1);
+  if (!linkById[id]) return;
+  suppressSpyUntil = Date.now() + 800;
+  setActivePill(id);
+});
+var pillTick = false;
+function requestPillUpdate() {
+  if (pillTick) return;
+  pillTick = true;
+  requestAnimationFrame(function () {
+    pillTick = false;
+    if (Date.now() < suppressSpyUntil) return;
+    updateActivePill();
+  });
+}
+window.addEventListener('scroll', requestPillUpdate, { passive: true });
+window.addEventListener('resize', requestPillUpdate, { passive: true });
+if (location.hash && linkById[location.hash.slice(1)]) setActivePill(location.hash.slice(1));
+else updateActivePill();
+</script>
+
+</body>
+</html>

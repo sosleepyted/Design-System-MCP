@@ -22,7 +22,10 @@ external libraries.
 | no-mui-emotion | Keep the component library zero-dependency | Never let @mui or @emotion into @ucm/ui |
 | hierarchy | Adjacent type steps differ by at least 1.25x; light headings | Never ship a flat scale like 14, 14.5, 15 |
 
-Also global: no gradient text, ever.
+Also global: no gradient text, ever. And text pairings are dark on light or
+light on dark within the palette, never color on color and never a mid-tone
+as or under text; the sanctioned pairing tables with measured contrast
+ratios are in color-pairings.md.
 
 ## Product-only bans
 

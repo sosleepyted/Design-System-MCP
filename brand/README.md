@@ -11,33 +11,37 @@ Foundations:
 
 1. [Brand Hub](guidelines/brand-hub.md): why the brand matters, the
    essentials at a glance, the logo rule, the old-palette migration.
-2. [The two modes](guidelines/modes.md): brand vs product, the first
+2. [The logo](guidelines/logo.md): the "ucm." wordmark, the accent dot,
+   the file source, what is not decided yet.
+3. [The two modes](guidelines/modes.md): brand vs product, the first
    decision of any piece of work.
-3. [Color](guidelines/color.md): the triad, the ramps, and the rules that
+4. [Color](guidelines/color.md): the triad, the ramps, and the rules that
    keep them honest.
-4. [Typography](guidelines/typography.md): Figtree, light headings,
+5. [Color pairings](guidelines/color-pairings.md): the sanctioned pairing
+   tables with measured WCAG contrast, ramp floors, banned pairings.
+6. [Typography](guidelines/typography.md): Figtree, light headings,
    hierarchy through contrast.
-5. [Motion](guidelines/motion.md): compositor-only animation, ease-out,
+7. [Motion](guidelines/motion.md): compositor-only animation, ease-out,
    reduced motion.
 
 Application:
 
-6. [Voice and copy](guidelines/voice-and-copy.md): the mechanical copy
+8. [Voice and copy](guidelines/voice-and-copy.md): the mechanical copy
    rules, bilingual by default, the two voices.
-7. [Layout, spacing, and states](guidelines/layout.md): containers, radius,
+9. [Layout, spacing, and states](guidelines/layout.md): containers, radius,
    shadow, forms, responsive rules.
-8. [Components](guidelines/components.md): the 16-component vocabulary, CTA
-   doctrine, templates, icons.
-9. [Dos and don'ts](guidelines/dos-and-donts.md): the quick reference,
-   mirroring the machine-checked rules.
+10. [Components](guidelines/components.md): the 16-component vocabulary, CTA
+    doctrine, templates, icons.
+11. [Dos and don'ts](guidelines/dos-and-donts.md): the quick reference,
+    mirroring the machine-checked rules.
 
 Working guides:
 
-10. [B2B presentations](guidelines/b2b-presentations.md): decks for
+12. [B2B presentations](guidelines/b2b-presentations.md): decks for
     ucm.agency clients.
-11. [Vibecoding with the UCM Design System](guidelines/vibecoding.md): how
+13. [Vibecoding with the UCM Design System](guidelines/vibecoding.md): how
     to build on-brand with Claude, three tracks.
-12. [Setting up the vibecoding environment](guidelines/vibecoding-environment.md):
+14. [Setting up the vibecoding environment](guidelines/vibecoding-environment.md):
     from zero to a working setup.
 
 Assets: [assets/](assets/) holds the color diagram and the logo folder

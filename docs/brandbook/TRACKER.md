@@ -30,6 +30,7 @@ they are records, not links.
 | 03 | B2B-Präsentationssystem für ucm.agency | updated (merged into 02-03) | UCM S1.9, S2.7 | See "Page 03 conflict log" and "Merge decision 02+03" below |
 | 04 | Vibecoding with the UCM Design System | updated (net-new, no incoming page) | HANDOFF (MCP tools, create-app); DS S1, S2.1, S2.2, S8; 02-03 deliverable | See "Page 04 notes" below |
 | 05 | Setting up the vibecoding environment | updated (net-new, no incoming page) | HANDOFF (registry, quick commands); repo source: mcp-server http.ts, create-app index.mjs, infra/registry/config.yaml | See "Page 05 notes" below |
+| 06 | The logo | pasted back (net-new, no incoming page; pasted 2026-07-07) | DS S2.1, S2.2, S5.1; UCM S1.3, S1.5, S1.8, S2.3; canonical file brand/guidelines/logo.md | See "Logo wordmark decision", "Logo page", and "Logo use cases and the live-site audit" below |
 
 ## Page 01 conflict log (Brand Hub)
 
@@ -176,6 +177,157 @@ text keeps the UCM casing convention from the page 01 log.
   header (BrandDocsLayout.astro) and that spec passage need a matching
   update. The brand book follows the user decision; the spec conflict is
   recorded here, not silently resolved.
+
+## Color pairing rules (2026-07-07)
+
+User decision: the brand book states which color pairings are allowed, on
+the principle dark on light or light on dark within the same tone, never
+color on color, with accessibility and readability maintained. Added to
+brand/guidelines/color.md as "Sanctioned pairings": measured WCAG contrast
+tables for text on light and dark surfaces, ink ramp floors, and banned
+pairings. dos-and-donts.md links to the tables. All ratios computed from
+the token hex values (WCAG relative luminance); tint backgrounds computed
+as alpha blends over the page color.
+
+Conflicts found by the math, resolved by sanctioning narrowly and logging
+here (token changes are spec and code territory, outside this workstream):
+
+- Inline warning #A96B00 measures 4.02 to 1 on page, below the 4.5 AA bar
+  at its built 12px size (UCM S3.8 uses it at 12px). Open question: revisit
+  the token or its size; interim guidance in the page prefers #8A5A00
+  (5.4 to 1) where strict AA applies.
+- Secondary text at 60 percent ink measures 4.47 to 1 on the page, a hair
+  under the 4.5 AA bar for normal text (built label style is 12px, UCM
+  S3.2); it passes on white cards (4.6). Interim guidance: prefer full ink
+  or 80 percent for meaning-bearing small text on the page. See the ramp
+  adoption entry below (2026-07-10).
+- White button text (navy and danger buttons) is built reality and passes
+  (17.2 and 7.1); the pairing tables sanction it as buttons-only so it does
+  not soften the "white is card-surface only" rule elsewhere.
+
+## Color pairings page split (2026-07-07)
+
+User request: the pairing rules become their own Confluence page. The
+"Sanctioned pairings" section moved verbatim from brand/guidelines/color.md
+to the new canonical page brand/guidelines/color-pairings.md, together with
+the color-pairings.svg reference; color.md keeps the one-line pairing
+principle and points at the page. Pointers updated: dos-and-donts.md, the
+brand/README.md reading order, the color-reference.html meta description.
+The known gaps (#A96B00 inline warning, 60 percent secondary text) travel
+with the tables and stay logged in "Color pairing rules" above. The page
+gets its tracker row when it is pasted to Confluence for the first time.
+
+## Ink opacity ramp adopted at four steps (2026-07-10)
+
+User decision: the ink text opacity ramp is 100 / 80 / 60 / 30, replacing
+the seven-step 100/85/78/65/55/45/35 that had been canonical. This reverses
+the 2026-07-07 note that the four-step ramp was "not adopted"; the user
+confirmed the four-step ramp is what they want for the whole project. Role
+mapping: body and emphasis collapse to 80, secondary body and labels and
+fine print to 60, icon strokes and placeholders and disabled states to 30.
+
+Measured on the page (sRGB alpha-composite, WCAG): 100 is 15.8, 80 is 8.7,
+60 is 4.47, 30 is 1.9. The 60 step lands a hair under the 4.5 AA bar for
+normal text on the page (passes on white cards at 4.6), which is the known
+gap logged above; revisit the token or reserve 60 for larger or card-bound
+text if strict AA is required.
+
+Reconciled in the same pass: color.md, color-pairings.md (floors and known
+gaps), typography.md (docs prose body 78 to 80), color-diagram.svg,
+color-pairings.svg (ramp-floors panel and caption opacities), and
+color-reference.html (visible ramp, embedded JSON, known gaps). HANDOFF.md
+non-negotiables and cleanup item 4 updated to match.
+
+## Logo page (2026-07-07, net-new)
+
+Authored at the user's request; there is no incoming Confluence page. The
+canonical file is brand/guidelines/logo.md. It gathers the standing
+decisions in one place: the "ucm." wordmark rule (lowercase, accent dot
+#FF9932, never retyped or rebuilt), Nunito Extra-Bold 800 as the
+wordmark-only face, the Drive branding elements folder as the single file
+source until the brand owner's go, the built in-code wordmark style (22px,
+tracking -0.04em, site header only), and logo motion under the global
+motion rules (standard ease cubic-bezier(0.16, 1, 0.3, 1), marquee logo
+parades brand-only). brand-hub.md and assets/logos/README.md now point at
+the page; the Brand Hub keeps its at-a-glance summary.
+
+Open questions for the user:
+
+- Clear space, minimum size, and placement contrast rules exist only in
+  the old Brand Guide. The page points there for now; provide the values
+  (or the Brand Guide export) and they will be migrated so the repo page
+  is self-sufficient.
+- Which variants do the delivered files include (dark surface, single
+  color, favicon or app icon)? The page currently sanctions whatever the
+  branding elements folder delivers; naming the variants explicitly would
+  be stronger.
+- The docs header conflict from the wordmark decision (it renders "UCM",
+  the decision says "ucm." with the dot) remains open; see "Logo wordmark
+  decision (2026-07-06)" above.
+
+## Logo use cases and the live-site audit (2026-07-07)
+
+User request: the logo page states which logo goes where. The repo has no
+record of the kit's contents (the incoming Brand Hub page only links a
+"ucm Logo Kit"), so www.ucm.jobs was audited as the production reality.
+The page follows the standing decisions; the divergences found are logged
+here, never silently adopted.
+
+Observed on www.ucm.jobs (2026-07-07):
+
+- Header and footer render the wordmark as HTML text: "ucm" plus a dot
+  span, Nunito 800 at 18px, letter-spacing 0, letters in #001E2B, the dot
+  in the triad yellow #FCC224, on a white pill.
+- The favicon set: ucm-logo_pine.png at 32px (light scheme), 48px, and as
+  the touch and app icons at 180, 192, and 512px; ucm-logo_white.png at
+  32px (dark scheme).
+- Both icon files draw "ucm" without the closing dot. The pine file's
+  dominant pixel measures #114358, the retired Pine #124259 within
+  compression tolerance; the white file is pure white.
+- Client logos run as a marquee parade, matching the spec's brand-web
+  pattern.
+
+Conflicts (repo rule vs production), decision pending:
+
+- Dot color: the decision of 2026-07-06 says #FF9932; the live dot is
+  #FCC224. Either the site moves or the decision is amended; the brand
+  book keeps #FF9932 until the user rules.
+- Dotless icons: the wordmark rule says never without the dot; both icon
+  files are dotless. Possible resolutions: regenerate the icons with the
+  dot, or sanction a dotless icon variant explicitly.
+- Icon color: Pine is retired for digital UI; the expected value is ink
+  #001E2B. The file naming suggests the kit still carries old-palette
+  exports.
+- Type style: the spec wordmark style is 22px with tracking -0.04em; the
+  live header uses 18px with letter-spacing 0.
+
+Open questions for the user:
+
+- For each conflict above: does production get updated, or the rule
+  amended? The page states the rules and lists the divergences until then.
+- Does the Drive kit contain more variants (lockups, monochrome, social
+  avatars)? The use-case table can only be completed from the kit's real
+  file list.
+
+Pasted back 2026-07-07 (user confirmation, first paste; row 06 above). The
+Confluence URL was not provided; add it to the row when handy. Markdown
+paste does not carry the images, so the images live in Confluence only if
+added by hand or via the attached PDF companion (brand/assets/
+logo-usage.pdf); confirm one of the two happened, or the Confluence copy
+shows broken image references.
+
+Update 2026-07-07, images and the PDF companion: at the user's request the
+logo page shows each logo next to its use case. The images are production
+records in brand/assets/logos/production/ (the two icon files from the
+live site's public CDN, a screenshot of the live header pill, and a
+preview compositing the white icon onto a hero-dark swatch for
+visibility). This does not lift the kit gate: official kit files still
+enter the repo only on the brand owner's explicit go, and the records are
+labeled as evidence of production state, divergences included. Because
+pasted Markdown does not carry images into Confluence, a generated PDF
+companion (brand/assets/logo-usage.pdf) mirrors the page for attaching to
+Confluence; logo.md stays the canonical source and the PDF is regenerated
+from it, never edited directly.
 
 ## Page 04 notes (vibecoding guide, net-new)
 

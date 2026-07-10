@@ -48,7 +48,8 @@ Only use the files from the official branding elements folder:
 https://drive.google.com/drive/folders/1I6p89HNb2kteBE6LIKWr4fAlxixvjdFb
 (Google Drive, UCM account required). Never retype or rebuild the logo. The
 wordmark is set in Nunito Extra-Bold 800; Nunito is never used for anything
-else. Follow spacing, sizing, and contrast rules from the Brand Guide.
+else. Follow spacing, sizing, and contrast rules from the Brand Guide. The
+full logo rules live in the logo page (guidelines/logo.md).
 
 ### Typography
 
